@@ -188,7 +188,63 @@
   ]
 }
 </script>
-  
+    <style>
+    .highlight {
+      background-color: #d0dd0a;
+      padding: 2rem 0;
+    }
+    .card-custom {
+      border-radius: 1rem;
+      border: 2px solid #e83e8c;
+      height: 100%;
+    }
+    .card-custom.orange-border {
+      border-color: #ffc107;
+    }
+    .text-pink {
+      color: #e83e8c;
+    }
+    .text-orange {
+      color: #ffc107;
+    }
+
+        .section-box {
+      padding: 2rem 1rem;
+      color: white;
+      min-height: 100%;
+    }
+    .financial {
+      background-color: #f04f27;
+    }
+    .academic {
+      background-color: #009fe3;
+    }
+    .parental {
+      background-color: #00a49f;
+      position: relative;
+    }
+    .section-box h4 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .section-box p {
+      margin: 0 0 1rem;
+    }
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+    .highlight2 {
+      font-weight: 700;
+    }
+    .parental img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-height: 90%;
+      width: auto;
+    }
+  </style>
 </head>
 <!-- Body -->
 <body>
@@ -259,13 +315,39 @@
       <div class="swiper hero-swiper min-vh-100">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
-          <div class="swiper-slide min-vh-100 d-flex flex-column py-5" style="background-image: url('assets/img/hero-bg/hero-slide.png'); background-size: cover; background-position: buttom;">
+          <div class="swiper-slide min-vh-100 d-flex flex-column py-5" style="background-image: url('assets/img/hero-bg/slide1.webp'); background-size: cover; background-position: center;">
             <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
               <div class="row mt-5">
                 <div class="col-xl-10 mx-auto">
-                  <h1 class="mb-md-4 pb-3" style="font-size: 38px; color: #ff1616; font-weight: bold; text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;">
+                  <!-- <h1 class="mb-md-4 pb-3" style="font-size: 38px; color: #ff1616; font-weight: bold; text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;">
                     Innovación Educativa para el Futuro – LEC Computación, tu aliado en tecnología y aprendizaje
-                  </h1>
+                  </h1> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide min-vh-100 d-flex flex-column py-5" style="background-image: url('assets/img/hero-bg/slide2.webp'); background-size: cover; background-position: center;">
+            <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
+              <div class="row mt-5">
+                <div class="col-xl-10 mx-auto">
+                  <!-- <h1 class="mb-md-4 pb-3" style="font-size: 38px; color: #ff1616; font-weight: bold; text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;">
+                    Innovación Educativa para el Futuro – LEC Computación, tu aliado en tecnología y aprendizaje
+                  </h1> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide min-vh-100 d-flex flex-column py-5" style="background-image: url('assets/img/hero-bg/slide3.webp'); background-size: cover; background-position: center;">
+            <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
+              <div class="row mt-5">
+                <div class="col-xl-10 mx-auto">
+                  <!-- <h1 class="mb-md-4 pb-3" style="font-size: 38px; color: #ff1616; font-weight: bold; text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;">
+                    Innovación Educativa para el Futuro – LEC Computación, tu aliado en tecnología y aprendizaje
+                  </h1> -->
                 </div>
               </div>
             </div>
@@ -310,7 +392,7 @@
           <!-- Items -->
           <div class="col py-4 my-2 my-sm-3">
             <div class="card card-hover border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2" style="background-color: #29BAD1; height: 390px;">
-              <div class="card-body pt-3">
+              <div class="card-body pt-3 my-5">
                 <h2 class="h1 d-inline-flex align-items-center">
                   Misión
                   <i class="bi bi-lightbulb-fill text-white fs-3 ms-2"></i>
@@ -325,7 +407,7 @@
 
             <div class="col py-4 my-2 my-sm-3">
             <div class="card card-hover border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2" style="background-color: #2CA3DD; height: 390px;">
-              <div class="card-body pt-3">
+              <div class="card-body pt-3 my-5">
                 <h2 class="h1 d-inline-flex align-items-center">
                   Visión
                   <i class="bi bi-rocket-takeoff text-white fs-3 ms-2"></i>
@@ -343,6 +425,92 @@
         </div>
       </div>
     </section>
+
+    <!-- Seccion nueva -->
+       <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h2 class="fw-bold">Campus Virtual</h2>
+        <p>Nuestra plataforma es la solución perfecta para cualquier institución educativa. Con <strong>Campus Virtual</strong>, puede gestionar de manera eficiente todas las actividades de <strong>estudiantes, padres de familia, docentes y coordinadores.</strong></p>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="assets/img/seccion3/telefonoapp.png" class="img-fluid" alt="Campus Virtual">
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Gestión Integral -->
+        <div class="col-md-3">
+          <div class="card card-custom text-center p-3">
+            <div class="card-body">
+              <h5 class="fw-bold text-pink">Gestión<br>Integral</h5>
+              <p>Centraliza todas las operaciones educativas en un solo lugar.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Interactividad -->
+        <div class="col-md-3">
+          <div class="card card-custom orange-border text-center p-3">
+            <div class="card-body">
+              <h5 class="fw-bold text-orange">Interactividad</h5>
+              <p>Facilita la comunicación y colaboración entre todos los miembros de la comunidad educativa.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Flexibilidad -->
+        <div class="col-md-3">
+          <div class="card card-custom text-center p-3">
+            <div class="card-body">
+              <h5 class="fw-bold text-pink">Flexibilidad</h5>
+              <p>Integra clases tanto presenciales como virtuales, adaptándose a sus necesidades.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Eficiencia -->
+        <div class="col-md-3">
+          <div class="card card-custom orange-border text-center p-3">
+            <div class="card-body">
+              <h5 class="fw-bold text-orange">Eficiencia</h5>
+              <p>Optimiza el tiempo y los recursos, mejorando la calidad educativa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion nueva -->
+     <div class="container-fluid">
+    <div class="row text-white">
+      <!-- Control Financiero -->
+      <div class="col-md-4 section-box financial">
+        <h4>Control Financiero</h4>
+        <p><span class="highlight2">💰 Cobros Rápidos</span><br>Elimine las complicaciones</p>
+        <p><span class="highlight2">📄 Solvencias</span><br>Resultados al instante</p>
+        <p><span class="highlight2">📊 Proyección de Ingresos</span><br>Análisis exacto</p>
+      </div>
+
+      <!-- Control Académico -->
+      <div class="col-md-4 section-box academic">
+        <h4>Control Académico</h4>
+        <p><span class="highlight2">📈 Notas Finales MINEDUC</span><br>Sin más complicaciones</p>
+        <p><span class="highlight2">📘 Libro de Inscripciones</span><br>Reportes inmediatos</p>
+        <p><span class="highlight2">📝 Boleta de Calificaciones</span><br>En línea y listos para imprimir</p>
+      </div>
+
+      <!-- Control Parental -->
+      <div class="col-md-4 section-box parental">
+        <h4>Control Parental en APP y Consultas Web</h4>
+        <p><span class="highlight2">📈 Notas Finales</span><br>Resultados en smartphone</p>
+        <p><span class="highlight2">🔔 Agenda (Tareas)</span><br>Notificaciones y Entrega de Tareas</p>
+        <p><span class="highlight2">✔️ Conducta</span><br>Aspectos actitudinales</p>
+        <img src="assets/img/seccion3/campus-virtual.png" alt="Plataforma" class="img-fluid">
+      </div>
+    </div>
+  </div>
 
   </main>
 
