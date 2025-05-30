@@ -688,31 +688,7 @@
         </button>
       </div>
     </div>
-    <div class="swiper" id="reviews-swiper" data-swiper-options='{
-      "slidesPerView": 2,
-      "spaceBetween": 16,
-      "loop": true,
-      "autoplay": {
-      "delay": 3000,
-      "disableOnInteraction": false,
-      "stopOnLastSlide": false,
-      "waitForTransition": false
-      },
-      "navigation": {
-      "prevEl": "#prev-review",
-      "nextEl": "#next-review"
-      },
-      "pagination": {
-      "el": ".swiper-pagination",
-      "clickable": true
-      },
-      "breakpoints": {
-      "500": { "slidesPerView": 3 },
-      "650": { "slidesPerView": 4 },
-      "900": { "slidesPerView": 5 },
-      "1100": { "slidesPerView": 6 }
-      }
-    }'>
+    <div class="swiper" id="reviews-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide py-3" style="margin-left: 70px;">
           <a href="#!" class="card-body px-2 mx-2" style="width:300px; display:flex; align-items:center; justify-content:center;">
@@ -742,23 +718,32 @@
       </div>
       <div class="swiper-pagination position-relative pt-3 mt-4 d-md-none d-flex"></div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var el = document.getElementById('reviews-swiper');
-        if (el && typeof Swiper !== 'undefined') {
-          var options = el.getAttribute('data-swiper-options');
-          var swiper = new Swiper(el, options ? JSON.parse(options) : {});
-          swiper.params.loop = true;
-          swiper.params.autoplay = {
-            delay: 3000,
-            disableOnInteraction: false,
-            stopOnLastSlide: false,
-            waitForTransition: false
-          };
-          swiper.autoplay.start();
-        }
-      });
-    </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('#reviews-swiper', {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        prevEl: '#prev-review',
+        nextEl: '#next-review'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        500: { slidesPerView: 3 },
+        650: { slidesPerView: 4 },
+        900: { slidesPerView: 5 }
+      }
+    });
+  });
+</script>
   </section>
 
   <!-- Microsoft 365 -->
