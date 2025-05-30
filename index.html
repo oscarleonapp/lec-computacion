@@ -675,6 +675,82 @@
     </div>
   </div>
 
+  <!-- Reviews -->
+  <section class="container py-5 mb-xl-3 mt-md-2 mt-lg-5">
+    <div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3">
+      <h2 class="mb-0">Comentarios de clientes</h2>
+      <div class="d-md-flex d-none ms-4">
+        <button type="button" id="prev-review" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Anterior">
+          <i class="bx bx-chevron-left"></i>
+        </button>
+        <button type="button" id="next-review" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Siguiente">
+          <i class="bx bx-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="swiper" id="reviews-swiper" data-swiper-options='{
+      "slidesPerView": 2,
+      "spaceBetween": 16,
+      "navigation": {
+        "prevEl": "#prev-review",
+        "nextEl": "#next-review"
+      },
+      "loop": true,
+      "autoplay": {
+        "delay": 3000,
+        "disableOnInteraction": false
+      },
+      "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+      },
+      "breakpoints": {
+        "500": { "slidesPerView": 3 },
+        "650": { "slidesPerView": 4 },
+        "900": { "slidesPerView": 5 },
+        "1100": { "slidesPerView": 6 }
+      }
+    }'>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide py-3">
+          <a href="#" class="card card-body card-hover px-2 mx-2">
+            <img src="assets/img/reviews/review-1.png" class="d-block mx-auto my-2" width="154" alt="Review 1">
+          </a>
+        </div>
+        <div class="swiper-slide py-3">
+          <a href="#" class="card card-body card-hover px-2 mx-2">
+            <img src="assets/img/reviews/review-2.png" class="d-block mx-auto my-2" width="154" alt="Review 2">
+          </a>
+        </div>
+        <div class="swiper-slide py-3">
+          <a href="#" class="card card-body card-hover px-2 mx-2">
+            <img src="assets/img/reviews/review-3.png" class="d-block mx-auto my-2" width="154" alt="Review 3">
+          </a>
+        </div>
+        <div class="swiper-slide py-3">
+          <a href="#" class="card card-body card-hover px-2 mx-2">
+            <img src="assets/img/reviews/review-4.png" class="d-block mx-auto my-2" width="154" alt="Review 4">
+          </a>
+        </div>
+        <div class="swiper-slide py-3">
+          <a href="#" class="card card-body card-hover px-2 mx-2">
+            <img src="assets/img/reviews/review-5.png" class="d-block mx-auto my-2" width="154" alt="Review 5">
+          </a>
+        </div>
+      </div>
+      <div class="swiper-pagination position-relative pt-3 mt-4 d-md-none d-flex"></div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var el = document.getElementById('reviews-swiper');
+        if (el && typeof Swiper !== 'undefined') {
+          var options = el.getAttribute('data-swiper-options');
+          new Swiper(el, options ? JSON.parse(options) : {});
+        }
+      });
+    </script>
+  </section>
+
   <!-- Microsoft 365 -->
      <!-- Banner superior -->
   <img src="ruta/a/tu/banner.png" alt="Banner superior" class="banner-pattern">
