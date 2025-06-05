@@ -58,437 +58,394 @@
   <!-- ================================================
        ESTILOS PERSONALIZADOS
   ================================================ -->
-  <style>
-    /* ----------------------------
-       Variables de color (opcional)
-    ---------------------------- */
-    :root {
-      --color-financial: #fa572e;
-      --color-academic:  #00a9eb;
-      --color-parental:  #00af9c;
-      --color-pink:      #e83e8c;
-      --color-orange:    #ffc107;
-      --color-teal:      #009D93;
-    }
+<style>
+  /* ----------------------------
+     Variables de color (opcional)
+  ---------------------------- */
+  :root {
+    --color-financial: #fa572e;
+    --color-academic:  #00a9eb;
+    --color-parental:  #00af9c;
+    --color-pink:      #e83e8c;
+    --color-orange:    #ffc107;
+    --color-teal:      #009D93;
+  }
 
-    /* ----------------------------
-       Reset / Ajustes globales
-    ---------------------------- */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-    a {
-      text-decoration: none;
-    }
+  /* ----------------------------
+     Reset / Ajustes globales
+  ---------------------------- */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
 
-    /* ------------------------------------------
-       SECCIÓN: Control Financiero / Académico / Parental
-    ------------------------------------------ */
-    .section-box {
-      padding: 2rem 1rem;
-      color: #fff;
-      min-height: 100%;
-    }
+  /* ------------------------------------------
+     SECCIÓN: Control Financiero / Académico / Parental
+  ------------------------------------------ */
+  .section-box {
+    padding: 2rem 1rem;
+    color: #fff;
+    min-height: 100%;
+  }
+  .section-box h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-box .item {
+    margin-bottom: 1.5rem;
+  }
+  .section-box .item .icon {
+    font-size: 2rem;
+    margin-right: 0.75rem;
+  }
+  .section-box .item .fw-bold {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  .section-box .item p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .financial {
+    background-color: var(--color-financial);
+  }
+  .academic {
+    background-color: var(--color-academic);
+  }
+  .parental {
+    background-color: var(--color-parental);
+    position: relative;
+  }
+  /* Posiciona la imagen al fondo-derecha de la columna “Control Parental” */
+  .parental img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 90%;
+    width: auto;
+  }
+
+  /* ------------------------------------------
+     SECCIÓN: Campus Virtual / Highlight Cards
+  ------------------------------------------ */
+  .highlight {
+    background-color: #d0dd0a;
+    padding: 2rem 0;
+  }
+  .card-custom {
+    border-radius: 1rem;
+    border: 2px solid var(--color-pink);
+    height: 100%;
+  }
+  .card-custom.orange-border {
+    border-color: var(--color-orange);
+  }
+  /* (Se eliminaron .card-custom.blue-border y .card-custom.teal-border) */
+  .card-custom .card-body {
+    padding: 2rem;
+  }
+  .card-custom h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ------------------------------------------
+     SECCIÓN: SmartToddlers
+  ------------------------------------------ */
+  /* (Se eliminaron .smart-card, .smart-image y .smart-text) */
+
+  /* ------------------------------------------
+     SECCIÓN: Microsoft 365
+  ------------------------------------------ */
+  .banner-pattern {
+    width: 100%;
+    height: auto;
+  }
+  .microsoft-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  .microsoft-container {
+    position: relative;
+  }
+  .card-box {
+    background-color: var(--color-orange);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+  }
+  .card-box .icon {
+    height: 60px;
+    margin-bottom: 10px;
+    width: auto;
+  }
+  .card-box .big-number {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #813091;
+    margin-top: 10px;
+  }
+  .bottom-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1d2e88;
+    margin-top: 30px;
+  }
+  .rocket-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    z-index: 1;
+    margin-top: 300px;
+  }
+
+  /* ------------------------------------------
+     SECCIÓN: Contacto / Footer
+  ------------------------------------------ */
+  .contact-header {
+    background-color: #ea4c89;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px 30px;
+    display: inline-block;
+  }
+  .contact-icon {
+    font-size: 1.5rem;
+    color: #fbbf24;
+  }
+  .contact-info a {
+    color: #3b82f6;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  .contact-label {
+    font-weight: 600;
+  }
+
+  /* ----------------------------
+     RESPONSIVE: Media Queries
+  ---------------------------- */
+  @media (max-width: 992px) {
     .section-box h4 {
-      font-weight: bold;
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .section-box .item {
-      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
     }
     .section-box .item .icon {
-      font-size: 2rem;
-      margin-right: 0.75rem;
+      font-size: 1.75rem;
+      margin-right: 0.5rem;
     }
     .section-box .item .fw-bold {
-      font-size: 1.1rem;
-      line-height: 1.2;
+      font-size: 1rem;
     }
     .section-box .item p {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.4;
+      font-size: 0.9rem;
     }
-    .financial {
-      background-color: var(--color-financial);
-    }
-    .academic {
-      background-color: var(--color-academic);
-    }
-    .parental {
-      background-color: var(--color-parental);
-      position: relative;
-    }
-    /* Posiciona la imagen al fondo-derecha de la columna “Control Parental” */
     .parental img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      max-height: 90%;
-      width: auto;
-    }
-
-    /* ------------------------------------------
-       SECCIÓN: Campus Virtual / Highlight Cards
-    ------------------------------------------ */
-    .img-books {
-      max-width: 100%;
-      height: auto;
-    }
-    .highlight {
-      background-color: #d0dd0a;
-      padding: 2rem 0;
-    }
-    .card-custom {
-      border-radius: 1rem;
-      border: 2px solid var(--color-pink);
-      height: 100%;
-    }
-    .card-custom.orange-border {
-      border-color: var(--color-orange);
-    }
-    .card-custom.blue-border {
-      border-color: var(--color-academic);
-    }
-    .card-custom.teal-border {
-      border-color: var(--color-parental);
-    }
-    .card-custom .card-img-top {
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-    }
-    .card-custom .card-body {
-      padding: 2rem;
-    }
-    .card-custom h5 {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-    }
-
-    /* ------------------------------------------
-       SECCIÓN: SmartToddlers
-    ------------------------------------------ */
-    .smart-card {
-      background-color: var(--color-teal);
-      border-radius: 25px;
-      color: white;
-      padding: 30px;
-      position: relative;
-      overflow: visible;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .smart-image {
-      position: absolute;
-      right: -80px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 240px;
-      max-width: 50vw;
-    }
-    .smart-text strong {
-      text-decoration: underline;
-    }
-
-    /* ------------------------------------------
-       SECCIÓN: Microsoft 365
-    ------------------------------------------ */
-    .banner-pattern {
-      width: 100%;
-      height: auto;
-    }
-    .microsoft-section {
-      background-color: #f8f9fa;
-      padding: 60px 0;
-    }
-    .microsoft-container {
-      position: relative;
-    }
-    .card-box {
-      background-color: var(--color-orange);
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      height: 100%;
-    }
-    .card-box .icon {
-      height: 60px;
-      margin-bottom: 10px;
-      width: auto;
-    }
-    .card-box .big-number {
-      font-size: 4rem;
-      font-weight: bold;
-      color: #813091;
-      margin-top: 10px;
-    }
-    .bottom-text {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #1d2e88;
-      margin-top: 30px;
-    }
-    .rocket-img {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 200px;
-      z-index: 1;
-      margin-top: 300px;
-    }
-
-    /* ------------------------------------------
-       SECCIÓN: Contacto / Footer
-    ------------------------------------------ */
-    .contact-header {
-      background-color: #ea4c89;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      border-radius: 25px;
-      padding: 10px 30px;
-      display: inline-block;
-    }
-    .contact-icon {
-      font-size: 1.5rem;
-      color: #fbbf24;
-    }
-    .contact-info a {
-      color: #3b82f6;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    .contact-label {
-      font-weight: 600;
-    }
-
-    /* ----------------------------
-       RESPONSIVE: Media Queries
-    ---------------------------- */
-    @media (max-width: 992px) {
-      .section-box h4 {
-        font-size: 1.25rem;
-      }
-      .section-box .item .icon {
-        font-size: 1.75rem;
-        margin-right: 0.5rem;
-      }
-      .section-box .item .fw-bold {
-        font-size: 1rem;
-      }
-      .section-box .item p {
-        font-size: 0.9rem;
-      }
-      .parental img {
-        max-height: 70%;
-      }
-
-      .dual-book-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .card-teal,
-      .card-lime,
-      .logo-col,
-      .book-image-col {
-        flex: 1 1 100%;
-        max-width: 100%;
-        margin-bottom: 1.5rem;
-      }
-      .card-teal .card-img-teal {
-        width: 160px;
-        bottom: -8px;
-        right: -15px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .section-box h4 {
-        font-size: 1.15rem;
-        margin-bottom: 1rem;
-      }
-      .section-box .item .icon {
-        font-size: 1.5rem;
-      }
-      .section-box .item .fw-bold {
-        font-size: 1rem;
-      }
-      .section-box .item p {
-        font-size: 0.85rem;
-      }
-      .parental img {
-        position: static;
-        display: block;
-        margin: 1rem auto 0;
-        width: 60%;
-        height: auto;
-      }
-      .smart-card {
-        padding: 20px;
-        max-width: 100%;
-      }
-      .smart-image {
-        position: static;
-        transform: none;
-        width: 100%;
-        max-width: 100%;
-        margin-top: 1rem;
-      }
-      .big-number {
-        font-size: 3rem;
-      }
-      .card-box {
-        padding: 15px;
-      }
-      .rocket-img {
-        display: none;
-      }
-      .illustration {
-        max-width: 100%;
-        margin-bottom: 1rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .section-box h4 {
-        font-size: 1rem;
-      }
-      .section-box .item .icon {
-        font-size: 1.25rem;
-      }
-      .section-box .item .fw-bold {
-        font-size: 0.95rem;
-      }
-      .section-box .item p {
-        font-size: 0.8rem;
-      }
-      .contact-header {
-        font-size: 1.5rem;
-        padding: 8px 20px;
-      }
-      .contact-icon {
-        font-size: 1.25rem;
-        width: 30px;
-        height: 30px;
-      }
-      .contact-label {
-        font-size: 0.9rem;
-      }
-      body {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-      .card-teal {
-        padding: 1.5rem;
-      }
-      .card-teal .card-img-teal {
-        width: 140px;
-        bottom: -6px;
-        right: -10px;
-      }
-      .card-teal .card-text,
-      .card-lime .card-text {
-        font-size: 0.95rem;
-      }
-      .card-lime {
-        padding: 1.5rem;
-      }
-    }
-
-    /* ==========================================
-       Estilos para la sección combinada “SmartToddlers / SmartKids”
-       ========================================== */
-    .dual-book-section {
-      background-color: #fff;
-      padding: 3rem 1rem;
+      max-height: 70%;
     }
 
     .dual-book-row {
-      display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-    }
-
-    .card-teal {
-      position: relative;
-      background-color: #00af9c;
-      color: #fff;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      overflow: hidden;
-      flex: 1 1 65%;
-      max-width: 65%;
-      min-height: 180px;
-    }
-
-    .card-teal .card-text {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    .card-teal .card-text strong {
-      text-decoration: underline;
-      font-weight: 700;
-    }
-
-    .card-teal .card-img-teal {
-      position: absolute;
-      bottom: -10px;
-      right: -20px;
-      width: 200px;
-      max-width: 50%;
-    }
-
-    .logo-col {
-      flex: 1 1 30%;
-      max-width: 30%;
       text-align: center;
     }
-    .logo-col img {
-      max-width: 180px;
-      width: 100%;
-      height: auto;
-    }
-
+    .card-teal,
+    .card-lime,
+    .logo-col,
     .book-image-col {
-      flex: 1 1 35%;
-      max-width: 35%;
-      text-align: center;
-    }
-    .book-image-col img {
+      flex: 1 1 100%;
       max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .card-teal .card-img-teal {
+      width: 160px;
+      bottom: -8px;
+      right: -15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-box h4 {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+    .section-box .item .icon {
+      font-size: 1.5rem;
+    }
+    .section-box .item .fw-bold {
+      font-size: 1rem;
+    }
+    .section-box .item p {
+      font-size: 0.85rem;
+    }
+    .parental img {
+      position: static;
+      display: block;
+      margin: 1rem auto 0;
+      width: 60%;
       height: auto;
     }
+    .big-number {
+      font-size: 3rem;
+    }
+    .card-box {
+      padding: 15px;
+    }
+    .rocket-img {
+      display: none;
+    }
+    .illustration {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
 
-    .card-lime {
-      position: relative;
-      background-color: #c6d426;
-      color: #fff;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      overflow: hidden;
-      flex: 1 1 60%;
-      max-width: 60%;
-      min-height: 180px;
-      margin-left: auto;
-    }
-    .card-lime .card-text {
+  @media (max-width: 576px) {
+    .section-box h4 {
       font-size: 1rem;
-      line-height: 1.5;
     }
-    .card-lime .card-text strong {
-      text-decoration: underline;
-      font-weight: 700;
+    .section-box .item .icon {
+      font-size: 1.25rem;
     }
-  </style>
+    .section-box .item .fw-bold {
+      font-size: 0.95rem;
+    }
+    .section-box .item p {
+      font-size: 0.8rem;
+    }
+    .contact-header {
+      font-size: 1.5rem;
+      padding: 8px 20px;
+    }
+    .contact-icon {
+      font-size: 1.25rem;
+      width: 30px;
+      height: 30px;
+    }
+    .contact-label {
+      font-size: 0.9rem;
+    }
+    body {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .card-teal {
+      padding: 1.5rem;
+    }
+    .card-teal .card-img-teal {
+      width: 140px;
+      bottom: -6px;
+      right: -10px;
+    }
+    .card-teal .card-text,
+    .card-lime .card-text {
+      font-size: 0.95rem;
+    }
+    .card-lime {
+      padding: 1.5rem;
+    }
+  }
+
+  /* ==========================================
+     Estilos para la sección combinada “SmartToddlers / SmartKids”
+     ========================================== */
+  .dual-book-section {
+    background-color: #fff;
+    padding: 3rem 1rem;
+  }
+
+  .dual-book-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .card-teal {
+    position: relative;
+    background-color: #00af9c;
+    color: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    overflow: hidden;
+    flex: 1 1 65%;
+    max-width: 65%;
+    min-height: 180px;
+  }
+
+  .card-teal .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .card-teal .card-text strong {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  .card-teal .card-img-teal {
+    position: absolute;
+    bottom: -10px;
+    right: -20px;
+    width: 200px;
+    max-width: 50%;
+  }
+
+  .logo-col {
+    flex: 1 1 30%;
+    max-width: 30%;
+    text-align: center;
+  }
+  .logo-col img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+  }
+
+  .book-image-col {
+    flex: 1 1 35%;
+    max-width: 35%;
+    text-align: center;
+  }
+  .book-image-col img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-lime {
+    position: relative;
+    background-color: #c6d426;
+    color: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    overflow: hidden;
+    flex: 1 1 60%;
+    max-width: 60%;
+    min-height: 180px;
+    margin-left: auto;
+  }
+  .card-lime .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .card-lime .card-text strong {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+</style>
+
 </head>
 
 <body>
@@ -709,11 +666,11 @@
           <div class="col">
             <div class="card border-0 shadow-sm text-decoration-none pt-5 px-3 pb-3" style="background-color: #29BAD1; height: 100%;">
               <div class="card-body pt-3 my-5 text-center">
-                <h2 class="h1 d-inline-flex align-items-center">
+                <h2 class="h1 d-inline-flex align-items-center text-white">
                   Misión <i class="bi bi-lightbulb-fill text-white fs-3 ms-2"></i>
                 </h2>
                 <hr style="color: #fff; border-width: 2px; margin-bottom: 40px;">
-                <p class="fs-5 text-justify">
+                <p class="fs-5 text-justify text-white">
                   Ser reconocidos como referencia nacional en el proceso de innovación tecnológica por organizaciones, empresas, e instituciones dedicadas a la formación.​
                 </p>
               </div>
@@ -723,11 +680,11 @@
           <div class="col">
             <div class="card border-0 shadow-sm text-decoration-none pt-5 px-3 pb-3" style="background-color: #2CA3DD; height: 100%;">
               <div class="card-body pt-3 my-5 text-center">
-                <h2 class="h1 d-inline-flex align-items-center">
+                <h2 class="h1 d-inline-flex align-items-center text-white">
                   Visión <i class="bi bi-rocket-takeoff text-white fs-3 ms-2"></i>
                 </h2>
                 <hr style="color: #fff; border-width: 2px; margin-bottom: 40px;">
-                <p class="fs-5 text-justify">
+                <p class="fs-5 text-justify text-white">
                   Ofrecer soluciones digitales y tecnológicas de punta como apoyo estratégico para la gestión educativa y capacitaciones especializadas a organizaciones, empresas, e instituciones dedicadas a la formación.​
                 </p>
               </div>
