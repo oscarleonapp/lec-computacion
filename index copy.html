@@ -275,6 +275,25 @@
       .parental img {
         max-height: 70%;
       }
+
+      .dual-book-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .card-teal,
+      .card-lime,
+      .logo-col,
+      .book-image-col {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+      .card-teal .card-img-teal {
+        width: 160px;
+        bottom: -8px;
+        right: -15px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -356,242 +375,255 @@
     }
 
     /* ==========================================
-   Estilos para la sección combinada “SmartToddlers / SmartKids”
-   ========================================== */
+       Estilos para la sección combinada “SmartToddlers / SmartKids”
+       ========================================== */
+    .dual-book-section {
+      background-color: #fff;
+      padding: 3rem 1rem;
+    }
 
-/* Contenedor principal (fondo blanco) */
-.dual-book-section {
-  background-color: #fff;
-  padding: 3rem 1rem; /* espacio arriba/abajo */
-}
+    .dual-book-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
 
-/* Flex contenedor para cada fila */
-.dual-book-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
+    .card-teal {
+      position: relative;
+      background-color: #00af9c;
+      color: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      overflow: hidden;
+      flex: 1 1 65%;
+      max-width: 65%;
+      min-height: 180px;
+    }
 
-/* ===========================
-   TARJETA 1: SmartToddlers (teal)
-   =========================== */
-.card-teal {
-  position: relative;
-  background-color: #00af9c;       /* Teal (RAL #009D93) */
-  color: #fff;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  overflow: hidden;
-  flex: 1 1 65%;                    /* Ocupa ~65% en pantallas grandes */
-  max-width: 65%;
-  min-height: 180px;                /* Ajustable según contenido */
-}
+    .card-teal .card-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
 
-.card-teal .card-text {
-  font-size: 1rem;
-  line-height: 1.5;
-}
+    .card-teal .card-text strong {
+      text-decoration: underline;
+      font-weight: 700;
+    }
 
-.card-teal .card-text strong {
-  text-decoration: underline;
-  font-weight: 700;
-}
+    .card-teal .card-img-teal {
+      position: absolute;
+      bottom: -10px;
+      right: -20px;
+      width: 200px;
+      max-width: 50%;
+    }
 
-/* Imagen “SmartToddlers” (superpuesta) */
-.card-teal .card-img-teal {
-  position: absolute;
-  bottom: -10px;                    /* Para que sobresalga un poco */
-  right: -20px;
-  width: 200px;                     /* Ajusta tamaño */
-  max-width: 50%;
-}
+    .logo-col {
+      flex: 1 1 30%;
+      max-width: 30%;
+      text-align: center;
+    }
+    .logo-col img {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+    }
 
-/* ===========================
-   LOGO SMARTKIDS (fila 1)
-   =========================== */
-.logo-col {
-  flex: 1 1 30%;
-  max-width: 30%;
-  text-align: center;
-}
+    .book-image-col {
+      flex: 1 1 35%;
+      max-width: 35%;
+      text-align: center;
+    }
+    .book-image-col img {
+      max-width: 100%;
+      height: auto;
+    }
 
-/* Ajusta el tamaño del logo */
-.logo-col img {
-  max-width: 180px;
-  width: 100%;
-  height: auto;
-}
+    .card-lime {
+      position: relative;
+      background-color: #c6d426;
+      color: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      overflow: hidden;
+      flex: 1 1 60%;
+      max-width: 60%;
+      min-height: 180px;
+      margin-left: auto;
+    }
+    .card-lime .card-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .card-lime .card-text strong {
+      text-decoration: underline;
+      font-weight: 700;
+    }
 
-/* ===========================
-   IMAGEN SMARTKIDS (fila 2, libros)
-   =========================== */
-.book-image-col {
-  flex: 1 1 35%;
-  max-width: 35%;
-  text-align: center;
-}
-.book-image-col img {
-  max-width: 100%;
-  height: auto;
-  /* Puedes ajustar el ancho fijo si lo prefieres:
-     width: 250px; max-width: 100%;
-  */
-}
-
-/* ===========================
-   TARJETA 2: SmartKids (lime-green)
-   =========================== */
-.card-lime {
-  position: relative;
-  background-color: #c6d426;       /* Lima (RAL #C6D426) */
-  color: #fff;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  overflow: hidden;
-  flex: 1 1 60%;
-  max-width: 60%;
-  min-height: 180px;
-  margin-left: auto;                /* Para empujar a la derecha en pantallas grandes */
-}
-
-.card-lime .card-text {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.card-lime .card-text strong {
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-/* ===========================
-   MEDIA QUERIES (RESPONSIVE)
-   =========================== */
-@media (max-width: 992px) {
-  .dual-book-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .card-teal,
-  .card-lime,
-  .logo-col,
-  .book-image-col {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-  }
-  .card-teal .card-img-teal {
-    width: 160px;
-    bottom: -8px;
-    right: -15px;
-  }
-}
-
-@media (max-width: 576px) {
-  .card-teal {
-    padding: 1.5rem;
-  }
-  .card-teal .card-img-teal {
-    width: 140px;
-    bottom: -6px;
-    right: -10px;
-  }
-  .card-teal .card-text,
-  .card-lime .card-text {
-    font-size: 0.95rem;
-  }
-  .card-lime {
-    padding: 1.5rem;
-  }
-}
-
+    @media (max-width: 576px) {
+      .card-teal {
+        padding: 1.5rem;
+      }
+      .card-teal .card-img-teal {
+        width: 140px;
+        bottom: -6px;
+        right: -10px;
+      }
+      .card-teal .card-text,
+      .card-lime .card-text {
+        font-size: 0.95rem;
+      }
+      .card-lime {
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="page-wrapper">
-<!-- ====================================
-     HEADER / NAVBAR (corregido)
-==================================== -->
-<header class="header navbar navbar-expand-lg navbar-white position-absolute navbar-sticky bg-white">
-  <div class="container px-3">
-    <!-- Logo -->
-    <a href="https://leccomputacion.com/" class="navbar-brand pe-3">
-      <img src="assets/img/logo/lec-logo-menu-azul.png" width="120" alt="LEC Computación">
-    </a>
+    <!-- ====================================
+         HEADER / NAVBAR (corregido)
+    ==================================== -->
+    <header class="header navbar navbar-expand-lg navbar-white position-absolute navbar-sticky bg-white">
+      <div class="container px-3">
+        <!-- Logo -->
+        <a href="https://leccomputacion.com/" class="navbar-brand pe-3">
+          <img src="assets/img/logo/lec-logo-menu-azul.png" width="120" alt="LEC Computación">
+        </a>
 
-    <!-- Botón “hamburguesa” para móvil -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#mobileMenu"
-      aria-controls="mobileMenu"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Offcanvas (solo en móvil: d-lg-none) -->
-    <div
-      class="offcanvas offcanvas-end d-lg-none"
-      tabindex="-1"
-      id="mobileMenu"
-      aria-labelledby="mobileMenuLabel"
-    >
-      <div class="offcanvas-header border-bottom">
-        <h5 class="offcanvas-title" id="mobileMenuLabel">Menú</h5>
+        <!-- Botón “hamburguesa” para móvil -->
         <button
+          class="navbar-toggler"
           type="button"
-          class="btn-close text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Cerrar"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <!-- ENLACES de menú (móvil) -->
-        <ul class="navbar-nav flex-column justify-content-center">
-          <li class="nav-item">
-            <a href="#!" class="nav-link text-dark">INICIO</a>
-          </li>
-          <li class="nav-item">
-            <a href="#!" class="nav-link text-dark">NOSOTROS</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#!"
-              id="serviciosDropdownMobile"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              SERVICIOS
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="serviciosDropdownMobile">
-              <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
-              <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
-              <li><a class="dropdown-item" href="#!">Capacitación</a></li>
-              <li><a class="dropdown-item" href="#!">Consultoría</a></li>
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas (solo en móvil: d-lg-none) -->
+        <div
+          class="offcanvas offcanvas-end d-lg-none"
+          tabindex="-1"
+          id="mobileMenu"
+          aria-labelledby="mobileMenuLabel"
+        >
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menú</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- ENLACES de menú (móvil) -->
+            <ul class="navbar-nav flex-column justify-content-center">
+              <li class="nav-item">
+                <a href="#!" class="nav-link text-dark">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a href="#!" class="nav-link text-dark">NOSOTROS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark"
+                  href="#!"
+                  id="serviciosDropdownMobile"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  SERVICIOS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="serviciosDropdownMobile">
+                  <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
+                  <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
+                  <li><a class="dropdown-item" href="#!">Capacitación</a></li>
+                  <li><a class="dropdown-item" href="#!">Consultoría</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-        </ul>
 
-        <!-- BOTÓN “CONTACTAR” (móvil: ancho completo dentro del offcanvas) -->
-        <div class="mt-4">
-          <a
-            href="#!"
-            class="btn btn-warning w-100 text-dark mb-3"
-            style="font-weight: 600;"
-          >
-            CONTACTAR
-          </a>
+            <!-- BOTÓN “CONTACTAR” (móvil: ancho completo dentro del offcanvas) -->
+            <div class="mt-4">
+              <a
+                href="#!"
+                class="btn btn-warning w-100 text-dark mb-3"
+                style="font-weight: 600;"
+              >
+                CONTACTAR
+              </a>
 
-          <!-- ICONOS WhatsApp / Facebook (móvil, dentro del offcanvas) -->
-          <div class="d-flex justify-content-start">
+              <!-- ICONOS WhatsApp / Facebook (móvil, dentro del offcanvas) -->
+              <div class="d-flex justify-content-start">
+                <a
+                  href="#!"
+                  class="btn btn-success btn-sm rounded-circle me-2"
+                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
+                >
+                  <i class="bi bi-whatsapp" style="font-size: 1.2rem; color: #fff;"></i>
+                </a>
+                <a
+                  href="#!"
+                  class="btn btn-primary btn-sm rounded-circle"
+                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
+                >
+                  <i class="bi bi-facebook" style="font-size: 1.2rem; color: #fff;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Offcanvas móvil -->
+
+        <!-- MENÚ y BOTONES en escritorio (ocultos < lg, visibles ≥ lg) -->
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center">
+          <!-- ENLACES de menú (escritorio) -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#!" class="nav-link text-dark">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link text-dark">NOSOTROS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-dark"
+                href="#!"
+                id="serviciosDropdownDesktop"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                SERVICIOS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="serviciosDropdownDesktop">
+                <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
+                <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
+                <li><a class="dropdown-item" href="#!">Capacitación</a></li>
+                <li><a class="dropdown-item" href="#!">Consultoría</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Botones de “CONTACTAR” + iconos (escritorio) -->
+          <div class="d-flex align-items-center">
+            <!-- Botón “CONTACTAR” pequeño -->
+            <a
+              href="#!"
+              class="btn btn-warning btn-sm text-dark me-3"
+              style="font-weight: 600;"
+            >
+              CONTACTAR
+            </a>
+            <!-- Iconos WhatsApp / Facebook -->
             <a
               href="#!"
               class="btn btn-success btn-sm rounded-circle me-2"
@@ -608,71 +640,9 @@
             </a>
           </div>
         </div>
+        <!-- /Menú escritorio -->
       </div>
-    </div>
-    <!-- /Offcanvas móvil -->
-
-    <!-- MENÚ y BOTONES en escritorio (ocultos < lg, visibles ≥ lg) -->
-    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center">
-      <!-- ENLACES de menú (escritorio) -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a href="#!" class="nav-link text-dark">INICIO</a>
-        </li>
-        <li class="nav-item">
-          <a href="#!" class="nav-link text-dark">NOSOTROS</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle text-dark"
-            href="#!"
-            id="serviciosDropdownDesktop"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            SERVICIOS
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="serviciosDropdownDesktop">
-            <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
-            <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
-            <li><a class="dropdown-item" href="#!">Capacitación</a></li>
-            <li><a class="dropdown-item" href="#!">Consultoría</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <!-- Botones de “CONTACTAR” + iconos (escritorio) -->
-      <div class="d-flex align-items-center">
-        <!-- Botón “CONTACTAR” pequeño -->
-        <a
-          href="#!"
-          class="btn btn-warning btn-sm text-dark me-3"
-          style="font-weight: 600;"
-        >
-          CONTACTAR
-        </a>
-        <!-- Iconos WhatsApp / Facebook -->
-        <a
-          href="#!"
-          class="btn btn-success btn-sm rounded-circle me-2"
-          style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
-        >
-          <i class="bi bi-whatsapp" style="font-size: 1.2rem; color: #fff;"></i>
-        </a>
-        <a
-          href="#!"
-          class="btn btn-primary btn-sm rounded-circle"
-          style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
-        >
-          <i class="bi bi-facebook" style="font-size: 1.2rem; color: #fff;"></i>
-        </a>
-      </div>
-    </div>
-    <!-- /Menú escritorio -->
-  </div>
-</header>
-
+    </header>
 
     <!-- =========================================
          HERO (Swiper Slider)
@@ -776,12 +746,12 @@
     </div>
 
     <!-- =========================================
-         SECCIÓN: Highlight Cards
+         SECCIÓN: Highlight Cards (ajustada para móvil)
     ========================================== -->
     <div class="highlight">
       <div class="container">
         <div class="row g-4">
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-md-3">
             <div class="card card-custom text-center p-3">
               <div class="card-body">
                 <h5 class="fw-bold text-pink">Gestión<br>Integral</h5>
@@ -789,7 +759,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-md-3">
             <div class="card card-custom orange-border text-center p-3">
               <div class="card-body">
                 <h5 class="fw-bold text-orange">Interactividad</h5>
@@ -797,7 +767,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-md-3">
             <div class="card card-custom text-center p-3">
               <div class="card-body">
                 <h5 class="fw-bold text-pink">Flexibilidad</h5>
@@ -805,7 +775,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-12 col-md-3">
             <div class="card card-custom orange-border text-center p-3">
               <div class="card-body">
                 <h5 class="fw-bold text-orange">Eficiencia</h5>
@@ -1035,72 +1005,65 @@
       </div>
     </div>
 
-<!-- ==========================================
-     SECCIÓN: SmartToddlers / SmartKids (diseño final)
-     ========================================== -->
-<section class="dual-book-section">
-  <div class="container-lg">
+    <!-- ==========================================
+         SECCIÓN: SmartToddlers / SmartKids (diseño final)
+    ========================================== -->
+    <section class="dual-book-section">
+      <div class="container-lg">
+        <!-- ============= Fila 1: SmartToddlers + Logo SmartKids ============= -->
+        <div class="dual-book-row">
+          <!-- Tarjeta Teal (SmartToddlers) -->
+          <div class="card-teal">
+            <div class="card-text">
+              <p>
+                <strong>SmartToddlers</strong> es una serie de libros de tecnología para preescolares que desarrolla
+                habilidades tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para
+                reforzar lo aprendido en el aula.
+              </p>
+              <p class="mb-0" style="font-size: 0.85rem;">RAL: #009D93</p>
+            </div>
+            <img
+              src="assets/img/seccion3/monitor-toddlers.webp"
+              alt="Libros SmartToddlers"
+              class="card-img-teal"
+            >
+          </div>
 
-    <!-- ============= Fila 1: SmartToddlers + Logo SmartKids ============= -->
-    <div class="dual-book-row">
-      
-      <!-- Tarjeta Teal (SmartToddlers) -->
-      <div class="card-teal">
-        <div class="card-text">
-          <p>
-            <strong>SmartToddlers</strong> es una serie de libros de tecnología para preescolares que desarrolla
-            habilidades tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para
-            reforzar lo aprendido en el aula.
-          </p>
-          <p class="mb-0" style="font-size: 0.85rem;">RAL: #009D93</p>
+          <!-- Logo SmartKids (centrado verticalmente) -->
+          <div class="logo-col">
+            <img
+              src="assets/img/seccion3/smart-kids-logo.png"
+              alt="SmartKids Logo"
+            >
+          </div>
         </div>
-        <img
-          src="assets/img/seccion3/monitor-toddlers.webp"
-          alt="Libros SmartToddlers"
-          class="card-img-teal"
-        >
-      </div>
+        <!-- /Fila 1 -->
 
-      <!-- Logo SmartKids (centrado verticalmente) -->
-      <div class="logo-col">
-        <img
-          src="assets/img/seccion3/smart-kids-logo.png"
-          alt="SmartKids Logo"
-        >
-      </div>
-    </div>
-    <!-- /Fila 1 -->
-
-    <!-- ============= Fila 2: Imagen SmartKids + Tarjeta Lime ============= -->
-    <div class="dual-book-row">
-
-      <!-- Columna izquierda: imagen fanned de libros SmartKids -->
-      <div class="book-image-col">
-        <img
-          src="assets/img/seccion3/libros-smartkids.webp"
-          alt="Libros SmartKids"
-        >
-      </div>
-
-      <!-- Tarjeta Lime (SmartKids) -->
-      <div class="card-lime">
-        <div class="card-text">
-          <p>
-            <strong>SmartKids</strong> es una serie de libros de informática para primaria que enseña tecnología
-            mediante actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
-            tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.
-          </p>
-          <p class="mb-0" style="font-size: 0.85rem;">RAL: #C6D426</p>
+        <!-- ============= Fila 2: Imagen SmartKids + Tarjeta Lime ============= -->
+        <div class="dual-book-row">
+          <!-- Columna izquierda: imagen fanned de libros SmartKids -->
+          <div class="book-image-col">
+            <img
+              src="assets/img/seccion3/libros-smartkids.webp"
+              alt="Libros SmartKids"
+            >
+          </div>
+          <!-- Tarjeta Lime (SmartKids) -->
+          <div class="card-lime">
+            <div class="card-text">
+              <p>
+                <strong>SmartKids</strong> es una serie de libros de informática para primaria que enseña tecnología
+                mediante actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
+                tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.
+              </p>
+              <p class="mb-0" style="font-size: 0.85rem;">RAL: #C6D426</p>
+            </div>
+          </div>
         </div>
+        <!-- /Fila 2 -->
       </div>
-
-    </div>
-    <!-- /Fila 2 -->
-
-  </div>
-</section>
-<!-- ========================================== -->
-
+    </section>
+    <!-- ========================================== -->
 
     <!-- =========================================
          SECCIÓN: Contacto / Footer
