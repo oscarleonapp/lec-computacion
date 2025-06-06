@@ -468,8 +468,8 @@
     text-align: center;
   }
   .logo-col img {
-    max-width: 180px;
-    width: 100%;
+    max-width: 80%;
+    /* width: 100%; */
     height: auto;
   }
 
@@ -479,7 +479,7 @@
     text-align: center;
   }
   .book-image-col img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
   }
 
@@ -813,12 +813,12 @@
     </div>
 
 <!-- =========================================
-     SECCIÓN: Control Financiero / Académico / Parental (centrada)
+     SECCIÓN: Control Financiero / Académico / Parental
 ========================================== -->
-<div class="container">
-  <div class="row g-0 text-white align-items-stretch">
+<div class="container-fluid px-0">
+  <div class="row g-0 text-white">
     <!-- Control Financiero -->
-    <div class="col-12 col-md-4 section-box financial">
+    <div class="col-md-4 section-box financial">
       <h4>Control Financiero</h4>
       <div class="item">
         <div class="d-flex align-items-center">
@@ -842,9 +842,8 @@
         <p>Análisis exacto</p>
       </div>
     </div>
-
     <!-- Control Académico -->
-    <div class="col-12 col-md-4 section-box academic">
+    <div class="col-md-4 section-box academic">
       <h4>Control Académico</h4>
       <div class="item">
         <div class="d-flex align-items-center">
@@ -868,9 +867,8 @@
         <p>En línea y listos para imprimir</p>
       </div>
     </div>
-
     <!-- Control Parental -->
-    <div class="col-12 col-md-4 section-box parental">
+    <div class="col-md-4 section-box parental">
       <h4>Control Parental en APP y Consultas Web</h4>
       <div class="item">
         <div class="d-flex align-items-center">
@@ -893,12 +891,12 @@
         </div>
         <p>Aspectos actitudinales</p>
       </div>
+      <!-- Imagen de fondo situada en la esquina inferior derecha -->
       <img src="assets/img/seccion3/campus-virtual.png"
            alt="Plataforma Campus Virtual">
     </div>
   </div>
 </div>
-
 
 
     <!-- =========================================
@@ -986,7 +984,7 @@
         </div>
         <div class="col-12 col-md-6">
           <h2 class="section-title">¿Qué es Microsoft 365?</h2>
-          <div class="copilot-text d-flex align-items-center">
+          <div class="copilot-text h2 d-flex align-items-center">
             Copilot
             <img src="assets/img/iconos/copilot.png" alt="Copilot Logo" class="copilot-logo ms-2">
           </div>
@@ -1038,8 +1036,8 @@
     <!-- ==========================================
          SECCIÓN: SmartToddlers / SmartKids (diseño final)
     ========================================== -->
-    <section class="dual-book-section">
-      <div class="container-lg">
+    <section class="dual-book-section"></section>
+      <div class="container-lg" style="background-image: url('assets/img/backgrounds/machas.webp'); background-size: cover; background-position: center;">
         <!-- ============= Fila 1: SmartToddlers + Logo SmartKids ============= -->
         <div class="dual-book-row">
           <!-- Tarjeta Teal (SmartToddlers) -->
@@ -1050,19 +1048,18 @@
                 habilidades tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para
                 reforzar lo aprendido en el aula.
               </p>
-              <p class="mb-0" style="font-size: 0.85rem;">RAL: #009D93</p>
             </div>
-            <img
-              src="assets/img/seccion3/monitor-toddlers.webp"
+            <!-- <img
+              src="assets/img/smart-kids/toodlers.webp"
               alt="Libros SmartToddlers"
               class="card-img-teal"
-            >
+            > -->
           </div>
 
           <!-- Logo SmartKids (centrado verticalmente) -->
           <div class="logo-col">
             <img
-              src="assets/img/seccion3/smart-kids-logo.png"
+              src="assets/img/smart-kids/toodlers.webp"
               alt="SmartKids Logo"
             >
           </div>
@@ -1074,7 +1071,7 @@
           <!-- Columna izquierda: imagen fanned de libros SmartKids -->
           <div class="book-image-col">
             <img
-              src="assets/img/seccion3/libros-smartkids.webp"
+              src="assets/img/smart-kids/smart-kids.webp"
               alt="Libros SmartKids"
             >
           </div>
@@ -1086,7 +1083,6 @@
                 mediante actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
                 tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.
               </p>
-              <p class="mb-0" style="font-size: 0.85rem;">RAL: #C6D426</p>
             </div>
           </div>
         </div>
