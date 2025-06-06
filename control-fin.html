@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es-ES" data-bs-theme="light">
+<head>
+  <!-- ================================================
+       META TAGS
+  ================================================ -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="LEC Computación">
+  <meta name="copyright" content="LEC Computación 2025. Todos los derechos reservados.">
+  <meta name="description" content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
+  <meta name="keywords" content="Educación, Software educativo, Innovación tecnológica, Formación académica, Capacitación, Tecnología educativa, Aprendizaje digital, Soluciones educativas, Educación a distancia, Herramientas de aprendizaje">
+  <link rel="canonical" href="https://leccomputacion.com/">
+  <link rel="alternate" hreflang="es-ES" href="https://leccomputacion.com/">
+  <meta property="og:site_name" content="LEC Computación">
+  <meta property="og:title" content="LEC Computación | Software Educativo">
+  <meta property="og:description" content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
+  <meta property="og:image" content="assets/img/slide-hero/slide-1.webp">
+  <meta property="og:url" content="https://leccomputacion.com/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- ================================================
+       FAVICONS
+  ================================================ -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-icon-180x180.png">
+  <link rel="shortcut icon" href="assets/img/logo/favicon-32x32.png">
+
+  <!-- ================================================
+       VENDOR CSS
+  ================================================ -->
+  <!-- Bootstrap 5.3 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-PLACEHOLDER_DE_TU_INTEGRITY_HASH"
+    crossorigin="anonymous"
+  >
+  <!-- Bootstrap Icons (para íconos de contacto) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  >
+  <!-- Boxicons (para íconos de sección) -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Swiper (slider) -->
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- ================================================
+       MAIN THEME CSS
+  ================================================ -->
+  <link href="assets/css/theme.min.css" rel="stylesheet">
+
+  <!-- ================================================
+       ESTILOS PERSONALIZADOS
+  ================================================ -->
+  <style>
+    :root {
+      /* Colores exactos (RAL) solicitados por el cliente */
+      --color-financial: #EB5B39;  /* RAL: #EB5B39 */
+      --color-academic:  #2CA3DD;  /* RAL: #2CA3DD */
+      --color-parental:  #009D93;  /* RAL: #009D93 */
+    }
+
+    /* Reset rápido (ya lo tenías) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'League Spartan', sans-serif; /* Texto por defecto en League Spartan Light */
+    }
+    a {
+      text-decoration: none;
+    }
+
+    /* ------------------------------------------
+       SECCIÓN: Control Financiero / Académico / Parental
+    ------------------------------------------ */
+    .section-box {
+      /* Aumentamos el padding vertical para hacerlo más “alargado” */
+      padding: 3rem 1rem;
+      color: #fff;
+      min-height: 350px;           /* Altura mínima, puedes ajustarla (ej. 350px, 400px, etc.) */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .section-box h4 {
+      /* Fuente del título: Lemon Milk Bold (o la que hayas importado) */
+      font-family: 'Lemon Milk', sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-box .item {
+      margin-bottom: 1.5rem;
+    }
+    .section-box .item .icon {
+      margin-right: 0.75rem;
+      font-size: 1.5rem;
+    }
+    .section-box .item p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      font-family: 'League Spartan', sans-serif; /* Texto en League Spartan Light */
+      font-weight: 300;
+    }
+
+    /* Backgrounds según RAL */
+    .financial {
+      background-color: var(--color-financial);
+    }
+    .academic {
+      background-color: var(--color-academic);
+    }
+    .parental {
+      background-color: var(--color-parental);
+      position: relative;
+    }
+
+    /* Ajuste de la imagen en la columna Parental */
+    .parental img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-height: 90%;
+      width: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <main class="page-wrapper">
+    <!-- ====================================
+         HEADER / NAVBAR
+    ==================================== -->
+    <header class="header navbar navbar-expand-lg navbar-white position-absolute navbar-sticky bg-white" role="navigation" aria-label="Menú principal">
+      <div class="container px-3">
+        <!-- Logo -->
+        <a href="https://leccomputacion.com/" class="navbar-brand pe-3">
+          <img src="assets/img/logo/lec-logo-menu-azul.png" width="120" alt="LEC Computación">
+        </a>
+
+        <!-- Botón “hamburguesa” para móvil -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas (solo en móvil: d-lg-none) -->
+        <div
+          class="offcanvas offcanvas-end d-lg-none"
+          tabindex="-1"
+          id="mobileMenu"
+          aria-labelledby="mobileMenuLabel"
+        >
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menú</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- ENLACES de menú (móvil) -->
+            <ul class="navbar-nav flex-column justify-content-center">
+              <li class="nav-item">
+                <a href="#!" class="nav-link text-dark">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a href="#!" class="nav-link text-dark">NOSOTROS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark"
+                  href="#!"
+                  id="serviciosDropdownMobile"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  SERVICIOS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="serviciosDropdownMobile">
+                  <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
+                  <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
+                  <li><a class="dropdown-item" href="#!">Capacitación</a></li>
+                  <li><a class="dropdown-item" href="#!">Consultoría</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- BOTÓN “CONTACTAR” (móvil: ancho completo dentro del offcanvas) -->
+            <div class="mt-4">
+              <a
+                href="#!"
+                class="btn btn-warning w-100 text-dark"
+                style="font-weight: 600;"
+              >
+                CONTACTAR
+              </a>
+
+              <!-- ICONOS WhatsApp / Facebook (móvil, dentro del offcanvas) -->
+              <div class="d-flex justify-content-start mt-3">
+                <a
+                  href="#!"
+                  class="btn btn-sm me-2"
+                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
+                >
+                  <i class="bi bi-whatsapp" style="font-size: 1.5rem; color: #1ca44e;"></i>
+                </a>
+                <a
+                  href="#!"
+                  class="btn btn-sm"
+                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
+                >
+                  <i class="bi bi-facebook" style="font-size: 1.5rem; color: #13161c;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Offcanvas móvil -->
+
+        <!-- MENÚ y BOTONES en escritorio (ocultos < lg, visibles ≥ lg) -->
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center">
+          <!-- ENLACES de menú (escritorio) -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#!" class="nav-link text-dark">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link text-dark">NOSOTROS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-dark"
+                href="#!"
+                id="serviciosDropdownDesktop"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                SERVICIOS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="serviciosDropdownDesktop">
+                <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
+                <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
+                <li><a class="dropdown-item" href="#!">Capacitación</a></li>
+                <li><a class="dropdown-item" href="#!">Consultoría</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Botones de “CONTACTAR” + iconos (escritorio) -->
+          <div class="d-flex align-items-center">
+            <!-- Botón “CONTACTAR” pequeño -->
+            <a
+              href="#!"
+              class="btn btn-warning btn-sm text-dark me-3"
+              style="font-weight: 700;"
+            >
+              CONTACTAR
+            </a>
+            <!-- Iconos WhatsApp / Facebook -->
+            <a
+              href="#!"
+              class="btn btn-sm me-2"
+              style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
+            >
+              <i class="bi bi-whatsapp" style="font-size: 1.5rem; color: #1ca44e;"></i>
+            </a>
+            <a
+              href="#!"
+              class="btn btn-sm"
+              style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
+            >
+              <i class="bi bi-facebook" style="font-size: 1.5rem; color: #13161c;"></i>
+            </a>
+          </div>
+        </div>
+        <!-- /Menú escritorio -->
+      </div>
+    </header>
+
+
+
+<!-- =========================================
+     SECCIÓN: Control Financiero / Académico / Parental
+========================================== -->
+<div class="container-fluid px-0">
+  <div class="row g-0 text-white">
+    <!-- Control Financiero -->
+    <div class="col-md-4 section-box financial">
+      <h4>Control Financiero</h4>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-wallet"></i>
+          <span class="fw-bold">Cobros Rápidos</span>
+        </div>
+        <p>Elimine las complicaciones</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-file-blank"></i>
+          <span class="fw-bold">Solvencias</span>
+        </div>
+        <p>Resultados al instante</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bar-chart-alt-2"></i>
+          <span class="fw-bold">Proyección de Ingresos</span>
+        </div>
+        <p>Análisis exacto</p>
+      </div>
+    </div>
+    <!-- Control Académico -->
+    <div class="col-md-4 section-box academic">
+      <h4>Control Académico</h4>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bar-chart-alt-2"></i>
+          <span class="fw-bold">Notas Finales MINEDUC</span>
+        </div>
+        <p>Sin más complicaciones</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-book"></i>
+          <span class="fw-bold">Libro de Inscripciones</span>
+        </div>
+        <p>Reportes inmediatos</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-file-blank"></i>
+          <span class="fw-bold">Boleta de Calificaciones</span>
+        </div>
+        <p>En línea y listos para imprimir</p>
+      </div>
+    </div>
+    <!-- Control Parental -->
+    <div class="col-md-4 section-box parental">
+      <h4>Control Parental en APP y Consultas Web</h4>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bar-chart-alt-2"></i>
+          <span class="fw-bold">Notas Finales</span>
+        </div>
+        <p>Resultados en smartphone</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bell"></i>
+          <span class="fw-bold">Agenda (Tareas)</span>
+        </div>
+        <p>Notificaciones y Entrega de Tareas</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-check-circle"></i>
+          <span class="fw-bold">Conducta</span>
+        </div>
+        <p>Aspectos actitudinales</p>
+      </div>
+      <!-- Imagen de fondo situada en la esquina inferior derecha -->
+      <img src="assets/img/seccion3/campus-virtual.png"
+           alt="Plataforma Campus Virtual">
+    </div>
+  </div>
+</div>
+
+
+
+
+  </main>
+
+  <!-- ================================================
+       BACK TO TOP BUTTON
+  ================================================ -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Subir</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+
+  <!-- ================================================
+       VENDOR SCRIPTS (con defer para optimizar carga)
+  ================================================ -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    defer
+    integrity="sha384-PLACEHOLDER_DE_TU_INTEGRITY_HASH"
+    crossorigin="anonymous"
+  ></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+
+  <!-- Main Theme Script -->
+  <script src="assets/js/theme.min.js" defer></script>
+</body>
+</html>

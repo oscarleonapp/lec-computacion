@@ -83,52 +83,106 @@
   }
 
   /* ------------------------------------------
-     SECCIÓN: Control Financiero / Académico / Parental
-  ------------------------------------------ */
-  .section-box {
-    padding: 2rem 1rem;
-    color: #fff;
-    min-height: 100%;
-  }
-  .section-box h4 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .section-box .item {
-    margin-bottom: 1.5rem;
-  }
-  .section-box .item .icon {
-    font-size: 2rem;
-    margin-right: 0.75rem;
-  }
-  .section-box .item .fw-bold {
-    font-size: 1.1rem;
-    line-height: 1.2;
-  }
-  .section-box .item p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-  .financial {
-    background-color: var(--color-financial);
-  }
-  .academic {
-    background-color: var(--color-academic);
-  }
-  .parental {
-    background-color: var(--color-parental);
-    position: relative;
-  }
-  /* Posiciona la imagen al fondo-derecha de la columna “Control Parental” */
-  .parental img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    max-height: 90%;
-    width: auto;
-  }
+       SECCIÓN: Control Financiero / Académico / Parental
+    ------------------------------------------ */
+    .section-box {
+      padding: 3rem 1rem;
+      color: #fff;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+    .section-box h4 {
+      font-family: 'Lemon Milk', sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-box .item {
+      margin-bottom: 1.5rem;
+    }
+    .section-box .item .icon {
+      margin-right: 0.75rem;
+      font-size: 1.5rem;
+    }
+    .section-box .item p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      font-weight: 300;
+    }
+
+    /* Backgrounds según RAL */
+    .financial {
+      background-color: var(--color-financial);
+    }
+    .academic {
+      background-color: var(--color-academic);
+    }
+    .parental {
+      background-color: var(--color-parental);
+    }
+
+    /* Ajuste de la imagen en la columna Parental */
+    .parental img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-height: 90%;
+      width: auto;
+    }
+
+    /* ==============================
+       MEDIA QUERIES PARA RESPONSIVE
+    ============================== */
+    @media (max-width: 991px) {
+      /* A partir de pantallas < 992px, se pueden reducir los paddings o alturas si se desea */
+      .section-box {
+        padding: 2.5rem 1rem;
+        min-height: 300px;
+      }
+      .section-box h4 {
+        font-size: 1.6rem;
+      }
+      .section-box .item .icon {
+        font-size: 1.4rem;
+      }
+      .section-box .item p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      /* En móviles (<768px) apilado vertical, quitamos min-height fijo para que el contenido determine la altura */
+      .section-box {
+        padding: 2rem 1rem;
+        min-height: auto;
+      }
+      .section-box h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .section-box .item {
+        margin-bottom: 1rem;
+      }
+      .section-box .item .icon {
+        font-size: 1.25rem;
+      }
+      .section-box .item p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+      }
+      /* Hacemos que la imagen no salga desbordando ni quede fuera de lugar */
+      .parental img {
+        position: static;
+        display: block;
+        margin: 1.5rem auto 0;
+        max-width: 80%;
+        height: auto;
+      }
+    }
 
   /* ------------------------------------------
      SECCIÓN: Campus Virtual / Highlight Cards
@@ -205,6 +259,12 @@
     width: 200px;
     z-index: 1;
     margin-top: 300px;
+  }
+
+  .copilot-logo{
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
   }
 
   /* ------------------------------------------
@@ -752,90 +812,94 @@
       </div>
     </div>
 
-    <!-- =========================================
-         SECCIÓN: Control Financiero / Académico / Parental
-    ========================================== -->
-    <div class="container-fluid px-0">
-      <div class="row g-0 text-white">
-        <!-- Control Financiero -->
-        <div class="col-md-4 section-box financial">
-          <h4>Control Financiero</h4>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-wallet"></i>
-              <span class="fw-bold">Cobros Rápidos</span>
-            </div>
-            <p>Elimine las complicaciones</p>
-          </div>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-file-blank"></i>
-              <span class="fw-bold">Solvencias</span>
-            </div>
-            <p>Resultados al instante</p>
-          </div>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-bar-chart-alt-2"></i>
-              <span class="fw-bold">Proyección de Ingresos</span>
-            </div>
-            <p>Análisis exacto</p>
-          </div>
+<!-- =========================================
+     SECCIÓN: Control Financiero / Académico / Parental (centrada)
+========================================== -->
+<div class="container">
+  <div class="row g-0 text-white align-items-stretch">
+    <!-- Control Financiero -->
+    <div class="col-12 col-md-4 section-box financial">
+      <h4>Control Financiero</h4>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-wallet"></i>
+          <span class="fw-bold">Cobros Rápidos</span>
         </div>
-        <!-- Control Académico -->
-        <div class="col-md-4 section-box academic">
-          <h4>Control Académico</h4>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-bar-chart-alt-2"></i>
-              <span class="fw-bold">Notas Finales MINEDUC</span>
-            </div>
-            <p>Sin más complicaciones</p>
-          </div>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-book"></i>
-              <span class="fw-bold">Libro de Inscripciones</span>
-            </div>
-            <p>Reportes inmediatos</p>
-          </div>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-file-blank"></i>
-              <span class="fw-bold">Boleta de Calificaciones</span>
-            </div>
-            <p>En línea y listos para imprimir</p>
-          </div>
+        <p>Elimine las complicaciones</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-file-blank"></i>
+          <span class="fw-bold">Solvencias</span>
         </div>
-        <!-- Control Parental -->
-        <div class="col-md-4 section-box parental">
-          <h4>Control Parental en APP y Consultas Web</h4>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-bar-chart-alt-2"></i>
-              <span class="fw-bold">Notas Finales</span>
-            </div>
-            <p>Resultados en smartphone</p>
-          </div>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-bell"></i>
-              <span class="fw-bold">Agenda (Tareas)</span>
-            </div>
-            <p>Notificaciones y Entrega de Tareas</p>
-          </div>
-          <div class="item">
-            <div class="d-flex align-items-center">
-              <i class="icon bx bx-check-circle"></i>
-              <span class="fw-bold">Conducta</span>
-            </div>
-            <p>Aspectos actitudinales</p>
-          </div>
-          <!-- Imagen de fondo situada en la esquina inferior derecha -->
-          <img src="assets/img/seccion3/campus-virtual.png" alt="Plataforma">
+        <p>Resultados al instante</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bar-chart-alt-2"></i>
+          <span class="fw-bold">Proyección de Ingresos</span>
         </div>
+        <p>Análisis exacto</p>
       </div>
     </div>
+
+    <!-- Control Académico -->
+    <div class="col-12 col-md-4 section-box academic">
+      <h4>Control Académico</h4>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bar-chart-alt-2"></i>
+          <span class="fw-bold">Notas Finales MINEDUC</span>
+        </div>
+        <p>Sin más complicaciones</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-book"></i>
+          <span class="fw-bold">Libro de Inscripciones</span>
+        </div>
+        <p>Reportes inmediatos</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-file-blank"></i>
+          <span class="fw-bold">Boleta de Calificaciones</span>
+        </div>
+        <p>En línea y listos para imprimir</p>
+      </div>
+    </div>
+
+    <!-- Control Parental -->
+    <div class="col-12 col-md-4 section-box parental">
+      <h4>Control Parental en APP y Consultas Web</h4>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bar-chart-alt-2"></i>
+          <span class="fw-bold">Notas Finales</span>
+        </div>
+        <p>Resultados en smartphone</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-bell"></i>
+          <span class="fw-bold">Agenda (Tareas)</span>
+        </div>
+        <p>Notificaciones y Entrega de Tareas</p>
+      </div>
+      <div class="item">
+        <div class="d-flex align-items-center">
+          <i class="icon bx bx-check-circle"></i>
+          <span class="fw-bold">Conducta</span>
+        </div>
+        <p>Aspectos actitudinales</p>
+      </div>
+      <img src="assets/img/seccion3/campus-virtual.png"
+           alt="Plataforma Campus Virtual">
+    </div>
+  </div>
+</div>
+
+
 
     <!-- =========================================
          SECCIÓN: Reviews
