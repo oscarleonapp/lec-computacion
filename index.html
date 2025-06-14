@@ -503,6 +503,341 @@
     text-decoration: underline;
     font-weight: 700;
   }
+
+  /* =========================================
+       STYLES PARA Control Financiero / Académico / Parental
+    ========================================= */
+    #control-fap .row {
+      align-items: stretch; /* columnas igual altura */
+    }
+    .control-financiero { background-color: #F05A28; }
+    .control-academico  { background-color: #009FE3; }
+    .control-parental   { background-color: #00A79D; }
+
+    /* Espaciado interior */
+    #control-fap .col-md-4 {
+      padding: 2rem;
+    }
+
+    /* Títulos */
+    #control-fap h4 {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    /* Cada “feature” */
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .feature:last-child {
+      margin-bottom: 0;
+    }
+    .feature img {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      margin-right: 1rem;
+    }
+    .feature h6 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .feature p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Oculta la imagen comentada sin borrarla del HTML */
+    .control-parental img.comentada {
+      display: none !important;
+    }
+
+  /* =========================================
+   STYLES PARA la sección de Microsoft 365
+========================================= */
+
+/* 1) La tarjeta debe permitir overflow para que el icono sobresalga */
+.microsoft-section .card-box {
+  position: relative;        /* ancla el absolute del icono y del número */
+  overflow: visible !important; /* necesario para que el icono no se “corte” */
+  background: #FFC107;
+  padding: 2rem 1.5rem 4rem; /* top para espacio del icono, bottom para el número */
+  border-radius: 0.5rem;
+}
+
+/* 2) Estilo unificado para **todos** los iconos sobresalientes */
+/*    Este bloque es idéntico a tu .cert-mos .mos-icon, pero aplicado a .icon */
+.microsoft-section .card-box .icon {
+  position: absolute;
+  top: -6rem;               /* ajusta cuánto sobresale */
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 300px;                /* ~200px / 32px por rem, ajústalo si quieres otro tamaño */
+  height: auto;
+  /* background: #fff; */
+  padding: 0.25rem 0.5rem;
+  /* box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); */
+  border-radius: 0.25rem;
+  z-index: 2;
+}
+
+.mos-icon{
+  position: absolute;
+  top: 1rem;
+  left: 18rem;               /* ajusta cuánto sobresale */
+  transform: translateX(-50%);
+  display: block;
+  width: 300px;                /* ~200px / 32px por rem, ajústalo si quieres otro tamaño */
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* 3) Título y párrafo dentro de la card (sin cambios) */
+.microsoft-section .card-box h2 {
+  font-weight: 700;
+  margin-top: 6rem; /* espacio extra tras el icono */
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10px; /* ajusta según el alto deseado */
+}
+.microsoft-section .card-box p.fs-6 {
+  font-size: 0.875rem;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+/* 4) Número grande, ajustado a la base de la card */
+.microsoft-section .card-box .big-number {
+  position: absolute;
+  bottom: -2rem;    /* sobresale 2rem por debajo */
+  left: -1rem;       /* siempre a 1rem del lateral */
+  font-size: 8.2rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #8e44ad;
+  pointer-events: none;
+  margin: 0;
+  z-index: 1;
+}
+
+.rocket-img{
+  position: absolute;
+  left: 50%;
+  top: -6.5rem; /* Ajusta este valor para subir o bajar la imagen */
+  transform: translateX(-50%);
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+/* -----------------------------
+   Breakpoint: Tablets & móviles
+   pantallas < 768px
+----------------------------- */
+@media (max-width: 767.98px) {
+  .microsoft-section .card-box {
+    padding: 1.5rem 1rem 3rem;    /* Menos padding para móviles */
+  }
+  .microsoft-section .card-box .icon {
+    top: -2rem;                   /* No sobresale tanto */
+    width: 3.5rem;                /* Icono más pequeño */
+  }
+  .microsoft-section .card-box .big-number {
+    bottom: -1.5rem;              /* Reduce el solapamiento */
+    font-size: 6rem;              /* Número más pequeño */
+    left: 0.5rem;                 /* Un poco más cerca del borde */
+  }
+  .microsoft-section .card-box h5 {
+    margin-top: 3.5rem;           /* Ajusta al nuevo top */
+    font-size: 1.125rem;          /* Título más pequeño */
+  }
+  .microsoft-section .card-box p.fs-6 {
+    font-size: 0.8125rem;         /* Texto más compacto */
+  }
+}
+
+/* -----------------------------
+   Breakpoint: Smartphones
+   pantallas < 576px
+----------------------------- */
+@media (max-width: 575.98px) {
+  .microsoft-section .card-box {
+    padding: 1.25rem 0.75rem 2.5rem;
+  }
+  .microsoft-section .card-box .icon {
+    top: -1.5rem;
+    width: 3rem;
+    padding: 0.25rem;
+  }
+  .microsoft-section .card-box .big-number {
+    bottom: -1rem;
+    font-size: 4.5rem;
+    left: 0.25rem;
+  }
+  .microsoft-section .card-box h5 {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+  .microsoft-section .card-box p.fs-6 {
+    font-size: 0.75rem;
+  }
+}
+
+/* -----------------------------
+   Breakpoint: Escritorio mediano
+   pantallas >= 768px y < 992px
+----------------------------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .microsoft-section .card-box {
+    padding: 2rem 1.25rem 4rem;
+  }
+  .microsoft-section .card-box .icon {
+    top: -2.5rem;
+    width: 4.5rem;
+  }
+  .microsoft-section .card-box .big-number {
+    bottom: -2rem;
+    font-size: 7.5rem;
+    left: 1rem;
+  }
+}
+
+/* -----------------------------
+   Breakpoint: Escritorio grande
+   pantallas >= 992px
+   (aquí se aplica tu estilo “por defecto”)
+----------------------------- */
+@media (min-width: 992px) {
+  .microsoft-section .card-box {
+    padding: 2rem 1.5rem 4rem;
+  }
+  .microsoft-section .card-box .icon {
+    top: -6rem;
+    width: 300px;
+  }
+  .microsoft-section .card-box .big-number {
+    bottom: -2rem;
+    font-size: 8.2rem;
+    left: -1rem;
+  }
+}
+
+
+/* =========================================
+   STYLES PARA SmartToddlers / SmartKids
+   (mockup final + responsive)
+========================================== */
+.dual-book-section {
+  background: #f0f0f0;
+  padding: 4rem 1rem;
+}
+.dual-book-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 6rem 2rem 8rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+/* Tarjetas base */
+.book-card {
+  position: relative;
+}
+/* Imágenes de libros */
+.book-image {
+  position: absolute;
+  width: 300px;
+  max-width: 35%;
+  border-radius: .5rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.toddlers-image {
+  top: -4rem;
+  left: 5%;
+  transform: rotate(-10deg);
+}
+.kids-image {
+  bottom: -2rem;
+  right: 5%;
+  transform: rotate(8deg);
+}
+/* Cajas de texto */
+.info-box {
+  position: absolute;
+  max-width: 45%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+.toddlers-info {
+  background: #00a79d; /* Teal */
+  top: 2rem;
+  left: 15%;
+}
+.kids-info {
+  background: #cbd426; /* Lime */
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+}
+/* Texto */
+.info-box p { margin: 0; }
+
+/* -------- Responsive -------- */
+@media (max-width: 1199.98px) {
+  .dual-book-wrapper { padding: 5rem 1.5rem 7rem; }
+  .book-image { width: 250px; }
+  .info-box { max-width: 50%; padding: 1.8rem; }
+}
+@media (max-width: 991.98px) {
+  .dual-book-wrapper { padding: 4rem 1rem 6rem; }
+  .book-image { width: 200px; }
+  .toddlers-image { top: -3rem; }
+  .kids-image     { bottom: -1rem; }
+  .info-box       { max-width: 60%; padding: 1.5rem; }
+}
+@media (max-width: 767.98px) {
+  .dual-book-wrapper,
+  .book-card,
+  .info-box,
+  .book-image {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+  .book-image { margin-bottom: 1rem; }
+  .info-box {
+    max-width: 100%;
+    text-align: center;
+    transform: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .book-image { width: 200px; }
+  .info-box   { font-size: .9rem; padding: 1rem; }
+}
+
 </style>
 
 </head>
@@ -568,8 +903,8 @@
                   SERVICIOS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="serviciosDropdownMobile">
-                  <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
-                  <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
+                  <li><a class="dropdown-item" href="#campus-virtual">Campus Virtual</a></li>
+                  <li><a class="dropdown-item" href="#smart-toddlers">SmartToddlers</a></li>
                   <li><a class="dropdown-item" href="#!">Capacitación</a></li>
                   <li><a class="dropdown-item" href="#!">Consultoría</a></li>
                 </ul>
@@ -630,7 +965,7 @@
                 SERVICIOS
               </a>
               <ul class="dropdown-menu" aria-labelledby="serviciosDropdownDesktop">
-                <li><a class="dropdown-item" href="#!">Campus Virtual</a></li>
+                <li><a class="dropdown-item" href="#campus-virtual">Campus Virtual</a></li>
                 <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
                 <li><a class="dropdown-item" href="#!">Capacitación</a></li>
                 <li><a class="dropdown-item" href="#!">Consultoría</a></li>
@@ -758,10 +1093,10 @@
     <!-- =========================================
          SECCIÓN: Campus Virtual
     ========================================== -->
-    <div class="container mb-5">
+    <div class="container mb-5" id="campus-virtual">
       <div class="row align-items-center">
         <div class="col-md-7">
-          <h2 class="fw-bold display-5">Campus Virtual</h2>
+          <img src="assets/img/iconos/campus2.png" alt="Campus Virtual" class="img-fluid mb-3">
           <p class="fs-5">
             Nuestra plataforma es la solución perfecta para cualquier institución educativa. Con <strong>Campus Virtual</strong>, puede gestionar de manera eficiente todas las actividades de <strong>estudiantes, padres de familia, docentes y coordinadores.</strong>
           </p>
@@ -814,91 +1149,99 @@
       </div>
     </div>
 
+    <section class="text-center my-5">
+      <img src="assets/img/seccion3/campus-virtual.png" alt="Descripción de la imagen" class="img-fluid mx-auto d-block" style="max-width: 400px;">
+    </section>
+
 <!-- =========================================
      SECCIÓN: Control Financiero / Académico / Parental
 ========================================== -->
-<div class="container-fluid px-0">
+<section id="control-fap" class="container-fluid px-0">
   <div class="row g-0 text-white">
     <!-- Control Financiero -->
-    <div class="col-md-4 section-box financial">
-      <h4>Control Financiero</h4>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-wallet"></i>
-          <span class="fw-bold">Cobros Rápidos</span>
+    <div class="col-md-4 p-4 control-financiero">
+      <h4 class="fw-bold mb-4">Control Financiero</h4>
+      <div class="feature d-flex mb-4">
+        <i class="bi bi-wallet2 fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Cobros Rápidos</h6>
+          <p class="mb-0">Elimine las complicaciones</p>
         </div>
-        <p>Elimine las complicaciones</p>
       </div>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-file-blank"></i>
-          <span class="fw-bold">Solvencias</span>
+      <div class="feature d-flex mb-4">
+        <i class="bi bi-receipt-cutoff fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Solvencias</h6>
+          <p class="mb-0">Resultados al instante</p>
         </div>
-        <p>Resultados al instante</p>
       </div>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-bar-chart-alt-2"></i>
-          <span class="fw-bold">Proyección de Ingresos</span>
+      <div class="feature d-flex">
+        <i class="bi bi-cash-stack fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Proyección de Ingresos</h6>
+          <p class="mb-0">Análisis exacto</p>
         </div>
-        <p>Análisis exacto</p>
       </div>
     </div>
+
     <!-- Control Académico -->
-    <div class="col-md-4 section-box academic">
-      <h4>Control Académico</h4>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-bar-chart-alt-2"></i>
-          <span class="fw-bold">Notas Finales MINEDUC</span>
+    <div class="col-md-4 p-4 control-academico">
+      <h4 class="fw-bold mb-4">Control Académico</h4>
+      <div class="feature d-flex mb-4">
+        <i class="bi bi-bar-chart fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Notas Finales MINEDUC</h6>
+          <p class="mb-0">Sin más complicaciones</p>
         </div>
-        <p>Sin más complicaciones</p>
       </div>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-book"></i>
-          <span class="fw-bold">Libro de Inscripciones</span>
+      <div class="feature d-flex mb-4">
+        <i class="bi bi-journal-bookmark fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Libro de Inscripciones</h6>
+          <p class="mb-0">Reportes inmediatos</p>
         </div>
-        <p>Reportes inmediatos</p>
       </div>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-file-blank"></i>
-          <span class="fw-bold">Boleta de Calificaciones</span>
+      <div class="feature d-flex">
+        <i class="bi bi-file-earmark-text fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Boleta de Calificaciones</h6>
+          <p class="mb-0">En línea y listos para imprimir</p>
         </div>
-        <p>En línea y listos para imprimir</p>
       </div>
     </div>
+
     <!-- Control Parental -->
-    <div class="col-md-4 section-box parental">
-      <h4>Control Parental en APP y Consultas Web</h4>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-bar-chart-alt-2"></i>
-          <span class="fw-bold">Notas Finales</span>
+    <div class="col-md-4 p-4 control-parental">
+      <h4 class="fw-bold mb-4">Control Parental en APP y Consultas Web</h4>
+      <div class="feature d-flex mb-4">
+        <i class="bi bi-person-badge fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Notas Finales</h6>
+          <p class="mb-0">Resultados en smartphone</p>
         </div>
-        <p>Resultados en smartphone</p>
       </div>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-bell"></i>
-          <span class="fw-bold">Agenda (Tareas)</span>
+      <div class="feature d-flex mb-4">
+        <i class="bi bi-bell fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Agenda (Tareas)</h6>
+          <p class="mb-0">Notificaciones y Entrega de Tareas</p>
         </div>
-        <p>Notificaciones y Entrega de Tareas</p>
       </div>
-      <div class="item">
-        <div class="d-flex align-items-center">
-          <i class="icon bx bx-check-circle"></i>
-          <span class="fw-bold">Conducta</span>
+      <div class="feature d-flex">
+        <i class="bi bi-check-circle fs-2 me-3"></i>
+        <div>
+          <h6 class="fw-semibold mb-1">Conducta</h6>
+          <p class="mb-0">Aspectos actitudinales</p>
         </div>
-        <p>Aspectos actitudinales</p>
       </div>
-      <!-- Imagen de fondo situada en la esquina inferior derecha -->
-      <img src="assets/img/seccion3/campus-virtual.png"
-           alt="Plataforma Campus Virtual">
+      <!-- Imagen original, conservada pero comentada -->
+      <!-- <img src="dfa44a4b-d50d-48f6-b3df-e0cd6a4da011.png" alt="Control Parental"> -->
     </div>
   </div>
-</div>
+</section>
+
+
+
 
 
     <!-- =========================================
@@ -1000,97 +1343,86 @@
       </div>
     </div>
 
-    <div class="microsoft-section">
-      <div class="container microsoft-container">
-        <div class="row text-center mb-4 g-4">
-          <div class="col-12 col-md-4">
-            <div class="card-box">
-              <img src="assets/img/iconos/outlook.png" class="icon" alt="Outlook">
-              <h5>Correo institucional</h5>
-              <div class="big-number">1</div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card-box">
-              <img src="assets/img/iconos/teams.png" class="icon" alt="Teams">
-              <h5>Trabajo Colaborativo<br>Clases en línea</h5>
-              <div class="big-number">2</div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card-box">
-              <img src="assets/img/iconos/microsoft.png" class="icon" alt="MOS">
-              <h5>Certificación MOS</h5>
-              <p class="fs-6">
-                Las certificaciones MOS (Microsoft Office Specialist) validan las habilidades de una persona en el uso de Microsoft Office.
-              </p>
-              <div class="big-number">3</div>
-            </div>
-          </div>
+<div class="microsoft-section">
+  <div class="container microsoft-container">
+    <div class="row text-center mb-4 g-4">
+      <!-- 1 -->
+      <div class="col-12 col-md-4">
+        <div class="card-box">
+          <img src="assets/img/iconos/outlook.png" class="icon" alt="Outlook">
+          <h2>Correo institucional</h2>
+          <div class="big-number">1</div>
         </div>
-        <p class="text-center bottom-text px-3">
-          ¿Sabía que el 85% de las empresas en Guatemala utilizan herramientas de Microsoft? Ofrezca a sus alumnos la oportunidad de destacarse.
-        </p>
-        <img src="assets/img/iconos/rocket-ilustracion.png" alt="Rocket" class="rocket-img">
+      </div>
+      <!-- 2 -->
+      <div class="col-12 col-md-4">
+        <div class="card-box">
+          <img src="assets/img/iconos/teams.png" class="icon" alt="Teams">
+          <h2>Trabajo Colaborativo<br>Clases en línea</h2>
+          <div class="big-number">2</div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-12 col-md-4">
+        <div class="card-box cert-mos">
+          <img src="assets/img/iconos/microsoft.png" class="mos-icon" alt="MOS" style="background-color: white; padding: 5px;">
+          <h2>Certificación MOS</h2>
+          <p class="fs-6">
+            Las certificaciones MOS (Microsoft Office Specialist) validan las habilidades de una persona en el uso de Microsoft Office.
+          </p>
+          <div class="big-number">3</div>
+        </div>
       </div>
     </div>
+    <div style="position: relative; min-height: 220px; width: 100%;">
+      <img src="assets/img/iconos/rocket-ilustracion.png" alt="Rocket" class="rocket-img mt-5">
+      <p class="text-center bottom-text px-3" style="position: absolute; bottom: 10px; left: 0; right: 0;">
+      ¿Sabía que el 85% de las empresas en Guatemala utilizan herramientas de Microsoft? Ofrezca a sus alumnos la oportunidad de destacarse.
+      </p>
+    </div>
+  </div>
+</div>
 
-    <!-- ==========================================
-         SECCIÓN: SmartToddlers / SmartKids (diseño final)
-    ========================================== -->
-    <section class="dual-book-section"></section>
-      <div class="container-lg" style="background-image: url('assets/img/backgrounds/machas.webp'); background-size: cover; background-position: center;">
-        <!-- ============= Fila 1: SmartToddlers + Logo SmartKids ============= -->
-        <div class="dual-book-row">
-          <!-- Tarjeta Teal (SmartToddlers) -->
-          <div class="card-teal">
-            <div class="card-text">
-              <p>
-                <strong>SmartToddlers</strong> es una serie de libros de tecnología para preescolares que desarrolla
-                habilidades tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para
-                reforzar lo aprendido en el aula.
-              </p>
-            </div>
-            <!-- <img
-              src="assets/img/smart-kids/toodlers.webp"
-              alt="Libros SmartToddlers"
-              class="card-img-teal"
-            > -->
-          </div>
 
-          <!-- Logo SmartKids (centrado verticalmente) -->
-          <div class="logo-col">
-            <img
-              src="assets/img/smart-kids/toodlers.webp"
-              alt="SmartKids Logo"
-            >
-          </div>
-        </div>
-        <!-- /Fila 1 -->
-
-        <!-- ============= Fila 2: Imagen SmartKids + Tarjeta Lime ============= -->
-        <div class="dual-book-row">
-          <!-- Columna izquierda: imagen fanned de libros SmartKids -->
-          <div class="book-image-col">
-            <img
-              src="assets/img/smart-kids/smart-kids.webp"
-              alt="Libros SmartKids"
-            >
-          </div>
-          <!-- Tarjeta Lime (SmartKids) -->
-          <div class="card-lime">
-            <div class="card-text">
-              <p>
-                <strong>SmartKids</strong> es una serie de libros de informática para primaria que enseña tecnología
-                mediante actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
-                tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- /Fila 2 -->
+<!-- ==========================================
+     SECCIÓN: SmartToddlers / SmartKids (diseño final)
+========================================== -->
+<section class="dual-book-section">
+  <div class="dual-book-wrapper">
+    <!-- SmartToddlers -->
+    <div class="book-card toddlers">
+      <img src="assets/img/smart-kids/toodlers.webp"
+           alt="Libros SmartToddlers"
+           class="book-image toddlers-image">
+      <div class="info-box toddlers-info">
+        <p>
+          <strong>SmartToddlers</strong> es una serie de libros de
+          tecnología para preescolares que desarrolla habilidades
+          tecnológicas acorde a su edad, integrando el aprendizaje
+          digital con otras áreas para reforzar lo aprendido en el aula.
+        </p>
       </div>
-    </section>
+    </div>
+    <!-- SmartKids -->
+    <div class="book-card kids">
+      <img src="assets/img/smart-kids/smart-kids.webp"
+           alt="Libros SmartKids"
+           class="book-image kids-image">
+      <div class="info-box kids-info">
+        <p>
+          <strong>SmartKids</strong> es una serie de libros de informática
+          para primaria que enseña tecnología mediante actividades y proyectos.
+          Promueve el aprendizaje por medio de la construcción, integrando
+          herramientas tecnológicas con materias como matemáticas, lenguaje,
+          historia, geografía y ciencias.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- =========================================
          SECCIÓN: Contacto / Footer
