@@ -739,104 +739,91 @@
 }
 
 
-/* =========================================
-   STYLES PARA SmartToddlers / SmartKids
-   (mockup final + responsive)
-========================================== */
 .dual-book-section {
-  background: #f0f0f0;
   padding: 4rem 1rem;
+  background: #fff;
 }
 .dual-book-wrapper {
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  background: #fff;
-  padding: 6rem 2rem 8rem;
-  border-radius: 1rem;
-  overflow: hidden;
 }
-/* Tarjetas base */
+
+/* Cada tarjeta relativa para posicionar internamente */
 .book-card {
   position: relative;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-/* Imágenes de libros */
+
+/* Imagen flotante, siempre por encima */
 .book-image {
-  position: absolute;
-  width: 300px;
-  max-width: 35%;
-  border-radius: .5rem;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 10; /* subimos la imagen */
+  margin: 0 auto;
 }
-.toddlers-image {
-  top: -4rem;
-  left: 5%;
-  transform: rotate(-10deg);
-}
-.kids-image {
-  bottom: -2rem;
-  right: 5%;
-  transform: rotate(8deg);
-}
-/* Cajas de texto */
+
+/* Caja de texto base, siempre por detrás */
 .info-box {
   position: absolute;
-  max-width: 45%;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1.5rem;
+  max-width: 320px;
   color: #fff;
   line-height: 1.4;
-  font-size: 1rem;
+  z-index: 1; /* bajamos la info-box */
 }
-.toddlers-info {
-  background: #00a79d; /* Teal */
-  top: 2rem;
-  left: 15%;
-}
-.kids-info {
-  background: #cbd426; /* Lime */
-  top: 50%;
-  right: 15%;
-  transform: translateY(-50%);
-}
-/* Texto */
-.info-box p { margin: 0; }
 
-/* -------- Responsive -------- */
-@media (max-width: 1199.98px) {
-  .dual-book-wrapper { padding: 5rem 1.5rem 7rem; }
-  .book-image { width: 250px; }
-  .info-box { max-width: 50%; padding: 1.8rem; }
+/* SmartToddlers: caja a la izquierda, centrada verticalmente */
+.book-card.toddlers .info-box {
+  background: #009D93;
+  top: 50%;
+  left: 0;
+  transform: translate(-20%, -50%);
+  text-align: left;
 }
-@media (max-width: 991.98px) {
-  .dual-book-wrapper { padding: 4rem 1rem 6rem; }
-  .book-image { width: 200px; }
-  .toddlers-image { top: -3rem; }
-  .kids-image     { bottom: -1rem; }
-  .info-box       { max-width: 60%; padding: 1.5rem; }
+
+/* SmartKids: caja a la derecha, alineada abajo */
+.book-card.kids .info-box {
+  background: #C6D426;
+  bottom: 0;
+  right: 0;
+  transform: translate(20%, 20%);
+  text-align: left;
 }
-@media (max-width: 767.98px) {
-  .dual-book-wrapper,
-  .book-card,
-  .info-box,
-  .book-image {
+
+/* Texto dentro de la caja */
+.info-box p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Ajustes mobile: pasan a una sola columna, sin offsets extremos */
+@media (max-width: 768px) {
+  .dual-book-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .book-card.toddlers .info-box,
+  .book-card.kids .info-box {
     position: static;
-    width: 100%;
     transform: none;
-    margin: 0 auto;
-    box-shadow: none;
-  }
-  .book-image { margin-bottom: 1rem; }
-  .info-box {
     max-width: 100%;
-    text-align: center;
-    transform: none !important;
+    margin-top: 1rem;
+  }
+  .book-image {
+    margin-bottom: 1rem;
   }
 }
-@media (max-width: 575.98px) {
-  .book-image { width: 200px; }
-  .info-box   { font-size: .9rem; padding: 1rem; }
-}
+
 
 </style>
 
@@ -1387,39 +1374,34 @@
 <!-- ==========================================
      SECCIÓN: SmartToddlers / SmartKids (diseño final)
 ========================================== -->
-<section class="dual-book-section">
-  <div class="dual-book-wrapper">
-    <!-- SmartToddlers -->
-    <div class="book-card toddlers">
-      <img src="assets/img/smart-kids/toodlers.webp"
-           alt="Libros SmartToddlers"
-           class="book-image toddlers-image">
-      <div class="info-box toddlers-info">
-        <p>
-          <strong>SmartToddlers</strong> es una serie de libros de
-          tecnología para preescolares que desarrolla habilidades
-          tecnológicas acorde a su edad, integrando el aprendizaje
-          digital con otras áreas para reforzar lo aprendido en el aula.
-        </p>
-      </div>
-    </div>
-    <!-- SmartKids -->
-    <div class="book-card kids">
-      <img src="assets/img/smart-kids/smart-kids.webp"
-           alt="Libros SmartKids"
-           class="book-image kids-image">
-      <div class="info-box kids-info">
-        <p>
-          <strong>SmartKids</strong> es una serie de libros de informática
-          para primaria que enseña tecnología mediante actividades y proyectos.
-          Promueve el aprendizaje por medio de la construcción, integrando
-          herramientas tecnológicas con materias como matemáticas, lenguaje,
-          historia, geografía y ciencias.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="container pt-5 pb-2 pb-md-3 py-lg-5">
+        <div class="row align-items-center my-3 py-md-3 py-lg-5">
+          <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
+            <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
+              <img src="assets/img/smart-kids/toddler.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md" style="transform: translate3d(-9px, 10px, 0px);">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4" style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
+            <h2 class="text-white">SmartToddlers</h2>
+              <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo aprendido en el aula.</p>
+          </div>
+        </div>
+        <div class="row align-items-center mt-2 mt-md-0 pt-5 pt-md-4 pt-lg-0 pb-md-3 pb-lg-5">
+          <div class="col-md-6 col-lg-5 offset-xl-1 mb-2 mb-md-0 pb-4 pb-md-0">
+            <div class="position-relative mx-auto mx-md-0" style="max-width: 462px;">
+              <img src="assets/img/smart-kids/smart-kids.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md" style="transform: translate3d(8px, -10px, 0px);">
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-5 offset-lg-1" style="background-color: #c3d216; border-radius: 1.5rem; padding: 2rem;">
+            <h2 class="text-white">SmartKids</h2>
+            <p class="text-white">es una serie de libros de informática para primaria que enseña tecnología mediante actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.​</p>
+          </div>
+        </div>
+        <!-- Extra spacing for dark mode only -->
+        <div class="pt-5 d-none d-dark-mode-block"></div>
+      </section>
+
+
 
 
 
