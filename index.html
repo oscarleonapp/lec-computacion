@@ -1042,7 +1042,7 @@
     <!-- =========================================
          SECCIÓN: Our Awards
     ========================================== -->
-    <section class="position-relative py-5 bg-light" style="background-image: url('assets/img/backgrounds/blanco-textura.png');">
+    <section class="position-relative py-5 bg-light" style="background-image: url('assets/img/backgrounds/blanco-textura.png'); width: 100%; background-size: cover; background-position: center;">
       <div class="container my-lg-5 my-md-4 my-3 py-xl-3">
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <!-- Misión -->
@@ -1089,7 +1089,18 @@
           </p>
         </div>
         <div class="col-md-5 text-center">
-          <img src="assets/img/seccion3/telefonoapp.png" class="img-fluid" alt="Campus Virtual">
+          <img src="assets/img/seccion3/telefonoapp.png" class="img-fluid animate-sideways" alt="Campus Virtual" style="max-width: 520px;">
+
+          <style>
+          @keyframes sideways {
+            0%   { transform: translateX(0); }
+            50%  { transform: translateX(32px); }
+            100% { transform: translateX(0); }
+          }
+          .animate-sideways {
+            animation: sideways 2.8s ease-in-out infinite;
+          }
+          </style>
         </div>
       </div>
     </div>
@@ -1137,7 +1148,18 @@
     </div>
 
     <section class="text-center my-5">
-      <img src="assets/img/seccion3/campus-virtual.png" alt="Descripción de la imagen" class="img-fluid mx-auto d-block" style="max-width: 400px;">
+      <img src="assets/img/seccion3/campus-virtual.png" alt="Campus Virtual, ilustración de estudiantes y docentes usando computadoras y tabletas en un entorno educativo digital, ambiente alegre y colaborativo" class="img-fluid mx-auto d-block animate-updown" style="max-width: 400px;">
+
+      <style>
+      @keyframes updown {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-24px); }
+        100% { transform: translateY(0); }
+      }
+      .animate-updown {
+        animation: updown 2.5s ease-in-out infinite;
+      }
+      </style>
     </section>
 
 <!-- =========================================
@@ -1362,9 +1384,19 @@
       </div>
     </div>
     <div style="position: relative; min-height: 220px; width: 100%;">
-      <img src="assets/img/iconos/rocket-ilustracion.png" alt="Rocket" class="rocket-img mt-5">
-      <p class="text-center bottom-text px-3" style="position: absolute; bottom: 10px; left: 0; right: 0;">
-      ¿Sabía que el 85% de las empresas en Guatemala utilizan herramientas de Microsoft? Ofrezca a sus alumnos la oportunidad de destacarse.
+      <img src="assets/img/iconos/rocket-ilustracion.png" alt="Ilustración de cohete despegando, fondo claro, sensación de avance y entusiasmo" class="rocket-img mt-5 animate-updown">
+      <style>
+        @keyframes updown {
+          0%   { transform: translateY(0); }
+          50%  { transform: translateY(-32px); }
+          100% { transform: translateY(0); }
+        }
+        .animate-updown {
+          animation: updown 2.5s ease-in-out infinite;
+        }
+      </style>
+      <p class="text-center bottom-text px-3" style="position: absolute; bottom: 10px; left: 0; right: 0; font-size: 22px;">
+      ¿Sabía que el 85% de las empresas en Guatemala utilizan herramientas de Microsoft? <br> Ofrezca a sus alumnos la oportunidad de destacarse.
       </p>
     </div>
   </div>
@@ -1400,11 +1432,6 @@
         <!-- Extra spacing for dark mode only -->
         <div class="pt-5 d-none d-dark-mode-block"></div>
       </section>
-
-
-
-
-
 
     <!-- =========================================
          SECCIÓN: Contacto / Footer
@@ -1442,7 +1469,18 @@
           </div>
         </div>
         <div class="col-md-6 text-center">
-          <img src="assets/img/iconos/avion-ilustracion.png" alt="Ilustración" class="img-fluid" style="max-height: 300px;">
+          <img src="assets/img/iconos/avion-ilustracion.png" alt="Ilustración de avión de papel volando hacia la derecha sobre fondo claro, transmite dinamismo y optimismo" class="img-fluid animate-leftright" style="max-height: 300px;">
+
+          <style>
+          @keyframes leftright {
+            0%   { transform: translateX(0); }
+            50%  { transform: translateX(40px); }
+            100% { transform: translateX(0); }
+          }
+          .animate-leftright {
+            animation: leftright 2.8s ease-in-out infinite;
+          }
+          </style>
           <div class="mt-3">
             <img src="assets/img/logo/apple-icon-180x180.png" alt="LEC Logo" style="max-height: 90px;">
           </div>
