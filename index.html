@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-ES" data-bs-theme="light">
+
 <head>
   <!-- ================================================
        META TAGS
@@ -8,13 +9,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="LEC Computación">
   <meta name="copyright" content="LEC Computación 2025. Todos los derechos reservados.">
-  <meta name="description" content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
-  <meta name="keywords" content="Educación, Software educativo, Innovación tecnológica, Formación académica, Capacitación, Tecnología educativa, Aprendizaje digital, Soluciones educativas, Educación a distancia, Herramientas de aprendizaje">
+  <meta name="description"
+    content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
+  <meta name="keywords"
+    content="Educación, Software educativo, Innovación tecnológica, Formación académica, Capacitación, Tecnología educativa, Aprendizaje digital, Soluciones educativas, Educación a distancia, Herramientas de aprendizaje">
   <link rel="canonical" href="https://leccomputacion.com/">
   <link rel="alternate" hreflang="es-ES" href="https://leccomputacion.com/">
   <meta property="og:site_name" content="LEC Computación">
   <meta property="og:title" content="LEC Computación | Software Educativo">
-  <meta property="og:description" content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
+  <meta property="og:description"
+    content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
   <meta property="og:image" content="assets/img/slide-hero/slide-1.webp">
   <meta property="og:url" content="https://leccomputacion.com/">
   <meta property="og:type" content="website">
@@ -32,18 +36,11 @@
        VENDOR CSS
   ================================================ -->
   <!-- Bootstrap 5.3 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-PLACEHOLDER_DE_TU_INTEGRITY_HASH"
-    crossorigin="anonymous"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-PLACEHOLDER_DE_TU_INTEGRITY_HASH" crossorigin="anonymous">
   <!-- Bootstrap Icons (para íconos de contacto) -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet"
-    crossorigin="anonymous"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"
+    crossorigin="anonymous">
   <!-- Boxicons (para íconos de sección) -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <!-- Swiper (slider) -->
@@ -57,32 +54,33 @@
   <!-- ================================================
        ESTILOS PERSONALIZADOS
   ================================================ -->
-<style>
-  /* ----------------------------
+  <style>
+    /* ----------------------------
      Variables de color (opcional)
   ---------------------------- */
-  :root {
-    --color-financial: #fa572e;
-    --color-academic:  #00a9eb;
-    --color-parental:  #00af9c;
-    --color-pink:      #e83e8c;
-    --color-orange:    #ffc107;
-    --color-teal:      #009D93;
-  }
+    :root {
+      --color-financial: #fa572e;
+      --color-academic: #00a9eb;
+      --color-parental: #00af9c;
+      --color-pink: #e83e8c;
+      --color-orange: #ffc107;
+      --color-teal: #009D93;
+    }
 
-  /* ----------------------------
+    /* ----------------------------
      Reset / Ajustes globales
   ---------------------------- */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
-  a {
-    text-decoration: none;
-  }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
 
-  /* ------------------------------------------
+    a {
+      text-decoration: none;
+    }
+
+    /* ------------------------------------------
        SECCIÓN: Control Financiero / Académico / Parental
     ------------------------------------------ */
     .section-box {
@@ -94,19 +92,23 @@
       justify-content: flex-start;
       position: relative;
     }
+
     .section-box h4 {
       font-family: 'Lemon Milk', sans-serif;
       font-weight: 700;
       font-size: 1.75rem;
       margin-bottom: 1.5rem;
     }
+
     .section-box .item {
       margin-bottom: 1.5rem;
     }
+
     .section-box .item .icon {
       margin-right: 0.75rem;
       font-size: 1.5rem;
     }
+
     .section-box .item p {
       margin: 0;
       font-size: 0.95rem;
@@ -118,9 +120,11 @@
     .financial {
       background-color: var(--color-financial);
     }
+
     .academic {
       background-color: var(--color-academic);
     }
+
     .parental {
       background-color: var(--color-parental);
     }
@@ -138,42 +142,52 @@
        MEDIA QUERIES PARA RESPONSIVE
     ============================== */
     @media (max-width: 991px) {
+
       /* A partir de pantallas < 992px, se pueden reducir los paddings o alturas si se desea */
       .section-box {
         padding: 2.5rem 1rem;
         min-height: 300px;
       }
+
       .section-box h4 {
         font-size: 1.6rem;
       }
+
       .section-box .item .icon {
         font-size: 1.4rem;
       }
+
       .section-box .item p {
         font-size: 0.9rem;
       }
     }
 
     @media (max-width: 767px) {
+
       /* En móviles (<768px) apilado vertical, quitamos min-height fijo para que el contenido determine la altura */
       .section-box {
         padding: 2rem 1rem;
         min-height: auto;
       }
+
       .section-box h4 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
       }
+
       .section-box .item {
         margin-bottom: 1rem;
       }
+
       .section-box .item .icon {
         font-size: 1.25rem;
       }
+
       .section-box .item p {
         font-size: 0.85rem;
         line-height: 1.3;
       }
+
       /* Hacemos que la imagen no salga desbordando ni quede fuera de lugar */
       .parental img {
         position: static;
@@ -184,335 +198,389 @@
       }
     }
 
-  /* ------------------------------------------
+    /* ------------------------------------------
      SECCIÓN: Campus Virtual / Highlight Cards
   ------------------------------------------ */
-  .highlight {
-    background-color: #d0dd0a;
-    padding: 2rem 0;
-  }
-  .card-custom {
-    border-radius: 1rem;
-    border: 2px solid var(--color-pink);
-    height: 100%;
-  }
-  .card-custom.orange-border {
-    border-color: var(--color-orange);
-  }
-  /* (Se eliminaron .card-custom.blue-border y .card-custom.teal-border) */
-  .card-custom .card-body {
-    padding: 2rem;
-  }
-  .card-custom h5 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
+    .highlight {
+      background-color: #d0dd0a;
+      padding: 2rem 0;
+    }
 
-  /* ------------------------------------------
+    .card-custom {
+      border-radius: 1rem;
+      border: 2px solid var(--color-pink);
+      height: 100%;
+    }
+
+    .card-custom.orange-border {
+      border-color: var(--color-orange);
+    }
+
+    /* (Se eliminaron .card-custom.blue-border y .card-custom.teal-border) */
+    .card-custom .card-body {
+      padding: 2rem;
+    }
+
+    .card-custom h5 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ------------------------------------------
      SECCIÓN: SmartToddlers
   ------------------------------------------ */
-  /* (Se eliminaron .smart-card, .smart-image y .smart-text) */
+    /* (Se eliminaron .smart-card, .smart-image y .smart-text) */
 
-  /* ------------------------------------------
+    /* ------------------------------------------
      SECCIÓN: Microsoft 365
   ------------------------------------------ */
-  .banner-pattern {
-    width: 100%;
-    height: auto;
-  }
-  .microsoft-section {
-    background-color: #f8f9fa;
-    padding: 60px 0;
-  }
-  .microsoft-container {
-    position: relative;
-  }
-  .card-box {
-    background-color: var(--color-orange);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    height: 100%;
-  }
-  .card-box .icon {
-    height: 60px;
-    margin-bottom: 10px;
-    width: auto;
-  }
-  .card-box .big-number {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #813091;
-    margin-top: 10px;
-  }
-  .bottom-text {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #1d2e88;
-    margin-top: 30px;
-  }
-  .rocket-img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    z-index: 1;
-    margin-top: 300px;
-  }
+    .banner-pattern {
+      width: 100%;
+      height: auto;
+    }
 
-  .copilot-logo{
-    width: 100px;
-    height: auto;
-    margin-top: 20px;
-  }
+    .microsoft-section {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+    }
 
-  /* ------------------------------------------
+    .microsoft-container {
+      position: relative;
+    }
+
+    .card-box {
+      background-color: var(--color-orange);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      height: 100%;
+    }
+
+    .card-box .icon {
+      height: 60px;
+      margin-bottom: 10px;
+      width: auto;
+    }
+
+    .card-box .big-number {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #813091;
+      margin-top: 10px;
+    }
+
+    .bottom-text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #1d2e88;
+      margin-top: 30px;
+    }
+
+    .rocket-img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      z-index: 1;
+      margin-top: 300px;
+    }
+
+    .copilot-logo {
+      width: 100px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    /* ------------------------------------------
      SECCIÓN: Contacto / Footer
   ------------------------------------------ */
-  .contact-header {
-    background-color: #ea4c89;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    border-radius: 25px;
-    padding: 10px 30px;
-    display: inline-block;
-  }
-  .contact-icon {
-    font-size: 1.5rem;
-    color: #fbbf24;
-  }
-  .contact-info a {
-    color: #3b82f6;
-  }
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-  .contact-label {
-    font-weight: 600;
-  }
+    .contact-header {
+      background-color: #ea4c89;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 25px;
+      padding: 10px 30px;
+      display: inline-block;
+    }
 
-  /* ----------------------------
+    .contact-icon {
+      font-size: 1.5rem;
+      color: #fbbf24;
+    }
+
+    .contact-info a {
+      color: #3b82f6;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-label {
+      font-weight: 600;
+    }
+
+    /* ----------------------------
      RESPONSIVE: Media Queries
   ---------------------------- */
-  @media (max-width: 992px) {
-    .section-box h4 {
-      font-size: 1.25rem;
+    @media (max-width: 992px) {
+      .section-box h4 {
+        font-size: 1.25rem;
+      }
+
+      .section-box .item .icon {
+        font-size: 1.75rem;
+        margin-right: 0.5rem;
+      }
+
+      .section-box .item .fw-bold {
+        font-size: 1rem;
+      }
+
+      .section-box .item p {
+        font-size: 0.9rem;
+      }
+
+      .parental img {
+        max-height: 70%;
+      }
+
+      .dual-book-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .card-teal,
+      .card-lime,
+      .logo-col,
+      .book-image-col {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+      .card-teal .card-img-teal {
+        width: 160px;
+        bottom: -8px;
+        right: -15px;
+      }
     }
-    .section-box .item .icon {
-      font-size: 1.75rem;
-      margin-right: 0.5rem;
+
+    @media (max-width: 768px) {
+      .section-box h4 {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-box .item .icon {
+        font-size: 1.5rem;
+      }
+
+      .section-box .item .fw-bold {
+        font-size: 1rem;
+      }
+
+      .section-box .item p {
+        font-size: 0.85rem;
+      }
+
+      .parental img {
+        position: static;
+        display: block;
+        margin: 1rem auto 0;
+        width: 60%;
+        height: auto;
+      }
+
+      .big-number {
+        font-size: 3rem;
+      }
+
+      .card-box {
+        padding: 15px;
+      }
+
+      .rocket-img {
+        display: none;
+      }
+
+      .illustration {
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
     }
-    .section-box .item .fw-bold {
-      font-size: 1rem;
+
+    @media (max-width: 576px) {
+      .section-box h4 {
+        font-size: 1rem;
+      }
+
+      .section-box .item .icon {
+        font-size: 1.25rem;
+      }
+
+      .section-box .item .fw-bold {
+        font-size: 0.95rem;
+      }
+
+      .section-box .item p {
+        font-size: 0.8rem;
+      }
+
+      .contact-header {
+        font-size: 1.5rem;
+        padding: 8px 20px;
+      }
+
+      .contact-icon {
+        font-size: 1.25rem;
+        width: 30px;
+        height: 30px;
+      }
+
+      .contact-label {
+        font-size: 0.9rem;
+      }
+
+      body {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      .card-teal {
+        padding: 1.5rem;
+      }
+
+      .card-teal .card-img-teal {
+        width: 140px;
+        bottom: -6px;
+        right: -10px;
+      }
+
+      .card-teal .card-text,
+      .card-lime .card-text {
+        font-size: 0.95rem;
+      }
+
+      .card-lime {
+        padding: 1.5rem;
+      }
     }
-    .section-box .item p {
-      font-size: 0.9rem;
-    }
-    .parental img {
-      max-height: 70%;
+
+    /* ==========================================
+     Estilos para la sección combinada “SmartToddlers / SmartKids”
+     ========================================== */
+    .dual-book-section {
+      background-color: #fff;
+      padding: 3rem 1rem;
     }
 
     .dual-book-row {
-      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    .card-teal {
+      position: relative;
+      background-color: #00af9c;
+      color: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      overflow: hidden;
+      flex: 1 1 65%;
+      max-width: 65%;
+      min-height: 180px;
+    }
+
+    .card-teal .card-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .card-teal .card-text strong {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    .card-teal .card-img-teal {
+      position: absolute;
+      bottom: -10px;
+      right: -20px;
+      width: 200px;
+      max-width: 50%;
+    }
+
+    .logo-col {
+      flex: 1 1 30%;
+      max-width: 30%;
       text-align: center;
     }
-    .card-teal,
-    .card-lime,
-    .logo-col,
-    .book-image-col {
-      flex: 1 1 100%;
-      max-width: 100%;
-      margin-bottom: 1.5rem;
-    }
-    .card-teal .card-img-teal {
-      width: 160px;
-      bottom: -8px;
-      right: -15px;
-    }
-  }
 
-  @media (max-width: 768px) {
-    .section-box h4 {
-      font-size: 1.15rem;
-      margin-bottom: 1rem;
-    }
-    .section-box .item .icon {
-      font-size: 1.5rem;
-    }
-    .section-box .item .fw-bold {
-      font-size: 1rem;
-    }
-    .section-box .item p {
-      font-size: 0.85rem;
-    }
-    .parental img {
-      position: static;
-      display: block;
-      margin: 1rem auto 0;
-      width: 60%;
+    .logo-col img {
+      max-width: 80%;
+      /* width: 100%; */
       height: auto;
     }
-    .big-number {
-      font-size: 3rem;
-    }
-    .card-box {
-      padding: 15px;
-    }
-    .rocket-img {
-      display: none;
-    }
-    .illustration {
-      max-width: 100%;
-      margin-bottom: 1rem;
-    }
-  }
 
-  @media (max-width: 576px) {
-    .section-box h4 {
-      font-size: 1rem;
+    .book-image-col {
+      flex: 1 1 35%;
+      max-width: 35%;
+      text-align: center;
     }
-    .section-box .item .icon {
-      font-size: 1.25rem;
+
+    .book-image-col img {
+      max-width: 80%;
+      height: auto;
     }
-    .section-box .item .fw-bold {
-      font-size: 0.95rem;
-    }
-    .section-box .item p {
-      font-size: 0.8rem;
-    }
-    .contact-header {
-      font-size: 1.5rem;
-      padding: 8px 20px;
-    }
-    .contact-icon {
-      font-size: 1.25rem;
-      width: 30px;
-      height: 30px;
-    }
-    .contact-label {
-      font-size: 0.9rem;
-    }
-    body {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
-    .card-teal {
-      padding: 1.5rem;
-    }
-    .card-teal .card-img-teal {
-      width: 140px;
-      bottom: -6px;
-      right: -10px;
-    }
-    .card-teal .card-text,
-    .card-lime .card-text {
-      font-size: 0.95rem;
-    }
+
     .card-lime {
-      padding: 1.5rem;
+      position: relative;
+      background-color: #c6d426;
+      color: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      overflow: hidden;
+      flex: 1 1 60%;
+      max-width: 60%;
+      min-height: 180px;
+      margin-left: auto;
     }
-  }
 
-  /* ==========================================
-     Estilos para la sección combinada “SmartToddlers / SmartKids”
-     ========================================== */
-  .dual-book-section {
-    background-color: #fff;
-    padding: 3rem 1rem;
-  }
+    .card-lime .card-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
 
-  .dual-book-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
+    .card-lime .card-text strong {
+      text-decoration: underline;
+      font-weight: 700;
+    }
 
-  .card-teal {
-    position: relative;
-    background-color: #00af9c;
-    color: #fff;
-    border-radius: 1.5rem;
-    padding: 2rem;
-    overflow: hidden;
-    flex: 1 1 65%;
-    max-width: 65%;
-    min-height: 180px;
-  }
-
-  .card-teal .card-text {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .card-teal .card-text strong {
-    text-decoration: underline;
-    font-weight: 700;
-  }
-
-  .card-teal .card-img-teal {
-    position: absolute;
-    bottom: -10px;
-    right: -20px;
-    width: 200px;
-    max-width: 50%;
-  }
-
-  .logo-col {
-    flex: 1 1 30%;
-    max-width: 30%;
-    text-align: center;
-  }
-  .logo-col img {
-    max-width: 80%;
-    /* width: 100%; */
-    height: auto;
-  }
-
-  .book-image-col {
-    flex: 1 1 35%;
-    max-width: 35%;
-    text-align: center;
-  }
-  .book-image-col img {
-    max-width: 80%;
-    height: auto;
-  }
-
-  .card-lime {
-    position: relative;
-    background-color: #c6d426;
-    color: #fff;
-    border-radius: 1.5rem;
-    padding: 2rem;
-    overflow: hidden;
-    flex: 1 1 60%;
-    max-width: 60%;
-    min-height: 180px;
-    margin-left: auto;
-  }
-  .card-lime .card-text {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  .card-lime .card-text strong {
-    text-decoration: underline;
-    font-weight: 700;
-  }
-
-  /* =========================================
+    /* =========================================
        STYLES PARA Control Financiero / Académico / Parental
     ========================================= */
     #control-fap .row {
-      align-items: stretch; /* columnas igual altura */
+      align-items: stretch;
+      /* columnas igual altura */
     }
-    .control-financiero { background-color: #F05A28; }
-    .control-academico  { background-color: #009FE3; }
-    .control-parental   { background-color: #00A79D; }
+
+    .control-financiero {
+      background-color: #F05A28;
+    }
+
+    .control-academico {
+      background-color: #009FE3;
+    }
+
+    .control-parental {
+      background-color: #00A79D;
+    }
 
     /* Espaciado interior */
     #control-fap .col-md-4 {
@@ -532,25 +600,29 @@
       align-items: flex-start;
       margin-bottom: 1.5rem;
     }
+
     .feature:last-child {
       margin-bottom: 0;
     }
+
     .feature img {
       flex-shrink: 0;
       width: 32px;
       height: 32px;
       margin-right: 1rem;
     }
+
     .feature h6 {
       margin: 0;
       font-size: 1rem;
       font-weight: 600;
       color: #fff;
     }
+
     .feature p {
       margin: 0;
       font-size: 0.875rem;
-      color: rgba(255,255,255,0.85);
+      color: rgba(255, 255, 255, 0.85);
     }
 
     /* Oculta la imagen comentada sin borrarla del HTML */
@@ -558,274 +630,311 @@
       display: none !important;
     }
 
-  /* =========================================
+    /* =========================================
    STYLES PARA la sección de Microsoft 365
 ========================================= */
 
-/* 1) La tarjeta debe permitir overflow para que el icono sobresalga */
-.microsoft-section .card-box {
-  position: relative;        /* ancla el absolute del icono y del número */
-  overflow: visible !important; /* necesario para que el icono no se “corte” */
-  background: #FFC107;
-  padding: 2rem 1.5rem 4rem; /* top para espacio del icono, bottom para el número */
-  border-radius: 0.5rem;
-}
+    /* 1) La tarjeta debe permitir overflow para que el icono sobresalga */
+    .microsoft-section .card-box {
+      position: relative;
+      /* ancla el absolute del icono y del número */
+      overflow: visible !important;
+      /* necesario para que el icono no se “corte” */
+      background: #FFC107;
+      padding: 2rem 1.5rem 4rem;
+      /* top para espacio del icono, bottom para el número */
+      border-radius: 0.5rem;
+    }
 
-/* 2) Estilo unificado para **todos** los iconos sobresalientes */
-/*    Este bloque es idéntico a tu .cert-mos .mos-icon, pero aplicado a .icon */
-.microsoft-section .card-box .icon {
-  position: absolute;
-  top: -6rem;               /* ajusta cuánto sobresale */
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 300px;                /* ~200px / 32px por rem, ajústalo si quieres otro tamaño */
-  height: auto;
-  /* background: #fff; */
-  padding: 0.25rem 0.5rem;
-  /* box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); */
-  border-radius: 0.25rem;
-  z-index: 2;
-}
+    /* 2) Estilo unificado para **todos** los iconos sobresalientes */
+    /*    Este bloque es idéntico a tu .cert-mos .mos-icon, pero aplicado a .icon */
+    .microsoft-section .card-box .icon {
+      position: absolute;
+      top: -6rem;
+      /* ajusta cuánto sobresale */
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 300px;
+      /* ~200px / 32px por rem, ajústalo si quieres otro tamaño */
+      height: auto;
+      /* background: #fff; */
+      padding: 0.25rem 0.5rem;
+      /* box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); */
+      border-radius: 0.25rem;
+      z-index: 2;
+    }
 
-.mos-icon{
-  position: absolute;
-  top: 1rem;
-  left: 18rem;               /* ajusta cuánto sobresale */
-  transform: translateX(-50%);
-  display: block;
-  width: 300px;                /* ~200px / 32px por rem, ajústalo si quieres otro tamaño */
-  height: auto;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-}
+    .mos-icon {
+      position: absolute;
+      top: 1rem;
+      left: 18rem;
+      /* ajusta cuánto sobresale */
+      transform: translateX(-50%);
+      display: block;
+      width: 300px;
+      /* ~200px / 32px por rem, ajústalo si quieres otro tamaño */
+      height: auto;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    }
 
-/* 3) Título y párrafo dentro de la card (sin cambios) */
-.microsoft-section .card-box h2 {
-  font-weight: 700;
-  margin-top: 6rem; /* espacio extra tras el icono */
-  margin-bottom: 0.5rem;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 10px; /* ajusta según el alto deseado */
-}
-.microsoft-section .card-box p.fs-6 {
-  font-size: 0.875rem;
-  line-height: 1.3;
-  margin-bottom: 0;
-}
+    /* 3) Título y párrafo dentro de la card (sin cambios) */
+    .microsoft-section .card-box h2 {
+      font-weight: 700;
+      margin-top: 6rem;
+      /* espacio extra tras el icono */
+      margin-bottom: 0.5rem;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10px;
+      /* ajusta según el alto deseado */
+    }
 
-/* 4) Número grande, ajustado a la base de la card */
-.microsoft-section .card-box .big-number {
-  position: absolute;
-  bottom: -2rem;    /* sobresale 2rem por debajo */
-  left: -1rem;       /* siempre a 1rem del lateral */
-  font-size: 8.2rem;
-  line-height: 1;
-  font-weight: 700;
-  color: #8e44ad;
-  pointer-events: none;
-  margin: 0;
-  z-index: 1;
-}
+    .microsoft-section .card-box p.fs-6 {
+      font-size: 0.875rem;
+      line-height: 1.3;
+      margin-bottom: 0;
+    }
 
-.rocket-img{
-  position: absolute;
-  left: 50%;
-  top: -6.5rem; /* Ajusta este valor para subir o bajar la imagen */
-  transform: translateX(-50%);
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  max-width: 100%;
-  height: auto;
-  z-index: 10;
-}
+    /* 4) Número grande, ajustado a la base de la card */
+    .microsoft-section .card-box .big-number {
+      position: absolute;
+      bottom: -2rem;
+      /* sobresale 2rem por debajo */
+      left: -1rem;
+      /* siempre a 1rem del lateral */
+      font-size: 8.2rem;
+      line-height: 1;
+      font-weight: 700;
+      color: #8e44ad;
+      pointer-events: none;
+      margin: 0;
+      z-index: 1;
+    }
 
-/* -----------------------------
+    .rocket-img {
+      position: absolute;
+      left: 50%;
+      top: -6.5rem;
+      /* Ajusta este valor para subir o bajar la imagen */
+      transform: translateX(-50%);
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+      z-index: 10;
+    }
+
+    /* -----------------------------
    Breakpoint: Tablets & móviles
    pantallas < 768px
 ----------------------------- */
-@media (max-width: 767.98px) {
-  .microsoft-section .card-box {
-    padding: 1.5rem 1rem 3rem;    /* Menos padding para móviles */
-  }
-  .microsoft-section .card-box .icon {
-    top: -2rem;                   /* No sobresale tanto */
-    width: 3.5rem;                /* Icono más pequeño */
-  }
-  .microsoft-section .card-box .big-number {
-    bottom: -1.5rem;              /* Reduce el solapamiento */
-    font-size: 6rem;              /* Número más pequeño */
-    left: 0.5rem;                 /* Un poco más cerca del borde */
-  }
-  .microsoft-section .card-box h5 {
-    margin-top: 3.5rem;           /* Ajusta al nuevo top */
-    font-size: 1.125rem;          /* Título más pequeño */
-  }
-  .microsoft-section .card-box p.fs-6 {
-    font-size: 0.8125rem;         /* Texto más compacto */
-  }
-}
+    @media (max-width: 767.98px) {
+      .microsoft-section .card-box {
+        padding: 1.5rem 1rem 3rem;
+        /* Menos padding para móviles */
+      }
 
-/* -----------------------------
+      .microsoft-section .card-box .icon {
+        top: -2rem;
+        /* No sobresale tanto */
+        width: 3.5rem;
+        /* Icono más pequeño */
+      }
+
+      .microsoft-section .card-box .big-number {
+        bottom: -1.5rem;
+        /* Reduce el solapamiento */
+        font-size: 6rem;
+        /* Número más pequeño */
+        left: 0.5rem;
+        /* Un poco más cerca del borde */
+      }
+
+      .microsoft-section .card-box h5 {
+        margin-top: 3.5rem;
+        /* Ajusta al nuevo top */
+        font-size: 1.125rem;
+        /* Título más pequeño */
+      }
+
+      .microsoft-section .card-box p.fs-6 {
+        font-size: 0.8125rem;
+        /* Texto más compacto */
+      }
+    }
+
+    /* -----------------------------
    Breakpoint: Smartphones
    pantallas < 576px
 ----------------------------- */
-@media (max-width: 575.98px) {
-  .microsoft-section .card-box {
-    padding: 1.25rem 0.75rem 2.5rem;
-  }
-  .microsoft-section .card-box .icon {
-    top: -1.5rem;
-    width: 3rem;
-    padding: 0.25rem;
-  }
-  .microsoft-section .card-box .big-number {
-    bottom: -1rem;
-    font-size: 4.5rem;
-    left: 0.25rem;
-  }
-  .microsoft-section .card-box h5 {
-    margin-top: 3rem;
-    font-size: 1rem;
-  }
-  .microsoft-section .card-box p.fs-6 {
-    font-size: 0.75rem;
-  }
-}
+    @media (max-width: 575.98px) {
+      .microsoft-section .card-box {
+        padding: 1.25rem 0.75rem 2.5rem;
+      }
 
-/* -----------------------------
+      .microsoft-section .card-box .icon {
+        top: -1.5rem;
+        width: 3rem;
+        padding: 0.25rem;
+      }
+
+      .microsoft-section .card-box .big-number {
+        bottom: -1rem;
+        font-size: 4.5rem;
+        left: 0.25rem;
+      }
+
+      .microsoft-section .card-box h5 {
+        margin-top: 3rem;
+        font-size: 1rem;
+      }
+
+      .microsoft-section .card-box p.fs-6 {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* -----------------------------
    Breakpoint: Escritorio mediano
    pantallas >= 768px y < 992px
 ----------------------------- */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .microsoft-section .card-box {
-    padding: 2rem 1.25rem 4rem;
-  }
-  .microsoft-section .card-box .icon {
-    top: -2.5rem;
-    width: 4.5rem;
-  }
-  .microsoft-section .card-box .big-number {
-    bottom: -2rem;
-    font-size: 7.5rem;
-    left: 1rem;
-  }
-}
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .microsoft-section .card-box {
+        padding: 2rem 1.25rem 4rem;
+      }
 
-/* -----------------------------
+      .microsoft-section .card-box .icon {
+        top: -2.5rem;
+        width: 4.5rem;
+      }
+
+      .microsoft-section .card-box .big-number {
+        bottom: -2rem;
+        font-size: 7.5rem;
+        left: 1rem;
+      }
+    }
+
+    /* -----------------------------
    Breakpoint: Escritorio grande
    pantallas >= 992px
    (aquí se aplica tu estilo “por defecto”)
 ----------------------------- */
-@media (min-width: 992px) {
-  .microsoft-section .card-box {
-    padding: 2rem 1.5rem 4rem;
-  }
-  .microsoft-section .card-box .icon {
-    top: -6rem;
-    width: 300px;
-  }
-  .microsoft-section .card-box .big-number {
-    bottom: -2rem;
-    font-size: 8.2rem;
-    left: -1rem;
-  }
-}
+    @media (min-width: 992px) {
+      .microsoft-section .card-box {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .microsoft-section .card-box .icon {
+        top: -6rem;
+        width: 300px;
+      }
+
+      .microsoft-section .card-box .big-number {
+        bottom: -2rem;
+        font-size: 8.2rem;
+        left: -1rem;
+      }
+    }
 
 
-.dual-book-section {
-  padding: 4rem 1rem;
-  background: #fff;
-}
-.dual-book-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .dual-book-section {
+      padding: 4rem 1rem;
+      background: #fff;
+    }
 
-/* Cada tarjeta relativa para posicionar internamente */
-.book-card {
-  position: relative;
-  overflow: visible;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
+    .dual-book-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* Imagen flotante, siempre por encima */
-.book-image {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 10; /* subimos la imagen */
-  margin: 0 auto;
-}
+    /* Cada tarjeta relativa para posicionar internamente */
+    .book-card {
+      position: relative;
+      overflow: visible;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
-/* Caja de texto base, siempre por detrás */
-.info-box {
-  position: absolute;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  max-width: 320px;
-  color: #fff;
-  line-height: 1.4;
-  z-index: 1; /* bajamos la info-box */
-}
+    /* Imagen flotante, siempre por encima */
+    .book-image {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 10;
+      /* subimos la imagen */
+      margin: 0 auto;
+    }
 
-/* SmartToddlers: caja a la izquierda, centrada verticalmente */
-.book-card.toddlers .info-box {
-  background: #009D93;
-  top: 50%;
-  left: 0;
-  transform: translate(-20%, -50%);
-  text-align: left;
-}
+    /* Caja de texto base, siempre por detrás */
+    .info-box {
+      position: absolute;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      max-width: 320px;
+      color: #fff;
+      line-height: 1.4;
+      z-index: 1;
+      /* bajamos la info-box */
+    }
 
-/* SmartKids: caja a la derecha, alineada abajo */
-.book-card.kids .info-box {
-  background: #C6D426;
-  bottom: 0;
-  right: 0;
-  transform: translate(20%, 20%);
-  text-align: left;
-}
+    /* SmartToddlers: caja a la izquierda, centrada verticalmente */
+    .book-card.toddlers .info-box {
+      background: #009D93;
+      top: 50%;
+      left: 0;
+      transform: translate(-20%, -50%);
+      text-align: left;
+    }
 
-/* Texto dentro de la caja */
-.info-box p {
-  margin: 0;
-  font-size: 0.95rem;
-}
+    /* SmartKids: caja a la derecha, alineada abajo */
+    .book-card.kids .info-box {
+      background: #C6D426;
+      bottom: 0;
+      right: 0;
+      transform: translate(20%, 20%);
+      text-align: left;
+    }
 
-/* Ajustes mobile: pasan a una sola columna, sin offsets extremos */
-@media (max-width: 768px) {
-  .dual-book-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .book-card.toddlers .info-box,
-  .book-card.kids .info-box {
-    position: static;
-    transform: none;
-    max-width: 100%;
-    margin-top: 1rem;
-  }
-  .book-image {
-    margin-bottom: 1rem;
-  }
-}
+    /* Texto dentro de la caja */
+    .info-box p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
 
+    /* Ajustes mobile: pasan a una sola columna, sin offsets extremos */
+    @media (max-width: 768px) {
+      .dual-book-wrapper {
+        grid-template-columns: 1fr;
+      }
 
-</style>
+      .book-card.toddlers .info-box,
+      .book-card.kids .info-box {
+        position: static;
+        transform: none;
+        max-width: 100%;
+        margin-top: 1rem;
+      }
+
+      .book-image {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
 
 </head>
 
@@ -834,7 +943,8 @@
     <!-- ====================================
          HEADER / NAVBAR
     ==================================== -->
-    <header class="header navbar navbar-expand-lg navbar-white position-absolute navbar-sticky bg-white" role="navigation" aria-label="Menú principal">
+    <header class="header navbar navbar-expand-lg navbar-white position-absolute navbar-sticky bg-white"
+      role="navigation" aria-label="Menú principal">
       <div class="container px-3">
         <!-- Logo -->
         <a href="https://leccomputacion.com/" class="navbar-brand pe-3">
@@ -842,86 +952,54 @@
         </a>
 
         <!-- Botón “hamburguesa” para móvil -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#mobileMenu"
-          aria-controls="mobileMenu"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Offcanvas (solo en móvil: d-lg-none) -->
-        <div
-          class="offcanvas offcanvas-end d-lg-none"
-          tabindex="-1"
-          id="mobileMenu"
-          aria-labelledby="mobileMenuLabel"
-        >
+        <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
           <div class="offcanvas-header border-bottom">
             <h5 class="offcanvas-title" id="mobileMenuLabel">Menú</h5>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Cerrar"
-            ></button>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
           </div>
           <div class="offcanvas-body">
             <!-- ENLACES de menú (móvil) -->
             <ul class="navbar-nav flex-column justify-content-center">
               <li class="nav-item">
-                <a href="#!" class="nav-link text-dark">INICIO</a>
+                <a href="#hero-section" class="nav-link text-dark">INICIO</a>
               </li>
               <li class="nav-item">
-                <a href="#!" class="nav-link text-dark">NOSOTROS</a>
+                <a href="#nosotros" class="nav-link text-dark">NOSOTROS</a>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle text-dark"
-                  href="#!"
-                  id="serviciosDropdownMobile"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <a class="nav-link dropdown-toggle text-dark" href="#!" id="serviciosDropdownMobile" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
                   SERVICIOS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="serviciosDropdownMobile">
                   <li><a class="dropdown-item" href="#campus-virtual">Campus Virtual</a></li>
                   <li><a class="dropdown-item" href="#smart-toddlers">SmartToddlers</a></li>
-                  <li><a class="dropdown-item" href="#!">Capacitación</a></li>
-                  <li><a class="dropdown-item" href="#!">Consultoría</a></li>
+                  <li><a class="dropdown-item" href="#capacitaciones">Capacitación</a></li>
                 </ul>
               </li>
             </ul>
 
             <!-- BOTÓN “CONTACTAR” (móvil: ancho completo dentro del offcanvas) -->
             <div class="mt-4">
-              <a
-                href="mailto:ventas@lecsat.com"
-                class="btn btn-warning w-100 text-dark"
-                style="font-weight: 600;"
-              >
+              <a href="mailto:ventas@lecsat.com" class="btn btn-warning w-100 text-dark" style="font-weight: 600;">
                 CONTACTAR
               </a>
 
+
               <!-- ICONOS WhatsApp / Facebook (móvil, dentro del offcanvas) -->
               <div class="d-flex justify-content-start mt-3">
-                <a
-                  href="https://wa.me/50266351491"
-                  class="btn btn-sm me-2"
-                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
-                >
+                <a href="https://wa.me/50266351491" class="btn btn-sm me-2"
+                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
                   <i class="bi bi-whatsapp" style="font-size: 1.5rem; color: #1ca44e;"></i>
                 </a>
-                <a
-                  href="https://www.facebook.com/leccomputacion"
-                  class="btn btn-sm"
-                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
-                >
+                <a href="https://www.facebook.com/leccomputacion" class="btn btn-sm"
+                  style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
                   <i class="bi bi-facebook" style="font-size: 1.5rem; color: #13161c;"></i>
                 </a>
               </div>
@@ -935,27 +1013,20 @@
           <!-- ENLACES de menú (escritorio) -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="#!" class="nav-link text-dark">INICIO</a>
+              <a href="#hero-section" class="nav-link text-dark">INICIO</a>
             </li>
             <li class="nav-item">
-              <a href="#!" class="nav-link text-dark">NOSOTROS</a>
+              <a href="#nosotros" class="nav-link text-dark">NOSOTROS</a>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle text-dark"
-                href="#!"
-                id="serviciosDropdownDesktop"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a class="nav-link dropdown-toggle text-dark" href="#!" id="serviciosDropdownDesktop" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 SERVICIOS
               </a>
               <ul class="dropdown-menu" aria-labelledby="serviciosDropdownDesktop">
                 <li><a class="dropdown-item" href="#campus-virtual">Campus Virtual</a></li>
-                <li><a class="dropdown-item" href="#!">SmartToddlers</a></li>
-                <li><a class="dropdown-item" href="#!">Capacitación</a></li>
-                <li><a class="dropdown-item" href="#!">Consultoría</a></li>
+                <li><a class="dropdown-item" href="#smart-toddlers">SmartToddlers</a></li>
+                <li><a class="dropdown-item" href="#capacitaciones">Capacitación</a></li>
               </ul>
             </li>
           </ul>
@@ -963,15 +1034,32 @@
           <!-- Botones de “CONTACTAR” + iconos (escritorio) -->
           <div class="d-flex align-items-center">
             <!-- Botón “CONTACTAR” pequeño -->
-            <a
-              href="mailto:ventas@lecsat.com"
-              class="btn btn-warning btn-sm text-dark me-3"
-              style="font-weight: 700;"
-            >
-              CONTACTAR
-            </a>
+            <div class="dropdown me-3">
+              <a href="mailto:ventas@lecsat.com" class="btn btn-warning btn-sm text-dark dropdown-toggle"
+                style="font-weight: 700;" id="contactarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACTAR
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="contactarDropdown">
+                <li>
+                  <a class="dropdown-item" href="mailto:ventas@lecsat.com">
+                    <i class="bi bi-envelope-fill me-2"></i>Correo electrónico
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://wa.me/50266351491" target="_blank">
+                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tel:+50225079131">
+                    <i class="bi bi-telephone-fill me-2"></i>Teléfono
+                  </a>
+                </li>
+              </ul>
+            </div>
+
             <!-- Iconos WhatsApp / Facebook -->
-            <a
+            <!-- <a
               href="https://wa.me/50266351491"
               target="_blank"
               rel="noopener"
@@ -979,12 +1067,9 @@
               style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
             >
               <i class="bi bi-whatsapp" style="font-size: 1.5rem; color: #1ca44e;"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/leccomputacion"
-              class="btn btn-sm"
-              style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"
-            >
+            </a> -->
+            <a href="https://www.facebook.com/leccomputacion" class="btn btn-sm"
+              style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
               <i class="bi bi-facebook" style="font-size: 1.5rem; color: #13161c;"></i>
             </a>
           </div>
@@ -996,24 +1081,28 @@
     <!-- =========================================
          HERO (Swiper Slider)
     ========================================== -->
-    <section class="position-relative bg-dark min-vh-100" data-bs-theme="dark">
-      <span class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(116% 118% at 50% 100%, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 41.8%, rgba(241,244,253,0.07) 82.5%);"></span>
+    <section class="position-relative bg-dark min-vh-100" data-bs-theme="dark" id="hero-section">
+      <span class="position-absolute top-0 start-0 w-100 h-100"
+        style="background: radial-gradient(116% 118% at 50% 100%, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 41.8%, rgba(241,244,253,0.07) 82.5%);"></span>
       <div class="swiper hero-swiper min-vh-100">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
-          <div class="swiper-slide d-flex flex-column py-5 min-vh-100" style="background: url('assets/img/hero-bg/slide1.webp') center/cover no-repeat;">
+          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
+            style="background: url('assets/img/hero-bg/slide1.webp') center/cover no-repeat;">
             <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
               <!-- Contenido opcional aquí -->
             </div>
           </div>
           <!-- Slide 2 -->
-          <div class="swiper-slide d-flex flex-column py-5 min-vh-100" style="background: url('assets/img/hero-bg/slide2.webp') center/cover no-repeat;">
+          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
+            style="background: url('assets/img/hero-bg/slide2.webp') center/cover no-repeat;">
             <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
               <!-- Contenido opcional aquí -->
             </div>
           </div>
           <!-- Slide 3 -->
-          <div class="swiper-slide d-flex flex-column py-5 min-vh-100" style="background: url('assets/img/hero-bg/slide3.webp') center/cover no-repeat;">
+          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
+            style="background: url('assets/img/hero-bg/slide3.webp') center/cover no-repeat;">
             <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
               <!-- Contenido opcional aquí -->
             </div>
@@ -1042,33 +1131,38 @@
     <!-- =========================================
          SECCIÓN: Our Awards
     ========================================== -->
-    <section class="position-relative py-5 bg-light" style="background-image: url('assets/img/backgrounds/blanco-textura.png'); width: 100%; background-size: cover; background-position: center;">
+    <section id="nosotros" class="position-relative py-5 bg-light"
+      style="background-image: url('assets/img/backgrounds/blanco-textura.png'); width: 100%; background-size: cover; background-position: center;">
       <div class="container my-lg-5 my-md-4 my-3 py-xl-3">
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <!-- Misión -->
           <div class="col">
-            <div class="card border-0 shadow-sm text-decoration-none pt-5 px-3 pb-3" style="background-color: #29BAD1; height: 100%;">
+            <div class="card border-0 shadow-sm text-decoration-none pt-5 px-3 pb-3"
+              style="background-color: #29BAD1; height: 100%;">
               <div class="card-body pt-3 my-5 text-center">
                 <h2 class="h1 d-inline-flex align-items-center text-white">
                   Misión <i class="bi bi-lightbulb-fill text-white fs-3 ms-2"></i>
                 </h2>
                 <hr style="color: #fff; border-width: 2px; margin-bottom: 40px;">
                 <p class="fs-5 text-justify text-white">
-                  Ser reconocidos como referencia nacional en el proceso de innovación tecnológica por organizaciones, empresas, e instituciones dedicadas a la formación.​
+                  Ser reconocidos como referencia nacional en el proceso de innovación tecnológica por organizaciones,
+                  empresas, e instituciones dedicadas a la formación.​
                 </p>
               </div>
             </div>
           </div>
           <!-- Visión -->
           <div class="col">
-            <div class="card border-0 shadow-sm text-decoration-none pt-5 px-3 pb-3" style="background-color: #2CA3DD; height: 100%;">
+            <div class="card border-0 shadow-sm text-decoration-none pt-5 px-3 pb-3"
+              style="background-color: #2CA3DD; height: 100%;">
               <div class="card-body pt-3 my-5 text-center">
                 <h2 class="h1 d-inline-flex align-items-center text-white">
                   Visión <i class="bi bi-rocket-takeoff text-white fs-3 ms-2"></i>
                 </h2>
                 <hr style="color: #fff; border-width: 2px; margin-bottom: 40px;">
                 <p class="fs-5 text-justify text-white">
-                  Ofrecer soluciones digitales y tecnológicas de punta como apoyo estratégico para la gestión educativa y capacitaciones especializadas a organizaciones, empresas, e instituciones dedicadas a la formación.​
+                  Ofrecer soluciones digitales y tecnológicas de punta como apoyo estratégico para la gestión educativa
+                  y capacitaciones especializadas a organizaciones, empresas, e instituciones dedicadas a la formación.​
                 </p>
               </div>
             </div>
@@ -1085,21 +1179,33 @@
         <div class="col-md-7">
           <img src="assets/img/iconos/campus2.png" alt="Campus Virtual" class="img-fluid mb-3">
           <p class="fs-5">
-            Nuestra plataforma es la solución perfecta para cualquier institución educativa. Con <strong>Campus Virtual</strong>, puede gestionar de manera eficiente todas las actividades de <strong>estudiantes, padres de familia, docentes y coordinadores.</strong>
+            Nuestra plataforma es la solución perfecta para cualquier institución educativa. Con <strong>Campus
+              Virtual</strong>, puede gestionar de manera eficiente todas las actividades de <strong>estudiantes, padres
+              de familia, docentes y coordinadores.</strong>
           </p>
         </div>
         <div class="col-md-5 text-center">
-          <img src="assets/img/seccion3/telefonoapp.png" class="img-fluid animate-sideways" alt="Campus Virtual" style="max-width: 520px;">
+          <img src="assets/img/seccion3/telefonoapp.png" class="img-fluid animate-sideways" alt="Campus Virtual"
+            style="max-width: 520px;">
 
           <style>
-          @keyframes sideways {
-            0%   { transform: translateX(0); }
-            50%  { transform: translateX(32px); }
-            100% { transform: translateX(0); }
-          }
-          .animate-sideways {
-            animation: sideways 2.8s ease-in-out infinite;
-          }
+            @keyframes sideways {
+              0% {
+                transform: translateX(0);
+              }
+
+              50% {
+                transform: translateX(32px);
+              }
+
+              100% {
+                transform: translateX(0);
+              }
+            }
+
+            .animate-sideways {
+              animation: sideways 2.8s ease-in-out infinite;
+            }
           </style>
         </div>
       </div>
@@ -1108,156 +1214,171 @@
     <!-- =========================================
          SECCIÓN: Highlight Cards
     ========================================== -->
-    <div class="highlight" style="background-image: url('assets/img/backgrounds/verde-1600x800.png'); background-size: cover; background-position: center;">
+    <div class="highlight"
+      style="background-image: url('assets/img/backgrounds/verde-1600x800.png'); background-size: cover; background-position: center;">
       <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-3">
-        <div class="card card-custom text-center p-3">
-          <div class="card-body">
-          <h5 class="fw-bold text-pink">Gestión<br>Integral</h5>
-          <p>Centraliza todas las operaciones educativas en un solo lugar.</p>
+        <div class="row g-4">
+          <div class="col-12 col-md-3">
+            <div class="card card-custom text-center p-3">
+              <div class="card-body">
+                <h5 class="fw-bold text-pink">Gestión<br>Integral</h5>
+                <p>Centraliza todas las operaciones educativas en un solo lugar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="card card-custom orange-border text-center p-3">
+              <div class="card-body">
+                <h5 class="fw-bold text-orange">Interactividad</h5>
+                <p>Facilita la comunicación y colaboración entre todos los miembros de la comunidad educativa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="card card-custom text-center p-3">
+              <div class="card-body">
+                <h5 class="fw-bold text-pink">Flexibilidad</h5>
+                <p>Integra clases tanto presenciales como virtuales, adaptándose a sus necesidades.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="card card-custom orange-border text-center p-3">
+              <div class="card-body">
+                <h5 class="fw-bold text-orange">Eficiencia</h5>
+                <p>Optimiza el tiempo y los recursos, mejorando la calidad educativa.</p>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-        <div class="col-12 col-md-3">
-        <div class="card card-custom orange-border text-center p-3">
-          <div class="card-body">
-          <h5 class="fw-bold text-orange">Interactividad</h5>
-          <p>Facilita la comunicación y colaboración entre todos los miembros de la comunidad educativa.</p>
-          </div>
-        </div>
-        </div>
-        <div class="col-12 col-md-3">
-        <div class="card card-custom text-center p-3">
-          <div class="card-body">
-          <h5 class="fw-bold text-pink">Flexibilidad</h5>
-          <p>Integra clases tanto presenciales como virtuales, adaptándose a sus necesidades.</p>
-          </div>
-        </div>
-        </div>
-        <div class="col-12 col-md-3">
-        <div class="card card-custom orange-border text-center p-3">
-          <div class="card-body">
-          <h5 class="fw-bold text-orange">Eficiencia</h5>
-          <p>Optimiza el tiempo y los recursos, mejorando la calidad educativa.</p>
-          </div>
-        </div>
-        </div>
-      </div>
       </div>
     </div>
 
-    <section class="text-center my-5">
-      <img src="assets/img/seccion3/campus-virtual.png" alt="Campus Virtual, ilustración de estudiantes y docentes usando computadoras y tabletas en un entorno educativo digital, ambiente alegre y colaborativo" class="img-fluid mx-auto d-block animate-updown" style="max-width: 400px;">
-
-      <style>
-      @keyframes updown {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(-24px); }
-        100% { transform: translateY(0); }
-      }
-      .animate-updown {
-        animation: updown 2.5s ease-in-out infinite;
-      }
-      </style>
+    <section class="my-0" style="height: 45vh; width: 100%;">
+      <div class="campus-swiper swiper w-100" style="max-width: 100%; margin: 0 auto;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center" style="background-color: #2ca3dd;">
+            <img src="assets/img/section-hero/academico.jpg"
+              alt="Campus Virtual, ilustración de estudiantes y docentes usando computadoras y tabletas en un entorno educativo digital, ambiente alegre y colaborativo"
+              class="img-fluid mx-auto d-block" style="width:100%;max-width:1000px;max-height:420px;object-fit:cover;">
+          </div>
+          <div class="swiper-slide text-center" style="background-color: #eb5b39;">
+            <img src="assets/img/section-hero/financiero.jpg" alt="Campus Virtual 2" class="img-fluid mx-auto d-block"
+              style="width:100%;max-width:1000px;max-height:420px;object-fit:cover;">
+          </div>
+          <div class="swiper-slide text-center" style="background-color: #009d94;">
+            <img src="assets/img/section-hero/parental.jpg" alt="Campus Virtual 3" class="img-fluid mx-auto d-block"
+              style="width:100%;max-width:1000px;max-height:420px;object-fit:cover;">
+          </div>
+        </div>
+        <div class="swiper-pagination mt-3"></div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Swiper('.campus-swiper', {
+            loop: true,
+            autoplay: {
+              delay: 3500,
+              disableOnInteraction: false
+            }
+          });
+        });
+      </script>
     </section>
 
-<!-- =========================================
+    <!-- =========================================
      SECCIÓN: Control Financiero / Académico / Parental
 ========================================== -->
-<section id="control-fap" class="container-fluid px-0">
-  <div class="row g-0 text-white">
-    <!-- Control Financiero -->
-    <div class="col-md-4 p-4 control-financiero">
-      <h4 class="fw-bold mb-4">Control Financiero</h4>
-      <div class="feature d-flex mb-4">
-        <i class="bi bi-wallet2 fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Cobros Rápidos</h6>
-          <p class="mb-0">Elimine las complicaciones</p>
+    <section id="control-fap" class="container-fluid px-0">
+      <div class="row g-0 text-white">
+        <!-- Control Financiero -->
+        <div class="col-md-4 p-4 control-financiero">
+          <h4 class="fw-bold mb-4">Control Financiero</h4>
+          <div class="feature d-flex mb-4">
+            <i class="bi bi-wallet2 fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Cobros Rápidos</h6>
+              <p class="mb-0">Elimine las complicaciones</p>
+            </div>
+          </div>
+          <div class="feature d-flex mb-4">
+            <i class="bi bi-receipt-cutoff fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Solvencias</h6>
+              <p class="mb-0">Resultados al instante</p>
+            </div>
+          </div>
+          <div class="feature d-flex">
+            <i class="bi bi-cash-stack fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Proyección de Ingresos</h6>
+              <p class="mb-0">Análisis exacto</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="feature d-flex mb-4">
-        <i class="bi bi-receipt-cutoff fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Solvencias</h6>
-          <p class="mb-0">Resultados al instante</p>
-        </div>
-      </div>
-      <div class="feature d-flex">
-        <i class="bi bi-cash-stack fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Proyección de Ingresos</h6>
-          <p class="mb-0">Análisis exacto</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Control Académico -->
-    <div class="col-md-4 p-4 control-academico">
-      <h4 class="fw-bold mb-4">Control Académico</h4>
-      <div class="feature d-flex mb-4">
-        <i class="bi bi-bar-chart fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Notas Finales MINEDUC</h6>
-          <p class="mb-0">Sin más complicaciones</p>
+        <!-- Control Académico -->
+        <div class="col-md-4 p-4 control-academico">
+          <h4 class="fw-bold mb-4">Control Académico</h4>
+          <div class="feature d-flex mb-4">
+            <i class="bi bi-bar-chart fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Notas Finales MINEDUC</h6>
+              <p class="mb-0">Sin más complicaciones</p>
+            </div>
+          </div>
+          <div class="feature d-flex mb-4">
+            <i class="bi bi-journal-bookmark fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Libro de Inscripciones</h6>
+              <p class="mb-0">Reportes inmediatos</p>
+            </div>
+          </div>
+          <div class="feature d-flex">
+            <i class="bi bi-file-earmark-text fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Boleta de Calificaciones</h6>
+              <p class="mb-0">En línea y listos para imprimir</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="feature d-flex mb-4">
-        <i class="bi bi-journal-bookmark fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Libro de Inscripciones</h6>
-          <p class="mb-0">Reportes inmediatos</p>
-        </div>
-      </div>
-      <div class="feature d-flex">
-        <i class="bi bi-file-earmark-text fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Boleta de Calificaciones</h6>
-          <p class="mb-0">En línea y listos para imprimir</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Control Parental -->
-    <div class="col-md-4 p-4 control-parental">
-      <h4 class="fw-bold mb-4">Control Parental en APP y Consultas Web</h4>
-      <div class="feature d-flex mb-4">
-        <i class="bi bi-person-badge fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Notas Finales</h6>
-          <p class="mb-0">Resultados en smartphone</p>
+        <!-- Control Parental -->
+        <div class="col-md-4 p-4 control-parental">
+          <h4 class="fw-bold mb-4">Control Parental en APP y Consultas Web</h4>
+          <div class="feature d-flex mb-4">
+            <i class="bi bi-person-badge fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Notas Finales</h6>
+              <p class="mb-0">Resultados en smartphone</p>
+            </div>
+          </div>
+          <div class="feature d-flex mb-4">
+            <i class="bi bi-bell fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Agenda (Tareas)</h6>
+              <p class="mb-0">Notificaciones y Entrega de Tareas</p>
+            </div>
+          </div>
+          <div class="feature d-flex">
+            <i class="bi bi-check-circle fs-2 me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Conducta</h6>
+              <p class="mb-0">Aspectos actitudinales</p>
+            </div>
+          </div>
+          <!-- Imagen original, conservada pero comentada -->
+          <!-- <img src="dfa44a4b-d50d-48f6-b3df-e0cd6a4da011.png" alt="Control Parental"> -->
         </div>
       </div>
-      <div class="feature d-flex mb-4">
-        <i class="bi bi-bell fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Agenda (Tareas)</h6>
-          <p class="mb-0">Notificaciones y Entrega de Tareas</p>
-        </div>
-      </div>
-      <div class="feature d-flex">
-        <i class="bi bi-check-circle fs-2 me-3"></i>
-        <div>
-          <h6 class="fw-semibold mb-1">Conducta</h6>
-          <p class="mb-0">Aspectos actitudinales</p>
-        </div>
-      </div>
-      <!-- Imagen original, conservada pero comentada -->
-      <!-- <img src="dfa44a4b-d50d-48f6-b3df-e0cd6a4da011.png" alt="Control Parental"> -->
-    </div>
-  </div>
-</section>
-
-
-
+    </section>
 
 
     <!-- =========================================
          SECCIÓN: Reviews
     ========================================== -->
-    <section class="container py-5 mb-xl-3 mt-md-2 mt-lg-5">
-      <div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3">
+    <section class="container-fluid py-5 mb-xl-3 mt-md-2 mt-lg-5" style="background: #fff;">
+      <div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3 px-3">
         <h2 class="mb-0">Comentarios de clientes</h2>
         <div class="d-md-flex d-none ms-4">
           <button id="prev-review" class="btn btn-icon btn-sm me-2" aria-label="Anterior">
@@ -1324,12 +1445,241 @@
           });
         });
       </script>
+      <style>
+        /* Opcional: elimina el padding lateral en pantallas grandes para ancho completo real */
+        @media (min-width: 1200px) {
+          .container-fluid[style] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+        }
+      </style>
     </section>
 
     <!-- =========================================
          SECCIÓN: Microsoft 365
     ========================================== -->
-    <img src="assets/img/cintillo/cintillo-colores.png" alt="Banner superior" class="banner-pattern mb-4">
+    <section class="container py-5 mb-xl-3 mt-md-2 mt-lg-5" id="capacitaciones">
+      <div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3">
+        <h2 class="mb-0">Microsoft 365</h2>
+        <!-- Slider prev/next buttons -->
+        <!-- <div class="d-md-flex d-none ms-4">
+          <button type="button" id="prev-brand" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous slide">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <button type="button" id="next-brand" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next slide">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+        </div> -->
+      </div>
+      <div class="swiper mx-n2" id="brands-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/1.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/2.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/3.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/4.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/5.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/6.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/7.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/8.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/9.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/10.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/11.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/12.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/13.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/14.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/15.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/16.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/17.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/18.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/19.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/20.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/21.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/22.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/23.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/24.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/25.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/26.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/27.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/28.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/29.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/30.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/31.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/32.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/33.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/34.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+          <div class="swiper-slide py-3">
+            <a href="#!" class="card-body card-hover px-2 mx-2">
+              <img src="assets/img/logos-apps/35.png" class="d-block mx-auto my-2" width="100" alt="Brand">
+            </a>
+          </div>
+        </div>
+        <!-- Pagination (bullets) -->
+        <div class="swiper-pagination position-relative pt-3 mt-4 d-md-none d-flex"></div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Swiper('#brands-swiper', {
+            slidesPerView: 2,
+            navigation: {
+              prevEl: '#prev-brand',
+              nextEl: '#next-brand'
+            },
+            loop: true,
+            autoplay: {
+              delay: 1000,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            breakpoints: {
+              500: { slidesPerView: 3, spaceBetween: 8 },
+              650: { slidesPerView: 4, spaceBetween: 8 },
+              900: { slidesPerView: 5, spaceBetween: 8 },
+              1100: { slidesPerView: 6, spaceBetween: 8 }
+            }
+          });
+        });
+      </script>
+    </section>
 
     <div class="container my-5">
       <div class="row align-items-center">
@@ -1343,95 +1693,117 @@
             <img src="assets/img/iconos/copilot.png" alt="Copilot Logo" class="copilot-logo ms-2">
           </div>
           <p class="mt-3">
-            Microsoft 365 es la <strong>plataforma de productividad, comunicación y colaboración</strong> más famosa a nivel mundial, y cuenta con las innovadoras aplicaciones de Office, servicios inteligentes en la nube y seguridad de primer nivel.
+            Microsoft 365 es la <strong>plataforma de productividad, comunicación y colaboración</strong> más famosa a
+            nivel mundial, y cuenta con las innovadoras aplicaciones de Office, servicios inteligentes en la nube y
+            seguridad de primer nivel.
           </p>
           <p>
-            La implementación de Microsoft 365 en su organización, independientemente de su tamaño, <strong>reducirá tiempo y costos en las tareas cotidianas</strong> y al mismo tiempo <strong>les permitirá a sus estudiantes prepararse para el entorno laboral que encontrarán al graduarse.</strong>
+            La implementación de Microsoft 365 en su organización, independientemente de su tamaño, <strong>reducirá
+              tiempo y costos en las tareas cotidianas</strong> y al mismo tiempo <strong>les permitirá a sus
+              estudiantes prepararse para el entorno laboral que encontrarán al graduarse.</strong>
           </p>
         </div>
       </div>
     </div>
 
-<div class="microsoft-section">
-  <div class="container microsoft-container">
-    <div class="row text-center mb-4 g-4">
-      <!-- 1 -->
-      <div class="col-12 col-md-4">
-        <div class="card-box">
-          <img src="assets/img/iconos/outlook.png" class="icon" alt="Outlook">
-          <h2>Correo institucional</h2>
-          <div class="big-number">1</div>
+    <div class="microsoft-section">
+      <div class="container microsoft-container">
+        <div class="row text-center mb-4 g-4">
+          <!-- 1 -->
+          <div class="col-12 col-md-4">
+            <div class="card-box">
+              <img src="assets/img/iconos/outlook.png" class="icon" alt="Outlook">
+              <h2>Correo institucional</h2>
+              <div class="big-number">1</div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="col-12 col-md-4">
+            <div class="card-box">
+              <img src="assets/img/iconos/teams.png" class="icon" alt="Teams">
+              <h2>Trabajo Colaborativo<br>Clases en línea</h2>
+              <div class="big-number">2</div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="col-12 col-md-4">
+            <div class="card-box">
+              <img src="assets/img/iconos/m-one.png" class="icon" alt="MOS">
+              <h2>Certificación MOS</h2>
+              <p class="fs-6">
+                Las certificaciones MOS (Microsoft Office Specialist) validan las habilidades de una persona en el uso
+                de Microsoft Office.
+              </p>
+              <div class="big-number">3</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- 2 -->
-      <div class="col-12 col-md-4">
-        <div class="card-box">
-          <img src="assets/img/iconos/teams.png" class="icon" alt="Teams">
-          <h2>Trabajo Colaborativo<br>Clases en línea</h2>
-          <div class="big-number">2</div>
-        </div>
-      </div>
-      <!-- 3 -->
-      <div class="col-12 col-md-4">
-        <div class="card-box cert-mos">
-          <img src="assets/img/iconos/microsoft.png" class="mos-icon" alt="MOS" style="background-color: white; padding: 5px;">
-          <h2>Certificación MOS</h2>
-          <p class="fs-6">
-            Las certificaciones MOS (Microsoft Office Specialist) validan las habilidades de una persona en el uso de Microsoft Office.
-          </p>
-          <div class="big-number">3</div>
+        <div class="row align-items-center" style="min-height: 220px;">
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img src="assets/img/iconos/rocket-ilustracion.png"
+              alt="Ilustración de cohete despegando, fondo claro, sensación de avance y entusiasmo"
+              class="rocket-img mt-5 animate-updown" style="position: static; margin-top: 0;">
+            <style>
+              @keyframes updown {
+                0% { transform: translateY(0);}
+                50% { transform: translateY(-32px);}
+                100% { transform: translateY(0);}
+              }
+              .animate-updown {
+                animation: updown 2.5s ease-in-out infinite;
+              }
+            </style>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center">
+            <p class="text-left bottom-text px-3 w-100" style="font-size: 22px;">
+              ¿Sabía que el 85% de las empresas en Guatemala utilizan herramientas de Microsoft? <br>
+              Ofrezca a sus alumnos la oportunidad de destacarse.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div style="position: relative; min-height: 220px; width: 100%;">
-      <img src="assets/img/iconos/rocket-ilustracion.png" alt="Ilustración de cohete despegando, fondo claro, sensación de avance y entusiasmo" class="rocket-img mt-5 animate-updown">
-      <style>
-        @keyframes updown {
-          0%   { transform: translateY(0); }
-          50%  { transform: translateY(-32px); }
-          100% { transform: translateY(0); }
-        }
-        .animate-updown {
-          animation: updown 2.5s ease-in-out infinite;
-        }
-      </style>
-      <p class="text-center bottom-text px-3" style="position: absolute; bottom: 10px; left: 0; right: 0; font-size: 22px;">
-      ¿Sabía que el 85% de las empresas en Guatemala utilizan herramientas de Microsoft? <br> Ofrezca a sus alumnos la oportunidad de destacarse.
-      </p>
-    </div>
-  </div>
-</div>
 
 
-<!-- ==========================================
+    <!-- ==========================================
      SECCIÓN: SmartToddlers / SmartKids (diseño final)
 ========================================== -->
-<section class="container pt-5 pb-2 pb-md-3 py-lg-5">
-        <div class="row align-items-center my-3 py-md-3 py-lg-5">
-          <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
-            <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
-              <img src="assets/img/smart-kids/toddler.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md" style="transform: translate3d(-9px, 10px, 0px);">
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4" style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
-            <h2 class="text-white">SmartToddlers</h2>
-              <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo aprendido en el aula.</p>
+    <section class="container pt-5 pb-2 pb-md-3 py-lg-5" id="smart-toddlers">
+      <div class="row align-items-center my-3 py-md-3 py-lg-5">
+        <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
+          <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
+            <img src="assets/img/smart-kids/toddler.png" class="rellax d-block" alt="Screen"
+              data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
+              style="transform: translate3d(-9px, 10px, 0px);">
           </div>
         </div>
-        <div class="row align-items-center mt-2 mt-md-0 pt-5 pt-md-4 pt-lg-0 pb-md-3 pb-lg-5">
-          <div class="col-md-6 col-lg-5 offset-xl-1 mb-2 mb-md-0 pb-4 pb-md-0">
-            <div class="position-relative mx-auto mx-md-0" style="max-width: 462px;">
-              <img src="assets/img/smart-kids/smart-kids.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md" style="transform: translate3d(8px, -10px, 0px);">
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-5 offset-lg-1" style="background-color: #c3d216; border-radius: 1.5rem; padding: 2rem;">
-            <h2 class="text-white">SmartKids</h2>
-            <p class="text-white">es una serie de libros de informática para primaria que enseña tecnología mediante actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.​</p>
+        <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4"
+          style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
+          <h2 class="text-white">SmartToddlers</h2>
+          <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades
+            tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo aprendido
+            en el aula.</p>
+        </div>
+      </div>
+      <div class="row align-items-center mt-2 mt-md-0 pt-5 pt-md-4 pt-lg-0 pb-md-3 pb-lg-5">
+        <div class="col-md-6 col-lg-5 offset-xl-1 mb-2 mb-md-0 pb-4 pb-md-0">
+          <div class="position-relative mx-auto mx-md-0" style="max-width: 462px;">
+            <img src="assets/img/smart-kids/smart-kids.png" class="rellax d-block" alt="Screen"
+              data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
+              style="transform: translate3d(8px, -10px, 0px);">
           </div>
         </div>
-        <!-- Extra spacing for dark mode only -->
-        <div class="pt-5 d-none d-dark-mode-block"></div>
-      </section>
+        <div class="col-md-6 col-xl-5 offset-lg-1"
+          style="background-color: #c3d216; border-radius: 1.5rem; padding: 2rem;">
+          <h2 class="text-white">SmartKids</h2>
+          <p class="text-white">es una serie de libros de informática para primaria que enseña tecnología mediante
+            actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
+            tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.​</p>
+        </div>
+      </div>
+      <!-- Extra spacing for dark mode only -->
+      <div class="pt-5 d-none d-dark-mode-block"></div>
+    </section>
 
     <!-- =========================================
          SECCIÓN: Contacto / Footer
@@ -1443,25 +1815,30 @@
       <div class="row align-items-center">
         <div class="col-md-6 contact-info">
           <div class="mb-3 d-flex align-items-start">
-            <i class="bi bi-telephone-fill contact-icon me-3 mt-1" style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
+            <i class="bi bi-telephone-fill contact-icon me-3 mt-1"
+              style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
             <div>
               <div class="contact-label">PBX: <a href="tel:+50225079131">(502) 2507-9131</a></div>
             </div>
           </div>
           <div class="mb-3 d-flex align-items-start">
-            <i class="bi bi-whatsapp contact-icon me-3 mt-1" style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
+            <i class="bi bi-whatsapp contact-icon me-3 mt-1"
+              style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
             <div>
-              <div class="contact-label">WhatsApp: <a href="https://wa.me/50266351491" target="_blank">(502) 6635-1491</a></div>
+              <div class="contact-label">WhatsApp: <a href="https://wa.me/50266351491" target="_blank">(502)
+                  6635-1491</a></div>
             </div>
           </div>
           <div class="mb-3 d-flex align-items-start">
-            <i class="bi bi-envelope-fill contact-icon me-3 mt-1" style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
+            <i class="bi bi-envelope-fill contact-icon me-3 mt-1"
+              style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
             <div>
               <div class="contact-label">Email: <a href="mailto:ventas@lecsat.com">ventas@lecsat.com</a></div>
             </div>
           </div>
           <div class="mb-3 d-flex align-items-start">
-            <i class="bi bi-geo-alt-fill contact-icon me-3 mt-1" style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
+            <i class="bi bi-geo-alt-fill contact-icon me-3 mt-1"
+              style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
             <div>
               <div class="contact-label">Dirección</div>
               <div>Avenida del Cementerio, 13-14 Zona 2, Villa Canales, Guatemala City, Guatemala</div>
@@ -1469,46 +1846,90 @@
           </div>
         </div>
         <div class="col-md-6 text-center">
-          <img src="assets/img/iconos/avion-ilustracion.png" alt="Ilustración de avión de papel volando hacia la derecha sobre fondo claro, transmite dinamismo y optimismo" class="img-fluid animate-leftright" style="max-height: 300px;">
+          <img src="assets/img/iconos/avion-ilustracion.png"
+            alt="Ilustración de avión de papel volando hacia la derecha sobre fondo claro, transmite dinamismo y optimismo"
+            class="img-fluid animate-leftright" style="max-height: 300px;">
 
           <style>
-          @keyframes leftright {
-            0%   { transform: translateX(0); }
-            50%  { transform: translateX(40px); }
-            100% { transform: translateX(0); }
-          }
-          .animate-leftright {
-            animation: leftright 2.8s ease-in-out infinite;
-          }
+            @keyframes leftright {
+              0% {
+                transform: translateX(0);
+              }
+
+              50% {
+                transform: translateX(40px);
+              }
+
+              100% {
+                transform: translateX(0);
+              }
+            }
+
+            .animate-leftright {
+              animation: leftright 2.8s ease-in-out infinite;
+            }
           </style>
           <div class="mt-3">
             <img src="assets/img/logo/apple-icon-180x180.png" alt="LEC Logo" style="max-height: 90px;">
           </div>
+ 
         </div>
+                  <div class="w-100 text-center mt-4">
+                    <small class="text-muted">Desarrollado Web por <a href="https://oscarleon.app/" class="text-muted">OSCARLEON</a></small>
+                  </div>
       </div>
     </div>
   </main>
 
-  <!-- ================================================
-       BACK TO TOP BUTTON
-  ================================================ -->
-  <a href="#top" class="btn-scroll-top" data-scroll>
-    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Subir</span>
-    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/50266351491" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
   </a>
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background: #1ebe5d;
+      color: #fff;
+    }
+
+    @media (max-width: 576px) {
+      .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        font-size: 1.7rem;
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+  </style>
 
   <!-- ================================================
        VENDOR SCRIPTS (con defer para optimizar carga)
   ================================================ -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    defer
-    integrity="sha384-PLACEHOLDER_DE_TU_INTEGRITY_HASH"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer
+    integrity="sha384-PLACEHOLDER_DE_TU_INTEGRITY_HASH" crossorigin="anonymous"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
   <!-- Main Theme Script -->
   <script src="assets/js/theme.min.js" defer></script>
 </body>
+
 </html>
