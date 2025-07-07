@@ -1,0 +1,286 @@
+<!-- =========================================================
+     index.html – versión optimizada (Campus, Reviews, Hero)
+     Fecha: 7 jul 2025
+========================================================= -->
+<!DOCTYPE html>
+<html lang="es-ES" data-bs-theme="light">
+<head>
+  <!-- ===========  META  =========== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="LEC Computación">
+  <meta name="copyright" content="LEC Computación 2025. Todos los derechos reservados.">
+  <meta name="description" content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
+  <meta name="keywords" content="Educación, Software educativo, Innovación tecnológica, Formación académica, Capacitación, Tecnología educativa, Aprendizaje digital, Soluciones educativas, Educación a distancia, Herramientas de aprendizaje">
+  <link rel="canonical" href="https://leccomputacion.com/">
+  <meta property="og:site_name" content="LEC Computación">
+  <meta property="og:title" content="LEC Computación | Software Educativo">
+  <meta property="og:description" content="Soluciones académicas que funcionan de forma Presencial, Semi presencial y a Distancia.">
+  <meta property="og:image" content="assets/img/slide-hero/slide-1.webp">
+  <meta property="og:url" content="https://leccomputacion.com/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- ===========  ICONOS / FAVICONS  =========== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/img/logo/apple-icon-180x180.png">
+
+  <!-- ===========  VENDOR CSS  =========== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-PLACEHOLDER" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet">
+
+  <!-- ===========  CSS PERSONALIZADO  =========== -->
+  <style>
+    :root{
+      --color-financial:#fa572e;
+      --color-academic:#00a9eb;
+      --color-parental:#00af9c;
+      --color-pink:#e83e8c;
+      --color-orange:#ffc107;
+      --color-teal:#009D93;
+    }
+    body{margin:0;padding:0;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;}
+    a{text-decoration:none;}
+
+    /* === Control Financiero / Académico / Parental ============ */
+    .section-box{position:relative;display:flex;flex-direction:column;justify-content:flex-start;padding:3rem 1rem;min-height:350px;color:#fff;}
+    .section-box h4{font-family:'Lemon Milk',sans-serif;font-weight:700;font-size:1.75rem;margin-bottom:1.5rem;}
+    .section-box .item{margin-bottom:1.5rem;}
+    .section-box .item .icon{font-size:1.5rem;margin-right:0.75rem;}
+    .section-box .item p{margin:0;font-size:0.95rem;line-height:1.4;font-weight:300;}
+    .financial{background:var(--color-financial);} .academic{background:var(--color-academic);} .parental{background:var(--color-parental);}
+    .parental img{position:absolute;bottom:0;right:0;width:auto;max-height:90%;}
+
+    /* --- Media ≤991px --- */
+    @media(max-width:991.98px){
+      .section-box{padding:2.5rem 1rem;min-height:300px;}
+      .section-box h4{font-size:1.6rem;}
+      .section-box .item .icon{font-size:1.4rem;}
+      .section-box .item p{font-size:0.9rem;}
+      .parental img{max-height:70%;}
+    }
+    /* --- Media ≤767px --- */
+    @media(max-width:767.98px){
+      .section-box{padding:2rem 1rem;min-height:auto;}
+      .section-box h4{font-size:1.5rem;margin-bottom:1rem;}
+      .section-box .item{margin-bottom:1rem;}
+      .section-box .item .icon{font-size:1.25rem;}
+      .section-box .item p{font-size:0.85rem;line-height:1.3;}
+      .parental img{position:static;display:block;margin:1.5rem auto 0;max-width:80%;height:auto;}
+    }
+    /* --- Media ≤576px --- */
+    @media(max-width:575.98px){
+      .section-box h4{font-size:1rem;}
+      .section-box .item .icon{font-size:1.25rem;}
+      .section-box .item p{font-size:0.8rem;}
+    }
+
+    /* === Highlight cards === */
+    .highlight{background:#d0dd0a;padding:2rem 0;}
+    .card-custom{height:100%;border:2px solid var(--color-pink);border-radius:1rem;}
+    .card-custom.orange-border{border-color:var(--color-orange);}
+    .card-custom .card-body{padding:2rem;}
+    .card-custom h5{font-size:1.25rem;margin-bottom:1rem;}
+
+    /* === Microsoft 365 tarjetas === */
+    .microsoft-section{background:#f8f9fa;padding:60px 0;}
+    .card-box{position:relative;overflow:visible;background:var(--color-orange);color:#fff;padding:2rem 1.5rem 4rem;border-radius:10px;text-align:center;height:100%;}
+    .card-box .icon{position:absolute;top:-6rem;left:50%;transform:translateX(-50%);width:300px;height:auto;z-index:2;}
+    .card-box .big-number{position:absolute;bottom:-2rem;left:-1rem;font-size:8.2rem;font-weight:700;line-height:1;color:#8e44ad;pointer-events:none;margin:0;z-index:1;}
+
+    @media(max-width:991.98px){
+      .card-box{padding:1.5rem 1.25rem 3rem;}
+      .card-box .icon{top:-2.5rem;width:4.5rem;}
+      .card-box .big-number{font-size:7.5rem;bottom:-2rem;left:1rem;}
+    }
+    @media(max-width:767.98px){
+      .card-box{padding:1.5rem 1rem 3rem;}
+      .card-box .icon{top:-2rem;width:3.5rem;}
+      .card-box .big-number{font-size:6rem;bottom:-1.5rem;left:0.5rem;}
+    }
+    @media(max-width:575.98px){
+      .card-box{padding:1.25rem 0.75rem 2.5rem;}
+      .card-box .icon{top:-1.5rem;width:3rem;}
+      .card-box .big-number{font-size:4.5rem;bottom:-1rem;left:0.25rem;}
+    }
+
+    /* === SmartBooks tarjetas === */
+    .dual-book-section{background:#fff;padding:4rem 1rem;}
+    .dual-book-wrapper{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:1200px;margin:0 auto;}
+    .book-card{position:relative;overflow:visible;display:flex;justify-content:center;align-items:flex-start;background:transparent;}
+    .book-image{width:100%;max-width:360px;height:auto;display:block;position:relative;z-index:10;margin:0 auto;}
+    .info-box{position:absolute;padding:1.5rem;border-radius:1.5rem;max-width:320px;color:#fff;line-height:1.4;z-index:1;}
+    .book-card.toddlers .info-box{background:#009D93;top:50%;left:0;transform:translate(-20%,-50%);}
+    .book-card.kids .info-box{background:#C6D426;bottom:0;right:0;transform:translate(20%,20%);}
+    .info-box p{margin:0;font-size:0.95rem;}
+    @media(max-width:768px){
+      .dual-book-wrapper{grid-template-columns:1fr;}
+      .info-box{position:static;transform:none;max-width:100%;margin-top:1rem;}
+      .book-image{margin-bottom:1rem;}
+    }
+
+    /* === Animaciones === */
+    @keyframes sideways{0%{transform:translateX(0)}50%{transform:translateX(32px)}100%{transform:translateX(0)}}
+    @keyframes sideways-sm{0%{transform:translateX(0)}50%{transform:translateX(12px)}100%{transform:translateX(0)}}
+    @keyframes updown{0%{transform:translateY(0)}50%{transform:translateY(-32px)}100%{transform:translateY(0)}}
+    @keyframes leftright{0%{transform:translateX(0)}50%{transform:translateX(40px)}100%{transform:translateX(0)}}
+    .animate-sideways{animation:sideways 2.8s ease-in-out infinite;}
+    .animate-updown{animation:updown 2.5s ease-in-out infinite;}
+    .animate-leftright{animation:leftright 2.8s ease-in-out infinite;}
+
+    /* === Campus phone ajustes === */
+    .campus-phone{width:100%;max-width:520px;}
+    @media(max-width:767.98px){
+      .campus-phone{max-width:260px;}
+      .animate-sideways{animation:sideways-sm 2.8s ease-in-out infinite;}
+    }
+
+    /* === HERO Swiper altura móvil === */
+    @media(max-width:575.98px){
+      #hero-section,#hero-section .hero-swiper,#hero-section .hero-swiper .swiper-slide{min-height:75vh!important;}
+      #hero-section .swiper-slide{background-position:50% 25%;}
+    }
+    @media(max-width:359.98px){
+      #hero-section,#hero-section .hero-swiper,#hero-section .hero-swiper .swiper-slide{min-height:68vh!important;}
+    }
+
+    /* === Reviews Swiper ancho fijo móvil para evitar shrink === */
+    @media(max-width:575.98px){
+      #reviews-swiper .swiper-slide{width:300px!important;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page-wrapper">
+    <!-- =================================================
+         HEADER / NAVBAR (sin cambios estructurales)
+    ================================================= -->
+    <!-- ... (navbar original aquí, sin modificaciones) ... -->
+
+    <!-- =================================================
+         HERO Swiper (con altura optimizada móvil)
+    ================================================= -->
+    <section id="hero-section" class="position-relative bg-dark min-vh-100" data-bs-theme="dark">
+      <span class="position-absolute top-0 start-0 w-100 h-100"
+            style="background:radial-gradient(116% 118% at 50% 100%,rgba(99,102,241,0.1) 0%,rgba(218,70,239,0.05) 41.8%,rgba(241,244,253,0.07) 82.5%);"></span>
+
+      <div class="swiper hero-swiper min-vh-100">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
+               style="background:url('assets/img/hero-bg/slide1.webp') center/cover no-repeat;"></div>
+          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
+               style="background:url('assets/img/hero-bg/slide2.webp') center/cover no-repeat;"></div>
+          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
+               style="background:url('assets/img/hero-bg/slide3.webp') center/cover no-repeat;"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SECCIÓN: Nosotros (Misión / Visión) – sin cambios
+    ================================================= -->
+    <!-- ... contenido original ... -->
+
+    <!-- =================================================
+         SECCIÓN: Campus Virtual (optimizada)
+    ================================================= -->
+    <section id="campus-virtual" class="container mb-5">
+      <div class="row align-items-center gy-4 overflow-hidden">
+        <div class="col-md-7">
+          <img src="assets/img/iconos/campus2.png" alt="Campus Virtual" class="img-fluid mb-3">
+          <p class="fs-5">
+            Nuestra plataforma es la solución perfecta para cualquier institución educativa.
+            Con <strong>Campus Virtual</strong> puede gestionar de manera eficiente todas las actividades de
+            <strong>estudiantes, padres de familia, docentes y coordinadores.</strong>
+          </p>
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="assets/img/seccion3/telefonoapp.png" alt="Campus Virtual"
+               class="campus-phone img-fluid animate-sideways mx-auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         Highlight Cards + Banner Swiper  (sin cambios)
+    ================================================= -->
+    <!-- ... contenido original ... -->
+
+    <!-- =================================================
+         SECCIÓN: Reviews (optimizada – 1 slide en móvil)
+    ================================================= -->
+    <section class="container-fluid py-5 mb-xl-3 mt-md-2 mt-lg-5 bg-white">
+      <div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3 px-3">
+        <h2 class="mb-0">Comentarios de clientes</h2>
+        <div class="d-md-flex d-none ms-4">
+          <button id="prev-review" class="btn btn-icon btn-sm me-2" aria-label="Anterior">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <button id="next-review" class="btn btn-icon btn-sm ms-2" aria-label="Siguiente">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="swiper" id="reviews-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide py-3"><div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center" style="max-width:300px;"><img src="assets/img/reviews/review-1.png" class="img-fluid" alt="Review 1"></div></div>
+          <div class="swiper-slide py-3"><div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center" style="max-width:300px;"><img src="assets/img/reviews/review-2.png" class="img-fluid" alt="Review 2"></div></div>
+          <div class="swiper-slide py-3"><div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center" style="max-width:300px;"><img src="assets/img/reviews/review-3.png" class="img-fluid" alt="Review 3"></div></div>
+          <div class="swiper-slide py-3"><div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center" style="max-width:300px;"><img src="assets/img/reviews/review-4.png" class="img-fluid" alt="Review 4"></div></div>
+          <div class="swiper-slide py-3"><div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center" style="max-width:300px;"><img src="assets/img/reviews/review-5.png" class="img-fluid" alt="Review 5"></div></div>
+        </div>
+        <div class="swiper-pagination position-relative pt-3 mt-4 d-md-none d-flex"></div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SECCIÓN: Microsoft 365, SmartBooks, Contacto, etc.
+         (sin cambios sustanciales; mantiene estructura original)
+    ================================================= -->
+    <!-- ... contenido original ... -->
+
+  </main>
+
+  <!-- =================================================
+       JS: Bootstrap + Swiper + Inits
+  ================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-PLACEHOLDER" crossorigin="anonymous"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    /* HERO */
+    new Swiper('.hero-swiper',{
+      loop:true,effect:'fade',
+      autoplay:{delay:5000,disableOnInteraction:false},
+      pagination:{el:'.hero-swiper .swiper-pagination',clickable:true}
+    });
+
+    /* Banner (Campus) */
+    new Swiper('.campus-swiper',{loop:true,autoplay:{delay:3500,disableOnInteraction:false}});
+
+    /* Reviews */
+    new Swiper('#reviews-swiper',{
+      slidesPerView:1,spaceBetween:16,loop:true,
+      autoplay:{delay:3000,disableOnInteraction:false},
+      navigation:{prevEl:'#prev-review',nextEl:'#next-review'},
+      pagination:{el:'#reviews-swiper .swiper-pagination',clickable:true},
+      breakpoints:{576:{slidesPerView:2},768:{slidesPerView:3},992:{slidesPerView:4},1200:{slidesPerView:5}}
+    });
+
+    /* Logos Microsoft 365 */
+    new Swiper('#brands-swiper',{
+      slidesPerView:2,loop:true,autoplay:{delay:1000,disableOnInteraction:false},
+      pagination:{el:'#brands-swiper .swiper-pagination',clickable:true},
+      breakpoints:{500:{slidesPerView:3,spaceBetween:8},650:{slidesPerView:4,spaceBetween:8},
+                   900:{slidesPerView:5,spaceBetween:8},1100:{slidesPerView:6,spaceBetween:8}}
+    });
+  </script>
+</body>
+</html>

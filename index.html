@@ -258,7 +258,7 @@
     }
 
     .card-box .icon {
-      height: 60px;
+      height: 90px;
       margin-bottom: 10px;
       width: auto;
     }
@@ -780,8 +780,8 @@
       }
 
       .microsoft-section .card-box .icon {
-        top: -1.5rem;
-        width: 3rem;
+        top: -2.7rem;
+        width: 12rem;
         padding: 0.25rem;
       }
 
@@ -987,9 +987,36 @@
 
             <!-- BOTÓN “CONTACTAR” (móvil: ancho completo dentro del offcanvas) -->
             <div class="mt-4">
-              <a href="mailto:ventas@lecsat.com" class="btn btn-warning w-100 text-dark" style="font-weight: 600;">
+               <div class="dropdown me-3">
+              <a href="mailto:ventas@lecsat.com" class="btn btn-warning btn-sm text-dark dropdown-toggle"
+                style="font-weight: 700;" id="contactarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 CONTACTAR
               </a>
+              <ul class="dropdown-menu" aria-labelledby="contactarDropdown">
+                <li>
+                  <a class="dropdown-item" href="mailto:ventas@lecsat.com">
+                    <i class="bi bi-envelope-fill me-2"></i>Correo electrónico
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://wa.me/50266351491" target="_blank">
+                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tel:+50225079131">
+                    <i class="bi bi-telephone-fill me-2"></i>Teléfono
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item"
+                    href="https://outlook.office.com/book/DemostracinCampusVirtual@lecsact.com/?ismsaljsauthenabled=true"
+                    target="_blank">
+                    <i class="bi bi-calendar2-check-fill me-2"></i>Solicitar Demostración
+                  </a>
+                </li>
+              </ul>
+            </div>
 
 
               <!-- ICONOS WhatsApp / Facebook (móvil, dentro del offcanvas) -->
@@ -1053,6 +1080,13 @@
                 <li>
                   <a class="dropdown-item" href="tel:+50225079131">
                     <i class="bi bi-telephone-fill me-2"></i>Teléfono
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item"
+                    href="https://outlook.office.com/book/DemostracinCampusVirtual@lecsact.com/?ismsaljsauthenabled=true"
+                    target="_blank">
+                    <i class="bi bi-calendar2-check-fill me-2"></i>Solicitar Demostración
                   </a>
                 </li>
               </ul>
@@ -1129,7 +1163,7 @@
     </section>
 
     <!-- =========================================
-         SECCIÓN: Our Awards
+         SECCIÓN: Misión Visión
     ========================================== -->
     <section id="nosotros" class="position-relative py-5 bg-light"
       style="background-image: url('assets/img/backgrounds/blanco-textura.png'); width: 100%; background-size: cover; background-position: center;">
@@ -1172,44 +1206,66 @@
     </section>
 
     <!-- =========================================
-         SECCIÓN: Campus Virtual
-    ========================================== -->
-    <div class="container mb-5" id="campus-virtual">
-      <div class="row align-items-center">
+     SECCIÓN: Campus Virtual  (optimizada)
+========================================= -->
+    <section id="campus-virtual" class="container mb-5">
+      <div class="row align-items-center gy-4 overflow-hidden"><!-- overflow‑hidden ⇢ evita scroll lateral -->
+        <!-- Texto + icono Campus -->
         <div class="col-md-7">
           <img src="assets/img/iconos/campus2.png" alt="Campus Virtual" class="img-fluid mb-3">
           <p class="fs-5">
-            Nuestra plataforma es la solución perfecta para cualquier institución educativa. Con <strong>Campus
-              Virtual</strong>, puede gestionar de manera eficiente todas las actividades de <strong>estudiantes, padres
-              de familia, docentes y coordinadores.</strong>
+            Nuestra plataforma es la solución perfecta para cualquier institución educativa. Con
+            <strong>Campus Virtual</strong> puede gestionar de manera eficiente todas las actividades de
+            <strong>estudiantes, padres de familia, docentes y coordinadores.</strong>
           </p>
         </div>
+
+        <!-- Imagen animada del teléfono -->
         <div class="col-md-5 text-center">
-          <img src="assets/img/seccion3/telefonoapp.png" class="img-fluid animate-sideways" alt="Campus Virtual"
-            style="max-width: 520px;">
-
-          <style>
-            @keyframes sideways {
-              0% {
-                transform: translateX(0);
-              }
-
-              50% {
-                transform: translateX(32px);
-              }
-
-              100% {
-                transform: translateX(0);
-              }
-            }
-
-            .animate-sideways {
-              animation: sideways 2.8s ease-in-out infinite;
-            }
-          </style>
+          <img src="assets/img/seccion3/telefonoapp.png" alt="Campus Virtual"
+            class="campus-phone img-fluid animate-sideways mx-auto"><!-- mx‑auto ⇢ centra -->
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- =========  CSS específico  ========= -->
+    <style>
+      /* 1) Tamaños razonables y centrado siempre */
+      .campus-phone {
+        width: 100%;
+        max-width: 520px;
+        /* desktop: sin cambios visuales */
+      }
+
+      /* 2) Ajustes móviles: más pequeña y sin desborde */
+      @media(max-width:767.98px) {
+        .campus-phone {
+          max-width: 260px;
+          /* ó 80vw si prefieres */
+        }
+
+        /* 3) Suaviza la animación en mobile para evitar saltos bruscos */
+        @keyframes sideways-sm {
+          0% {
+            transform: translateX(0)
+          }
+
+          50% {
+            transform: translateX(12px)
+          }
+
+          /* menor amplitud */
+          100% {
+            transform: translateX(0)
+          }
+        }
+
+        .animate-sideways {
+          animation: sideways-sm 2.8s ease-in-out infinite;
+        }
+      }
+    </style>
+
 
     <!-- =========================================
          SECCIÓN: Highlight Cards
@@ -1253,7 +1309,9 @@
         </div>
       </div>
     </div>
-
+    <!-- =========================================
+         SECCIÓN: Banner Slider
+    ========================================== -->
     <section class="my-0" style="height: 45vh; width: 100%;">
       <div class="campus-swiper swiper w-100" style="max-width: 100%; margin: 0 auto;">
         <div class="swiper-wrapper">
@@ -1287,97 +1345,12 @@
     </section>
 
     <!-- =========================================
-     SECCIÓN: Control Financiero / Académico / Parental
-========================================== -->
-    <section id="control-fap" class="container-fluid px-0">
-      <div class="row g-0 text-white">
-        <!-- Control Financiero -->
-        <div class="col-md-4 p-4 control-financiero">
-          <h4 class="fw-bold mb-4">Control Financiero</h4>
-          <div class="feature d-flex mb-4">
-            <i class="bi bi-wallet2 fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Cobros Rápidos</h6>
-              <p class="mb-0">Elimine las complicaciones</p>
-            </div>
-          </div>
-          <div class="feature d-flex mb-4">
-            <i class="bi bi-receipt-cutoff fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Solvencias</h6>
-              <p class="mb-0">Resultados al instante</p>
-            </div>
-          </div>
-          <div class="feature d-flex">
-            <i class="bi bi-cash-stack fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Proyección de Ingresos</h6>
-              <p class="mb-0">Análisis exacto</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Control Académico -->
-        <div class="col-md-4 p-4 control-academico">
-          <h4 class="fw-bold mb-4">Control Académico</h4>
-          <div class="feature d-flex mb-4">
-            <i class="bi bi-bar-chart fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Notas Finales MINEDUC</h6>
-              <p class="mb-0">Sin más complicaciones</p>
-            </div>
-          </div>
-          <div class="feature d-flex mb-4">
-            <i class="bi bi-journal-bookmark fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Libro de Inscripciones</h6>
-              <p class="mb-0">Reportes inmediatos</p>
-            </div>
-          </div>
-          <div class="feature d-flex">
-            <i class="bi bi-file-earmark-text fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Boleta de Calificaciones</h6>
-              <p class="mb-0">En línea y listos para imprimir</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Control Parental -->
-        <div class="col-md-4 p-4 control-parental">
-          <h4 class="fw-bold mb-4">Control Parental en APP y Consultas Web</h4>
-          <div class="feature d-flex mb-4">
-            <i class="bi bi-person-badge fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Notas Finales</h6>
-              <p class="mb-0">Resultados en smartphone</p>
-            </div>
-          </div>
-          <div class="feature d-flex mb-4">
-            <i class="bi bi-bell fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Agenda (Tareas)</h6>
-              <p class="mb-0">Notificaciones y Entrega de Tareas</p>
-            </div>
-          </div>
-          <div class="feature d-flex">
-            <i class="bi bi-check-circle fs-2 me-3"></i>
-            <div>
-              <h6 class="fw-semibold mb-1">Conducta</h6>
-              <p class="mb-0">Aspectos actitudinales</p>
-            </div>
-          </div>
-          <!-- Imagen original, conservada pero comentada -->
-          <!-- <img src="dfa44a4b-d50d-48f6-b3df-e0cd6a4da011.png" alt="Control Parental"> -->
-        </div>
-      </div>
-    </section>
-
-
-    <!-- =========================================
          SECCIÓN: Reviews
     ========================================== -->
-    <section class="container-fluid py-5 mb-xl-3 mt-md-2 mt-lg-5" style="background: #fff;">
+    <!-- =========================================
+     SECCIÓN: Reviews  (optimizada para mobile)
+========================================= -->
+    <section class="container-fluid py-5 mb-xl-3 mt-md-2 mt-lg-5" style="background:#fff;">
       <div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3 px-3">
         <h2 class="mb-0">Comentarios de clientes</h2>
         <div class="d-md-flex d-none ms-4">
@@ -1389,40 +1362,56 @@
           </button>
         </div>
       </div>
+
+      <!-- Swiper -->
       <div class="swiper" id="reviews-swiper">
         <div class="swiper-wrapper">
+          <!-- === Slide 1 === -->
           <div class="swiper-slide py-3">
-            <div class="card-body px-2 mx-2 d-flex align-items-center justify-content-center" style="width:300px;">
+            <div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center"
+              style="max-width:300px;">
               <img src="assets/img/reviews/review-1.png" class="img-fluid" alt="Review 1">
             </div>
           </div>
+          <!-- === Slide 2 === -->
           <div class="swiper-slide py-3">
-            <div class="card-body px-2 mx-2 d-flex align-items-center justify-content-center" style="width:300px;">
+            <div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center"
+              style="max-width:300px;">
               <img src="assets/img/reviews/review-2.png" class="img-fluid" alt="Review 2">
             </div>
           </div>
+          <!-- === Slide 3 === -->
           <div class="swiper-slide py-3">
-            <div class="card-body px-2 mx-2 d-flex align-items-center justify-content-center" style="width:300px;">
+            <div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center"
+              style="max-width:300px;">
               <img src="assets/img/reviews/review-3.png" class="img-fluid" alt="Review 3">
             </div>
           </div>
+          <!-- === Slide 4 === -->
           <div class="swiper-slide py-3">
-            <div class="card-body px-2 mx-2 d-flex align-items-center justify-content-center" style="width:300px;">
+            <div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center"
+              style="max-width:300px;">
               <img src="assets/img/reviews/review-4.png" class="img-fluid" alt="Review 4">
             </div>
           </div>
+          <!-- === Slide 5 === -->
           <div class="swiper-slide py-3">
-            <div class="card-body px-2 mx-2 d-flex align-items-center justify-content-center" style="width:300px;">
+            <div class="card-body px-2 mx-auto d-flex align-items-center justify-content-center"
+              style="max-width:300px;">
               <img src="assets/img/reviews/review-5.png" class="img-fluid" alt="Review 5">
             </div>
           </div>
         </div>
+
+        <!-- Bullets solo en mobile -->
         <div class="swiper-pagination position-relative pt-3 mt-4 d-md-none d-flex"></div>
       </div>
+
+      <!-- Swiper init: 1 review en mobile -->
       <script>
         document.addEventListener('DOMContentLoaded', function () {
           new Swiper('#reviews-swiper', {
-            slidesPerView: 2,
+            slidesPerView: 1,           // 👈 Solo 1 en pantallas <576 px
             spaceBetween: 16,
             loop: true,
             autoplay: {
@@ -1438,26 +1427,19 @@
               clickable: true
             },
             breakpoints: {
-              500: { slidesPerView: 3 },
-              650: { slidesPerView: 4 },
-              900: { slidesPerView: 5 }
+              576: { slidesPerView: 2 },  // ≥576 px → 2
+              768: { slidesPerView: 3 },  // ≥768 px → 3
+              992: { slidesPerView: 4 },  // ≥992 px → 4
+              1200: { slidesPerView: 5 }  // ≥1200 px → 5
             }
           });
         });
       </script>
-      <style>
-        /* Opcional: elimina el padding lateral en pantallas grandes para ancho completo real */
-        @media (min-width: 1200px) {
-          .container-fluid[style] {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-          }
-        }
-      </style>
     </section>
 
+
     <!-- =========================================
-         SECCIÓN: Microsoft 365
+         SECCIÓN: Microsoft 365 Slider
     ========================================== -->
     <section class="container py-5 mb-xl-3 mt-md-2 mt-lg-5" id="capacitaciones">
       <div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3">
@@ -1681,6 +1663,9 @@
       </script>
     </section>
 
+    <!-- =========================================
+         SECCIÓN: Microsoft 365 Textos
+    ========================================== -->
     <div class="container my-5">
       <div class="row align-items-center">
         <div class="col-12 col-md-6 text-center">
@@ -1706,6 +1691,9 @@
       </div>
     </div>
 
+    <!-- =========================================
+         SECCIÓN: Microsoft 365 iconos
+    ========================================== -->
     <div class="microsoft-section">
       <div class="container microsoft-container">
         <div class="row text-center mb-4 g-4">
@@ -1728,7 +1716,7 @@
           <!-- 3 -->
           <div class="col-12 col-md-4">
             <div class="card-box">
-              <img src="assets/img/iconos/m-one.png" class="icon" alt="MOS">
+              <img src="assets/img/iconos/microst-ico2.png" class="icon" alt="MOS">
               <h2>Certificación MOS</h2>
               <p class="fs-6">
                 Las certificaciones MOS (Microsoft Office Specialist) validan las habilidades de una persona en el uso
@@ -1745,10 +1733,19 @@
               class="rocket-img mt-5 animate-updown" style="position: static; margin-top: 0;">
             <style>
               @keyframes updown {
-                0% { transform: translateY(0);}
-                50% { transform: translateY(-32px);}
-                100% { transform: translateY(0);}
+                0% {
+                  transform: translateY(0);
+                }
+
+                50% {
+                  transform: translateY(-32px);
+                }
+
+                100% {
+                  transform: translateY(0);
+                }
               }
+
               .animate-updown {
                 animation: updown 2.5s ease-in-out infinite;
               }
@@ -1768,57 +1765,71 @@
     <!-- ==========================================
      SECCIÓN: SmartToddlers / SmartKids (diseño final)
 ========================================== -->
-    <section class="container pt-5 pb-2 pb-md-3 py-lg-5" id="smart-toddlers">
+
+    <section class="container pt-5 pb-2 pb-md-3 py-lg-5 position-relative" id="smart-toddlers"
+      style="background: url('assets/img/backgrounds/blanco-textura.png') center/cover no-repeat;">
       <div class="row align-items-center my-3 py-md-3 py-lg-5">
-        <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
-          <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
-            <img src="assets/img/smart-kids/toddler.png" class="rellax d-block" alt="Screen"
-              data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
-              style="transform: translate3d(-9px, 10px, 0px);">
+        <!-- Fila 3 imagen a la izquierda -->
+        <div class="row align-items-center my-3 py-md-3 py-lg-5">
+          <!-- Imagen a la izquierda -->
+          <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 mb-2 mb-md-0 pb-4 pb-md-0 order-md-1">
+            <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
+              <img src="assets/img/smart-kids/toddler.png" class="rellax d-block" alt="Screen"
+                data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
+                style="transform: translate3d(-9px, 10px, 0px);">
+            </div>
+          </div>
+          <!-- Texto a la derecha -->
+          <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 pb-md-4 order-md-2"
+            style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
+            <h2 class="text-white">Smart Toddlers</h2>
+            <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades
+              tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo
+              aprendido
+              en el aula.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4"
-          style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
-          <h2 class="text-white">SmartToddlers</h2>
-          <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades
-            tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo aprendido
-            en el aula.</p>
-        </div>
-      </div>
-      <div class="row align-items-center mt-2 mt-md-0 pt-5 pt-md-4 pt-lg-0 pb-md-3 pb-lg-5">
-        <div class="col-md-6 col-lg-5 offset-xl-1 mb-2 mb-md-0 pb-4 pb-md-0">
-          <div class="position-relative mx-auto mx-md-0" style="max-width: 462px;">
-            <img src="assets/img/smart-kids/smart-kids.png" class="rellax d-block" alt="Screen"
-              data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
-              style="transform: translate3d(8px, -10px, 0px);">
+        <!-- Fila 3 imagen a la derecha -->
+        <div class="row align-items-center my-3 py-md-3 py-lg-5">
+          <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
+            <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
+              <img src="assets/img/smart-kids/smar-kid-libros.webp" class="rellax d-block" alt="Screen"
+                data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
+                style="transform: translate3d(-9px, 10px, 0px);">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4"
+            style="background-color: #c3d216; border-radius: 1.5rem; padding: 2rem;">
+            <h2 class="text-white">SmartKids</h2>
+            <p class="text-white">es una serie de libros de informática para primaria que enseña tecnología mediante
+              actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
+              tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.​</p>
           </div>
         </div>
-        <div class="col-md-6 col-xl-5 offset-lg-1"
-          style="background-color: #c3d216; border-radius: 1.5rem; padding: 2rem;">
-          <h2 class="text-white">SmartKids</h2>
-          <p class="text-white">es una serie de libros de informática para primaria que enseña tecnología mediante
-            actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
-            tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.​</p>
-        </div>
-      </div>
-            <div class="row align-items-center my-3 py-md-3 py-lg-5">
-        <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
-          <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
-            <img src="assets/img/smart-kids/toddler.png" class="rellax d-block" alt="Screen"
-              data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
-              style="transform: translate3d(-9px, 10px, 0px);">
+        <!-- Fila 3 imagen a la derecha -->
+        <div class="row align-items-center my-3 py-md-3 py-lg-5">
+          <!-- Imagen a la izquierda -->
+          <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 mb-2 mb-md-0 pb-4 pb-md-0 order-md-1">
+            <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
+              <img src="assets/img/smart-kids/smart-teens-libros.webp" class="rellax d-block" alt="Screen"
+                data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
+                style="transform: translate3d(-9px, 10px, 0px);">
+            </div>
+          </div>
+          <!-- Texto a la derecha -->
+          <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 pb-md-4 order-md-2"
+            style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
+            <h2 class="text-white">Smart Teens</h2>
+            <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades
+              tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo
+              aprendido
+              en el aula.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4"
-          style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
-          <h2 class="text-white">Smart Teens</h2>
-          <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades
-            tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo aprendido
-            en el aula.</p>
-        </div>
-      </div>
-      <!-- Extra spacing for dark mode only -->
-      <div class="pt-5 d-none d-dark-mode-block"></div>
+
+
+        <!-- Extra spacing for dark mode only -->
+        <div class="pt-5 d-none d-dark-mode-block"></div>
     </section>
 
     <!-- =========================================
@@ -1860,6 +1871,19 @@
               <div>Avenida del Cementerio, 13-14 Zona 2, Villa Canales, Guatemala City, Guatemala</div>
             </div>
           </div>
+          <div class="mb-3 d-flex align-items-start">
+            <i class="bi bi-calendar2-check-fill contact-icon me-3 mt-1"
+              style="background-color: #ffbe00; padding: 5px; border-radius: 50%; color: white; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"></i>
+            <div>
+              <div class="contact-label">Solicitar demostración</div>
+              <div>
+                <a href="https://outlook.office.com/book/DemostracinCampusVirtual@lecsact.com/?ismsaljsauthenabled=true"
+                  target="_blank">
+                  Reservar una demostración
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-md-6 text-center">
           <img src="assets/img/iconos/avion-ilustracion.png"
@@ -1888,11 +1912,14 @@
           <div class="mt-3">
             <img src="assets/img/logo/apple-icon-180x180.png" alt="LEC Logo" style="max-height: 90px;">
           </div>
- 
+
         </div>
-                  <div class="w-100 text-center mt-4">
-                    <small class="text-muted">Desarrollado Web por <a href="https://oscarleon.app/" class="text-muted">OSCARLEON</a></small>
-                  </div>
+        <div class="w-100 text-center mt-4">
+          <small class="text-muted">© 2025 LEC Computación. Todos los derechos reservados.</small>
+          <br>
+          <small class="text-muted">Desarrollado Web por <a href="https://oscarleon.app/"
+              class="text-muted">OSCARLEON</a></small>
+        </div>
       </div>
     </div>
   </main>
