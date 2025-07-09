@@ -744,7 +744,7 @@
       .microsoft-section .card-box .icon {
         top: -2rem;
         /* No sobresale tanto */
-        width: 3.5rem;
+        width: 10rem;
         /* Icono más pequeño */
       }
 
@@ -812,7 +812,7 @@
 
       .microsoft-section .card-box .icon {
         top: -2.5rem;
-        width: 4.5rem;
+        width: 10rem;
       }
 
       .microsoft-section .card-box .big-number {
@@ -1115,52 +1115,78 @@
     <!-- =========================================
          HERO (Swiper Slider)
     ========================================== -->
-    <section class="position-relative bg-dark min-vh-100" data-bs-theme="dark" id="hero-section">
-      <span class="position-absolute top-0 start-0 w-100 h-100"
-        style="background: radial-gradient(116% 118% at 50% 100%, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 41.8%, rgba(241,244,253,0.07) 82.5%);"></span>
-      <div class="swiper hero-swiper min-vh-100">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
-            style="background: url('assets/img/hero-bg/slide1.webp') center/cover no-repeat;">
-            <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
-              <!-- Contenido opcional aquí -->
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
-            style="background: url('assets/img/hero-bg/slide2.webp') center/cover no-repeat;">
-            <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
-              <!-- Contenido opcional aquí -->
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="swiper-slide d-flex flex-column py-5 min-vh-100"
-            style="background: url('assets/img/hero-bg/slide3.webp') center/cover no-repeat;">
-            <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
-              <!-- Contenido opcional aquí -->
-            </div>
-          </div>
+<section class="position-relative hero-section" data-bs-theme="dark" id="hero-section">
+  <span class="position-absolute top-0 start-0 w-100 h-100"
+    ></span>
+  <div class="swiper hero-swiper hero-swiper-custom">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide hero-slide"
+        style="background: url('assets/img/hero-bg/slide1.webp') center/cover no-repeat;">
+        <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
+          <!-- Contenido opcional aquí -->
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          new Swiper('.hero-swiper', {
-            loop: true,
-            effect: 'fade',
-            autoplay: {
-              delay: 5000,
-              disableOnInteraction: false,
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            }
-          });
-        });
-      </script>
-    </section>
+      <!-- Slide 2 -->
+      <div class="swiper-slide hero-slide"
+        style="background: url('assets/img/hero-bg/slide2.webp') center/cover no-repeat;">
+        <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
+          <!-- Contenido opcional aquí -->
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide hero-slide"
+        style="background: url('assets/img/hero-bg/slide3.webp') center/cover no-repeat;">
+        <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
+          <!-- Contenido opcional aquí -->
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Swiper('.hero-swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      });
+    });
+  </script>
+  <style>
+    .hero-section {
+      min-height: 100vh;
+    }
+
+    .hero-swiper-custom,
+    .hero-slide {
+      min-height: 100vh;
+    }
+
+    @media (max-width: 767.98px) {
+      .hero-section {
+        min-height: auto;
+      }
+
+      .hero-swiper-custom,
+      .hero-slide {
+        height: auto;
+        min-height: auto;
+        aspect-ratio: 1 / 1;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+      }
+    }
+  </style>
+</section>
 
     <!-- =========================================
          SECCIÓN: Misión Visión
@@ -1701,7 +1727,7 @@
           <div class="col-12 col-md-4">
             <div class="card-box">
               <img src="assets/img/iconos/outlook.png" class="icon" alt="Outlook">
-              <h2>Correo institucional</h2>
+              <h2 style="color: #fff;">Correo institucional</h2>
               <div class="big-number">1</div>
             </div>
           </div>
@@ -1709,7 +1735,7 @@
           <div class="col-12 col-md-4">
             <div class="card-box">
               <img src="assets/img/iconos/teams.png" class="icon" alt="Teams">
-              <h2>Trabajo Colaborativo<br>Clases en línea</h2>
+              <h2 style="color: #fff;">Trabajo Colaborativo<br>Clases en línea</h2>
               <div class="big-number">2</div>
             </div>
           </div>
@@ -1717,7 +1743,7 @@
           <div class="col-12 col-md-4">
             <div class="card-box">
               <img src="assets/img/iconos/microst-ico2.png" class="icon" alt="MOS">
-              <h2>Certificación MOS</h2>
+              <h2 style="color: #fff;">Certificación MOS</h2>
               <p class="fs-6">
                 Las certificaciones MOS (Microsoft Office Specialist) validan las habilidades de una persona en el uso
                 de Microsoft Office.
@@ -1727,36 +1753,10 @@
           </div>
         </div>
         <div class="row align-items-center" style="min-height: 220px;">
-          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-            <img src="assets/img/iconos/rocket-ilustracion.png"
-              alt="Ilustración de cohete despegando, fondo claro, sensación de avance y entusiasmo"
-              class="rocket-img mt-5 animate-updown" style="position: static; margin-top: 0;">
-            <style>
-              @keyframes updown {
-                0% {
-                  transform: translateY(0);
-                }
-
-                50% {
-                  transform: translateY(-32px);
-                }
-
-                100% {
-                  transform: translateY(0);
-                }
-              }
-
-              .animate-updown {
-                animation: updown 2.5s ease-in-out infinite;
-              }
-            </style>
-          </div>
-          <div class="col-12 col-md-6 d-flex align-items-center">
-            <p class="text-left bottom-text px-3 w-100" style="font-size: 22px;">
+            <p class="text-center bottom-text px-3 w-100" style="font-size: 22px;">
               ¿Sabía que el 85% de las empresas en Guatemala utilizan herramientas de Microsoft? <br>
               Ofrezca a sus alumnos la oportunidad de destacarse.
             </p>
-          </div>
         </div>
       </div>
     </div>
@@ -1767,7 +1767,7 @@
 ========================================== -->
 
     <section class="container pt-5 pb-2 pb-md-3 py-lg-5 position-relative" id="smart-toddlers"
-      style="background: url('assets/img/backgrounds/blanco-textura.png') center/cover no-repeat;">
+      style="background: url('assets/img/backgrounds/blanco-textura.png') center/cover no-repeat; width: 100vw; max-width: 100%;">
       <div class="row align-items-center my-3 py-md-3 py-lg-5">
         <!-- Fila 3 imagen a la izquierda -->
         <div class="row align-items-center my-3 py-md-3 py-lg-5">
@@ -1792,16 +1792,16 @@
         <!-- Fila 3 imagen a la derecha -->
         <div class="row align-items-center my-3 py-md-3 py-lg-5">
           <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
-            <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
+            <div class="position-relative mx-auto mx-md-0" style="max-width: 550px;">
               <img src="assets/img/smart-kids/smar-kid-libros.webp" class="rellax d-block" alt="Screen"
                 data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
-                style="transform: translate3d(-9px, 10px, 0px);">
+                style="transform: translate3d(-9px, 10px, 0px); width: 1200px;">
             </div>
           </div>
           <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4"
             style="background-color: #c3d216; border-radius: 1.5rem; padding: 2rem;">
             <h2 class="text-white">SmartKids</h2>
-            <p class="text-white">es una serie de libros de informática para primaria que enseña tecnología mediante
+            <p class="text-white">Es una serie de libros de informática para primaria que enseña tecnología mediante
               actividades y proyectos. Promueve el aprendizaje por medio de la construcción, integrando herramientas
               tecnológicas con materias como matemáticas, lenguaje, historia, geografía y ciencias.​</p>
           </div>
@@ -1810,7 +1810,7 @@
         <div class="row align-items-center my-3 py-md-3 py-lg-5">
           <!-- Imagen a la izquierda -->
           <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 mb-2 mb-md-0 pb-4 pb-md-0 order-md-1">
-            <div class="position-relative mx-auto mx-md-0" style="max-width: 400px;">
+            <div class="position-relative mx-auto mx-md-0" style="max-width: 550px;">
               <img src="assets/img/smart-kids/smart-teens-libros.webp" class="rellax d-block" alt="Screen"
                 data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md"
                 style="transform: translate3d(-9px, 10px, 0px);">
@@ -1819,11 +1819,9 @@
           <!-- Texto a la derecha -->
           <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 pb-md-4 order-md-2"
             style="background-color: #009D93; border-radius: 1.5rem; padding: 2rem;">
-            <h2 class="text-white">Smart Teens</h2>
-            <p class="text-white">Es una serie de libros de tecnología para preescolares que desarrolla habilidades
-              tecnológicas acorde a su edad, integrando el aprendizaje digital con otras áreas para reforzar lo
-              aprendido
-              en el aula.</p>
+            <h2 class="text-white">SmartTeens</h2>
+            <p class="text-white">Es una serie de libros digitales de tecnología para jóvenes de básicos y diversificado que desarrolla habilidades digitales mediante proyectos y actividades
+integradas con otras áreas del conocimiento.</p>
           </div>
         </div>
 
@@ -1897,7 +1895,7 @@
               }
 
               50% {
-                transform: translateX(40px);
+                transform: translateX(20px);
               }
 
               100% {
@@ -1932,7 +1930,7 @@
     .whatsapp-float {
       position: fixed;
       bottom: 28px;
-      right: 28px;
+      right: 18px;
       z-index: 9999;
       background: #25d366;
       color: #fff;
