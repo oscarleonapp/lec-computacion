@@ -936,6 +936,20 @@
         margin-bottom: 1rem;
       }
     }
+
+    /* CSS puro */
+.grad-under{
+  position:relative;           /* crea contexto para ::before */
+  color:transparent;           /* texto hueco */
+}
+
+.grad-under::before{
+  content:"";                  /* capa decorativa */
+  position:absolute;
+  inset:0;                     /* cubre todo el <h1> */
+  z-index:-1;                  /* queda debajo del texto */
+}
+
   </style>
 
 </head>
@@ -1128,7 +1142,12 @@
             style="background: url('assets/img/hero-bg/slide1.webp') center/cover no-repeat;">
             <div class="container position-relative text-center zindex-5 pt-4 pt-md-5 pb-5 mt-auto">
               <!-- Contenido opcional aquí -->
-              <h1 class="text-white">LEC Computación - Software Educativo</h1>
+<h1
+  class="grad-under text-5xl font-extrabold leading-tight tracking-tight
+         sm:text-7xl text-transparent"
+>
+  LEC Computación – <br class="sm:hidden" />Software Educativo
+</h1>
             </div>
           </div>
           <!-- Slide 2 -->
